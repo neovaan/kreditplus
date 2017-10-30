@@ -43,17 +43,17 @@ return [
                 ]
         ],
 
-        'pages' => [
-                [
-                        'id' => 1,
-                        'section_id' => '1.1',
-                        'title' => 'Welcome',
-                        'intro' => 'Inspire your self',
-                        'description' => 'Do not be anxious about tomorrow, for tomorrow will be anxious for itself. '
-                                . ' Let the day\'s own trouble be sufficient for the day',
-                        'create_on' => '2016-12:21 10:00'
-                ]
-        ],
+        // 'pages' => [
+        //         [
+        //                 'id' => 1,
+        //                 'section_id' => '1.1',
+        //                 'title' => 'Welcome',
+        //                 'intro' => 'Inspire your self',
+        //                 'description' => 'Do not be anxious about tomorrow, for tomorrow will be anxious for itself. '
+        //                         . ' Let the day\'s own trouble be sufficient for the day',
+        //                 'create_on' => '2016-12:21 10:00'
+        //         ]
+        // ],
 
         'configurations' => [
                 [
