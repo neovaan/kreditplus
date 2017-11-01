@@ -13,9 +13,9 @@ return [
         'title' => 'Kreditplus',
         'icon' => 'fa-clone',
         'tables' => [
-                'content-kreditplus'
+                'content_kreditplus'
         ],
         'panels' => [
-                'content-kreditplus'
+                'content_kreditplus'
         ]
 ];

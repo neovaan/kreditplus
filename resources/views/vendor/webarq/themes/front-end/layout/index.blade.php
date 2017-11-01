@@ -104,7 +104,7 @@
                         <div class="list-foot-menu">
                             <h6>Kreditplusku</h6>
                             <ul>
-                                <li><a href="{{URL('produk')}}">Kreditplus Mobile</a></li>
+                                <li><a href="{{URL('kreditplus-mobile')}}">Kreditplus Mobile</a></li>
                                 <li><a href="{{URL('kreditmu')}}">KreditMu</a></li>
                                 <li><a href="{{URL('simulasi')}}">Simulasi Kredit</a></li>
                             </ul>
@@ -113,7 +113,7 @@
                             <h6>Hi! Kreditplus</h6>
                             <ul>
                                 <li><a href="{{URL('contact')}}">Form Kontak</a></li>
-                                <li><a href="{{URL('contact')}}">Kantor Cabang</a></li>
+                                <li><a href="{{URL('kantor-cabang')}}">Kantor Cabang</a></li>
                             </ul>
                         </div>
                     </div>

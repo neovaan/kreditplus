@@ -3,7 +3,7 @@
 
 <div class="career-form box-form">
 	<div class="left">
-		<form method="post">
+		<form method="post" id="frm-c">
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 			<div class="row">
 				<label>Nama</label>
@@ -48,7 +48,7 @@
 </div>
 <script>
 	$(document).ready(function(){
-		$('form').submit(function(){
+		$('#frm-c').submit(function(){
 			$.ajax({
 				url:'contact',
 				type:$(this).attr('method'),

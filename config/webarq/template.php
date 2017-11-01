@@ -75,7 +75,8 @@ return [
                         'view'=> 'slide',
                         'table' => [
                                 'name' => 'slides',
-                                'select'=>['title','intro','image']
+                                'translate'=>['title','intro'],
+                                'select'=>['image']
                         ],
                         'panel'=>'slide',
                         'limit' => 2
@@ -85,7 +86,8 @@ return [
                         'view'=> 'layanan',
                         'table' => [
                                 'name' => 'layanan',
-                                'select'=>['title','description','intro','image1','image2']
+                                'translate'=>['title','description','intro'],
+                                'select'=>['image1','image2']
                         ],
                         'panel'=>'layanan',
                         'limit' => 1
@@ -95,7 +97,8 @@ return [
                         'view'=> 'produk',
                         'table' => [
                                 'name' => 'produk',
-                                'select'=>['title','intro','image']
+                                'translate'=>['title','intro'],
+                                'select'=>['image']
                         ],
                         'panel'=>'produk'
                 ],
@@ -115,7 +118,8 @@ return [
                         'view' => 'tentang-kami.content',
                         'table' => [
                                 'name' => 'content',
-                                'select'=>['intro','description','title','image1','image2']
+                                'translate'=>['intro','description'],
+                                'select'=>['image1','image2','title']
                         ],
                         'panel' => 'content',
                         'limit' => 1    
@@ -126,7 +130,7 @@ return [
                         'view' => 'tentang-kami.visimisi',
                         'table' => [
                                 'name' => 'visimisi',
-                                'select'=>['visi','misi','nilai']
+                                'translate'=>['visi','misi','nilai']
                         ],
                         'panel' => 'visi',
                         'limit' => 1    
@@ -136,7 +140,8 @@ return [
                         'view' => 'tentang-kami.management',
                         'table' => [
                                 'name' => 'management',
-                                'select'=>['image','title','description']
+                                'translate'=>['title','description'],
+                                'select'=>['image']
                         ],
                         'panel' => 'management',
                         'limit' => 1  
@@ -146,29 +151,32 @@ return [
                         'view' => 'tentang-kami.prestasi',
                         'table' => [
                                 'name' => 'prestasi',
-                                'select'=>['image','title','intro']
+                                'translate'=>['title','intro'],
+                                'select'=>['image']
                         ],
                         'panel' => 'prestasi',
-                        'limit' => 9 
+                        'paginate' => 2,
+                        'limit'=>10 
                 ],
                 'goodcorporategov'=>[
                         'name' => 'Good Corporate Gov',
                         'view' => 'tentang-kami.gcg',
                         'table' => [
                                 'name' => 'goodcorporategov',
-                                'select'=>['image','title','intro','description']
+                                'translate'=>['title','intro','description'],
+                                'select'=>['image']
                         ],
                         'panel' => 'goodcorporategov',
                         'limit' => 1 
                 ],
-                'content-produk'=>[
+                'content_produk'=>[
                         'name' => 'Content Produk',
                         'view' => 'produk.content',
                         'table' => [
-                                'name' => 'content-produk',
-                                'select'=>['title','intro','description']
+                                'name' => 'content_produk',
+                                'translate'=>['title','intro','description']
                         ],
-                        'panel' => 'content-produk',
+                        'panel' => 'content_produk',
                         'limit' => 1
                 ],
                 'tabel_pengajuan'=>[
@@ -176,19 +184,21 @@ return [
                         'view' => 'produk.tabel_pengajuan',
                         'table' => [
                                 'name' => 'tabel_pengajuan',
-                                'select'=>['persyaratan','wiraswasta','karyawan','profesional']
+                                'translate'=>['persyaratan'],
+                                'select'=>['wiraswasta','karyawan','profesional']
                         ],
                         'panel' => 'tabel_pengajuan',
                         'limit' => 5
                 ],
-                'content-kreditplus'=>[
+                'content_kreditplus'=>[
                         'name' => 'Content Kreditplus',
                         'view' => 'kreditplus.content',
                         'table' => [
-                                'name' => 'content-kreditplus',
-                                'select'=>['description','title','intro','image']
+                                'name' => 'content_kreditplus',
+                                'translate'=>['description','title','intro'],
+                                'select'=>['image']
                         ],
-                        'panel' => 'content-kreditplus',
+                        'panel' => 'content_kreditplus',
                         'limit' => 1
                 ],
                 'informasi'=>[
@@ -196,7 +206,8 @@ return [
                         'view' => 'informasi.berita',
                         'table' => [
                                 'name' => 'informasi',
-                                'select'=>['description','title','intro','image','id','type']
+                                'translate'=>['description','title','intro'],
+                                'select'=>['image','type']
                         ],
                         'panel' => 'informasi',
                         'limit' => 10
@@ -206,7 +217,8 @@ return [
                         'view' => 'contact.contact',
                         'table' => [
                                 'name' => 'contact',
-                                'select'=>['description','title','alamat','telp','email','fax']
+                                'translate'=>['description','title'],
+                                'select'=>['alamat','telp','email','fax']
                         ],
                         'panel' => 'contact',
                         'limit' => 1
@@ -216,7 +228,7 @@ return [
                         'view' => 'description',
                         'table' => [
                                 'name' => 'content',
-                                'select'=>['intro','title','description']
+                                'translate'=>['intro','title','description']
                         ],
                         'panel' => 'pengajuan'
                ],
@@ -225,27 +237,28 @@ return [
                         'view' => 'karir',
                         'table' => [
                                 'name' => 'karir',
-                                'select'=>['title_job','penempatan','description']
+                                'translate'=>['description'],
+                                'select'=>['title_job','penempatan']
                         ],
                         'limit'=>10,
                         'panel' => 'karir'
                ],
-               // 'content-karir'=>[
-               //          'name' => 'Karir Content',
-               //          'view' => 'karir',
-               //          'table' => [
-               //                  'name' => 'content',
-               //                  'select'=>['title','intro','description']
-               //          ],
-               //          'limit'=>1,
-               //          'panel' => 'content'
-               // ],
+               'content-karir'=>[
+                        'name' => 'Karir Content',
+                        'view' => 'produk.content',
+                        'table' => [
+                                'name' => 'content',
+                                'translate'=>['title','intro','description']
+                        ],
+                        'limit'=>1,
+                        'panel' => 'content-karir'
+               ],
                'kreditplus_karir'=>[
                         'name' => 'Kreditplus-Karir',
                         'view' => 'karir.tes',
                         'table' => [
                                 'name' => 'kreditplus_karir',
-                                'select'=>['title','intro','description']
+                                'translate'=>['title','intro','description']
                         ],
                         'limit'=>1,
                         'panel' => 'kreditplus_karir'
@@ -258,7 +271,25 @@ return [
                                 'select'=>['kota','alamat','fax','email','telp']
                         ],
                         'limit'=>100,
-                 ]  
+                 ],
+                 'form_pengajuan'=>[
+                        'name' => 'Form Pengajuan',
+                        'view' => 'form_pengajuan',
+                        'table' => [
+                                'name' => 'form_pengajuan',
+                                'translate'=>['filed1','filed2','filed3','filed4','filed5','filed6','filed7','filed8','filed9','filed10']
+                        ],
+                        'limit'=>1
+                 ],
+                 'desc_prestasi'=>[
+                        'name' => 'Description Prestasi',
+                        'view' => 'produk.content',
+                        'table' => [
+                                'name' => 'content',
+                                'translate'=>['title','intro','description']
+                        ],
+                        'limit'=>1
+                 ]    
                 // 'banner' => [
                 //         'name' => 'Banner',
                 //         'view' => 'banner',

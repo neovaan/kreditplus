@@ -7,5 +7,5 @@ use Webarq\Model\AbstractListingModel;
 
 class ContentKreditplusModel extends AbstractListingModel
 {
-    protected $table = 'content-kreditplus';
+    protected $table = 'content_kreditplus';
 }

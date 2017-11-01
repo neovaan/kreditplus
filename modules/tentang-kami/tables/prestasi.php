@@ -10,6 +10,6 @@ return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
         ['master' => 'title', 'name' => 'image', 'notnull' => true],
-        ['master' => 'title', 'name' => 'title', 'notnull' => true],
-        ['master' => 'shortIntro', 'name' => 'intro', 'notnull' => true]
+        ['master' => 'title', 'name' => 'title', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'shortIntro', 'name' => 'intro', 'notnull' => true, 'multilingual' => true]
        ];

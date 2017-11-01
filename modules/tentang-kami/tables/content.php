@@ -11,7 +11,7 @@ return [
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
         ['master' => 'title', 'name' => 'image1', 'notnull' => true],
         ['master' => 'title', 'name' => 'image2', 'notnull' => true],
-        ['master' => 'title', 'name' => 'title', 'notnull' => true],
+        ['master' => 'title', 'name' => 'title', 'notnull' => true,'multilingual' => true],
         ['master' => 'shortIntro', 'name' => 'intro', 'multilingual' => true, 'notnull' => true],
         ['master' => 'description', 'name' => 'description', 'multilingual' => true,  'notnull' => true]
        ];

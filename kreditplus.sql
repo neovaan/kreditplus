@@ -199,8 +199,8 @@ INSERT INTO `content` (`id`, `section_id`, `title`, `image1`, `image2`, `intro`,
 	(2, '16.57', 'FORM PENGAJUAN KREDIT', NULL, NULL, 'Saya dengan ini mengajukan pembiayaan (kredit) untuk pembelian produk :', NULL);
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 
--- Dumping structure for table kreditplus.content-kreditplus
-CREATE TABLE IF NOT EXISTS `content-kreditplus` (
+-- Dumping structure for table kreditplus.content_kreditplus
+CREATE TABLE IF NOT EXISTS `content_kreditplus` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `section_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
@@ -210,34 +210,33 @@ CREATE TABLE IF NOT EXISTS `content-kreditplus` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table kreditplus.content-kreditplus: ~3 rows (approximately)
-DELETE FROM `content-kreditplus`;
-/*!40000 ALTER TABLE `content-kreditplus` DISABLE KEYS */;
-INSERT INTO `content-kreditplus` (`id`, `section_id`, `title`, `image`, `intro`, `description`) VALUES
+-- Dumping data for table kreditplus.content_kreditplus: ~3 rows (approximately)
+DELETE FROM `content_kreditplus`;
+/*!40000 ALTER TABLE `content_kreditplus` DISABLE KEYS */;
+INSERT INTO `content_kreditplus` (`id`, `section_id`, `title`, `image`, `intro`, `description`) VALUES
 	(2, '11.49', 'FITUR KREDITPLUS MOBILE', 'site/uploads/banners/59f034dde724b-promo-img2.jpg', '<h3>Kreditplus Mobile adalah aplikasi jasa pembiayaan konsumen dari Kreditplus yang menawarkan berbagai kemudahan dan manfaat bagi seluruh pengguna (member maupun non-member Kreditplus) dalam satu genggaman.</h3>\r\n\r\n<p>Sesuai dengan motto kami yaitu cepat, mudah, dan aman, nikmati kecepatan informasi dan kemudahan pengajuan kredit sampai dengan pembayaran langsung dari smartphone anda.</p>\r\n', '<p>Anda dapat mulai mengembangkan usaha impian anda dengan layanan modal usaha maupun multiguna motor dan mobil dari Kreditplus serta penuhi semua kebutuhan elektronik anda dengan layanan multiguna barang.</p>\r\n\r\n<p>Sementara tersedia untuk wilayah Jabodetabek.<br />\r\nInformasi lebih lanjut hubungi&nbsp;<a href="http://localhost/kreditplus__/information_promo_detail2.php"><strong>Contact Center KreditPlus 1500 605.</strong></a></p>\r\n'),
 	(3, '12.51', 'FITUR KREDITMU', 'site/uploads/banners/59f036bfb5058-promo-img3.jpg', '<h3>Kreditmu adalah metode pembayaran &quot;CICILAN TANPA KARTU KREDIT&quot; dari Kreditplus (PT.Finansia Multifinance). Dengan kreditmu, Anda bisa membeli barang dengan cara dicicil dengan periode dari 3, 6, sampai 12 bulan.</h3>\r\n\r\n<p>Dengan mendafat di Kreditmu, Anda akan diberikan fasilitas limit cicialan dengan cepat yang bisa digunakan untuk berbelanja secara online (elevenia, jd.id, pasarwarga, livaza) &quot;TANPA KARTU KREDIT TANPA RIBET&quot;.</p>\r\n', '<p>Kreditmu adalah metode pembayaran &quot;CICILAN TANPA KARTU KREDIT&quot; dari Kreditplus (PT.Finansia Multifinance). Dengan kreditmu, Anda bisa membeli barang dengan cara dicicil dengan periode dari 3, 6, sampai 12 bulan.<br />\r\nDengan mendafat di Kreditmu, Anda akan diberikan fasilitas limit cicialan dengan cepat yang bisa digunakan untuk berbelanja secara online (elevenia, jd.id, pasarwarga, livaza) &quot;TANPA KARTU KREDIT TANPA RIBET&quot;.</p>\r\n'),
 	(4, '11.51', 'FITUR KREDITPLUS MOBILE', 'site/uploads/banners/59f5e37a3ff1f-promo-img2.jpg', '<h3>Kreditplus Mobile adalah aplikasi jasa pembiayaan konsumen dari Kreditplus yang menawarkan berbagai kemudahan dan manfaat bagi seluruh pengguna (member maupun non-member Kreditplus) dalam satu genggaman.</h3>\r\n\r\n<p>Sesuai dengan motto kami yaitu cepat, mudah, dan aman, nikmati kecepatan informasi dan kemudahan pengajuan kredit sampai dengan pembayaran langsung dari smartphone anda.</p>\r\n', '<p>Anda dapat mulai mengembangkan usaha impian anda dengan layanan modal usaha maupun multiguna motor dan mobil dari Kreditplus serta penuhi semua kebutuhan elektronik anda dengan layanan multiguna barang.</p>\r\n\r\n<p>Sementara tersedia untuk wilayah Jabodetabek.<br />\r\nInformasi lebih lanjut hubungi&nbsp;<a href="http://localhost/kreditplus__/information_promo_detail2.php"><strong>Contact Center KreditPlus 1500 605.</strong></a></p>\r\n\r\n<p>&nbsp;</p>\r\n');
-/*!40000 ALTER TABLE `content-kreditplus` ENABLE KEYS */;
+/*!40000 ALTER TABLE `content_kreditplus` ENABLE KEYS */;
 
--- Dumping structure for table kreditplus.content-produk
-CREATE TABLE IF NOT EXISTS `content-produk` (
+-- Dumping structure for table kreditplus.content_produk
+CREATE TABLE IF NOT EXISTS `content_produk` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `section_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
   `intro` text COLLATE utf8_unicode_ci NOT NULL,
-  `description` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Dumping data for table kreditplus.content-produk: ~4 rows (approximately)
-DELETE FROM `content-produk`;
-/*!40000 ALTER TABLE `content-produk` DISABLE KEYS */;
-INSERT INTO `content-produk` (`id`, `section_id`, `title`, `intro`, `description`) VALUES
-	(1, '7.37', 'PINJAMAN USAHA', 'Kreditplus memberikan solusi kebutuhan pengadaan barang modal dan bahan baku dengan proses yang mudah, cepat dan aman.', '<p>Berbagai kemudahan yang ditawarkan Kreditplus yaitu :</p>\r\n\r\n<ol>\r\n	<li>3 jam sudah bisa transaksi</li>\r\n	<li>Cukup dengan melampirkan invoice/bon/kwitansi dari penyedia barang modal dan atau bahan baku</li>\r\n	<li>Jangka waktu pembiayaan mulai dari 9 hingga 47 bulan</li>\r\n	<li>Jaminan BPKB &ldquo;Mobil &amp; Motor&rdquo;</li>\r\n	<li>Pembayaran angsuran yang mudah melalui berbagai payment point</li>\r\n</ol>\r\n\r\n<p>Berikut adalah persyaratan aplikasi pengajuan pinjaman usaha:&nbsp;</p>\r\n'),
-	(2, '8.41', 'PEMBELIAN MOBIL', 'Kreditplus membantu konsumen mewujudkan impian untuk memiliki mobil impian dengan harga yang terjangkau.', '<p>Solusi pembiayaan kendaraan mobil &amp; motor anda dengan proses yang mudah, cepat dan aman. Berbagai kemudahan yang ditawarkan Kreditplus yaitu :</p>\r\n\r\n<ol>\r\n	<li>3 jam sudah bisa transaksi</li>\r\n	<li>Membiayai kendaraan Jepang ataupun non jepang</li>\r\n	<li>Asuransi atas mobil &amp; motor yang dibiayai sepanjang masa pembiayaan</li>\r\n	<li>Asuransi jiwa atas konsumen yang mengajukan pembiayaan</li>\r\n	<li>Dapat membiayai kendaraan hingga 10 tahun termasuk tenor</li>\r\n	<li>Jangka waktu pembiayaan mulai dari 9 hingga 47 bulan</li>\r\n	<li>Pembayaran angsuran yang mudah melalui berbagai payment point</li>\r\n</ol>\r\n\r\n<p>Berikut adalah persyaratan aplikasi pengajuan kredit mobil:</p>\r\n'),
-	(3, '9.43', 'PEMBELIAN MOTOR', 'Kredit Plus memberikan solusi pembiayaan motor anda dengan proses yang mudah, cepat dan aman.', '<p>Berbagai kemudahan yang ditawarkan Kreditplus yaitu :</p>\r\n\r\n<ol>\r\n	<li>3 jam sudah bisa transaksi</li>\r\n	<li>Membiayai kendaraan Jepang ataupun non jepang</li>\r\n	<li>Asuransi atas mobil &amp; motor yang dibiayai sepanjang masa pembiayaan</li>\r\n	<li>Asuransi jiwa atas konsumen yang mengajukan pembiayaan</li>\r\n	<li>Dapat membiayai kendaraan hingga 10 tahun termasuk tenor</li>\r\n	<li>Jangka waktu pembiayaan mulai dari 9 hingga 47 bulan</li>\r\n	<li>Pembayaran angsuran yang mudah melalui berbagai payment point</li>\r\n</ol>\r\n\r\n<p>Berikut adalah persyaratan aplikasi pengajuan kredit motor:&nbsp;</p>\r\n'),
-	(4, '10.47', 'PINJAMAN USAHA', 'Kreditplus memberikan solusi kebutuhan pengadaan barang modal dan bahan baku dengan proses yang mudah, cepat dan aman.', '<p>Berbagai kemudahan yang ditawarkan Kreditplus yaitu :</p>\r\n\r\n<ol>\r\n	<li>3 jam sudah bisa transaksi</li>\r\n	<li>Cukup dengan melampirkan invoice/bon/kwitansi dari penyedia barang modal dan atau bahan baku</li>\r\n	<li>Jangka waktu pembiayaan mulai dari 9 hingga 47 bulan</li>\r\n	<li>Jaminan BPKB &ldquo;Mobil &amp; Motor&rdquo;</li>\r\n	<li>Pembayaran angsuran yang mudah melalui berbagai payment point</li>\r\n</ol>\r\n\r\n<p>Berikut adalah persyaratan aplikasi pengajuan pinjaman usaha:</p>\r\n');
-/*!40000 ALTER TABLE `content-produk` ENABLE KEYS */;
+-- Dumping data for table kreditplus.content_produk: ~4 rows (approximately)
+DELETE FROM `content_produk`;
+/*!40000 ALTER TABLE `content_produk` DISABLE KEYS */;
+INSERT INTO `content_produk` (`id`, `section_id`, `title`, `intro`) VALUES
+	(1, '7.37', 'PINJAMAN USAHA', 'Kreditplus memberikan solusi kebutuhan pengadaan barang modal dan bahan baku dengan proses yang mudah, cepat dan aman.'),
+	(2, '8.41', 'PEMBELIAN MOBIL', 'Kreditplus membantu konsumen mewujudkan impian untuk memiliki mobil impian dengan harga yang terjangkau.'),
+	(3, '9.43', 'PEMBELIAN MOTOR', 'Kredit Plus memberikan solusi pembiayaan motor anda dengan proses yang mudah, cepat dan aman.'),
+	(4, '10.47', 'PINJAMAN USAHA', 'Kreditplus memberikan solusi kebutuhan pengadaan barang modal dan bahan baku dengan proses yang mudah, cepat dan aman.');
+/*!40000 ALTER TABLE `content_produk` ENABLE KEYS */;
 
 -- Dumping structure for table kreditplus.content_i18n
 CREATE TABLE IF NOT EXISTS `content_i18n` (
@@ -1009,9 +1008,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(39, '2017_10_25_023243_visimisi', 10),
 	(40, '2017_10_25_024238_management', 11),
 	(41, '2017_10_25_025426_goodcorporategov', 12),
-	(42, '2017_10_25_035606_content-produk', 13),
+	(42, '2017_10_25_035606_content_produk', 13),
 	(43, '2017_10_25_040945_tabel_pengajuan', 14),
-	(44, '2017_10_25_063707_content-kreditplus', 15),
+	(44, '2017_10_25_063707_content_kreditplus', 15),
 	(45, '2017_10_27_025154_brand', 16),
 	(46, '2017_10_27_033558_area', 17),
 	(47, '2017_10_27_040734_pengajuan_user', 18),
@@ -1199,18 +1198,17 @@ CREATE TABLE IF NOT EXISTS `produk` (
   `title` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(225) COLLATE utf8_unicode_ci NOT NULL,
   `intro` text COLLATE utf8_unicode_ci NOT NULL,
-  `description` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Dumping data for table kreditplus.produk: ~4 rows (approximately)
 DELETE FROM `produk`;
 /*!40000 ALTER TABLE `produk` DISABLE KEYS */;
-INSERT INTO `produk` (`id`, `section_id`, `title`, `image`, `intro`, `description`) VALUES
-	(1, '1.24', 'Pembelian Elektronik', 'site/uploads/slidess/59eff3362275a-prod-01.jpg', 'This is Photoshop\'s version  of Lorem', NULL),
-	(2, '1.24', 'Pembelian Mobil', 'site/uploads/slidess/59eff3fd1bc03-prod-02.jpg', 'This is Photoshop\'s version  of Lorem', NULL),
-	(3, '1.24', 'Pembelian Motor', 'site/uploads/slidess/59eff35d5f6ba-prod-03.jpg', 'This is Photoshop\'s version  of Lorem', NULL),
-	(4, '1.24', 'Peminjaman Modal Usaha', 'site/uploads/slidess/59eff38604c3d-prod-04.jpg', 'This is Photoshop\'s version  of Lorem', NULL);
+INSERT INTO `produk` (`id`, `section_id`, `title`, `image`, `intro`) VALUES
+	(1, '1.24', 'Pembelian Elektronik', 'site/uploads/slidess/59eff3362275a-prod-01.jpg', 'This is Photoshop\'s version  of Lorem'),
+	(2, '1.24', 'Pembelian Mobil', 'site/uploads/slidess/59eff3fd1bc03-prod-02.jpg', 'This is Photoshop\'s version  of Lorem'),
+	(3, '1.24', 'Pembelian Motor', 'site/uploads/slidess/59eff35d5f6ba-prod-03.jpg', 'This is Photoshop\'s version  of Lorem'),
+	(4, '1.24', 'Peminjaman Modal Usaha', 'site/uploads/slidess/59eff38604c3d-prod-04.jpg', 'This is Photoshop\'s version  of Lorem');
 /*!40000 ALTER TABLE `produk` ENABLE KEYS */;
 
 -- Dumping structure for table kreditplus.produk_home
@@ -1281,20 +1279,20 @@ INSERT INTO `sections` (`id`, `template`, `object`, `title`, `sequence`, `create
 	(32, 'prestasi', 'prestasi', 'Content Prestasi', 2, '2017-10-25 02:48:54', NULL),
 	(33, 'goodcorporategov', 'banner', 'Banner Good Corporate', 1, '2017-10-25 02:59:28', NULL),
 	(34, 'goodcorporategov', 'goodcorporategov', 'Content Good Corporate', 2, '2017-10-25 02:59:51', NULL),
-	(37, 'produk', 'content-produk', 'Produk Content', 1, '2017-10-25 04:02:52', NULL),
+	(37, 'produk', 'content_produk', 'Produk Content', 1, '2017-10-25 04:02:52', NULL),
 	(38, 'produk', 'banner', 'Banner Produk', 2, '2017-10-25 04:05:15', NULL),
 	(39, 'produk', 'tabel_pengajuan', 'Elektronik Pengajuan', 3, '2017-10-25 04:20:22', NULL),
 	(40, 'produk', 'banner', 'Banner Mobil', 4, '2017-10-25 04:23:33', NULL),
-	(41, 'produk', 'content-produk', 'Produk Mobil', 5, '2017-10-25 04:24:15', NULL),
+	(41, 'produk', 'content_produk', 'Produk Mobil', 5, '2017-10-25 04:24:15', NULL),
 	(42, 'produk', 'tabel_pengajuan', 'Pengajuan mobil', 6, '2017-10-25 04:27:56', NULL),
-	(43, 'produk', 'content-produk', 'Produk Motor', 7, '2017-10-25 04:30:47', NULL),
+	(43, 'produk', 'content_produk', 'Produk Motor', 7, '2017-10-25 04:30:47', NULL),
 	(44, 'produk', 'banner', 'Motor Banner', 8, '2017-10-25 04:30:59', NULL),
 	(45, 'produk', 'tabel_pengajuan', 'Pengajuan Motor', 9, '2017-10-25 04:31:18', NULL),
 	(46, 'produk', 'banner', 'Banner Pinjaman', 10, '2017-10-25 04:35:30', NULL),
-	(47, 'produk', 'content-produk', 'Pinjaman Content', 11, '2017-10-25 04:35:49', NULL),
+	(47, 'produk', 'content_produk', 'Pinjaman Content', 11, '2017-10-25 04:35:49', NULL),
 	(48, 'produk', 'tabel_pengajuan', 'Pengajuan Pinjaman', 12, '2017-10-25 04:36:04', NULL),
 	(50, 'kreditplus', 'banner', 'Banner kreditplu', 1, '2017-10-25 06:46:06', NULL),
-	(51, 'kreditplus', 'content-kreditplus', 'Content Kreditmu', 2, '2017-10-25 06:59:27', NULL),
+	(51, 'kreditplus', 'content_kreditplus', 'Content Kreditmu', 2, '2017-10-25 06:59:27', NULL),
 	(52, 'kreditplus', 'banner', 'Banner Kreditmu', 3, '2017-10-25 07:00:08', NULL),
 	(53, 'informasi', 'informasi', 'informasi & berita', 1, '2017-10-25 08:09:35', NULL),
 	(55, 'informasi', 'banner', 'banner informasi', 2, '2017-10-25 08:11:03', NULL),

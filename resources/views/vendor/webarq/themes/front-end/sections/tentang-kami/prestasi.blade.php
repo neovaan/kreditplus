@@ -1,6 +1,3 @@
-<h3 class="tblue">Prestasi</h3>
-<h3 class="tregular">This is Photoshop's version  of Lorem Ipsum.</h3>
-<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
 
 <div class="box-list-achievement">
 	<?php foreach ($shareData as $data) { ?>
@@ -20,7 +17,6 @@
 	</div>
 	<?php } ?>
 </div>
-
 <div class="pagination">
 	<a href="" class="prev">Previous</a>
 	<a href="" class="active">1</a>

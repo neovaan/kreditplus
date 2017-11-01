@@ -16,5 +16,5 @@ return [
         ['master' => 'title', 'name' => 'rya', 'notnull' => true],
         ['master' => 'title', 'name' => 'brand', 'notnull' => true],
         ['master' => 'title', 'name' => 'area', 'notnull' => true],
-        ['master' => 'shortIntro', 'name' => 'pesan', 'notnull' => true]
+        ['master' => 'shortIntro', 'name' => 'pesan', 'notnull' => true, 'multilingual' => true]
        ];

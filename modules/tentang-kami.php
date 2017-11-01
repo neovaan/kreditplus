@@ -13,9 +13,9 @@ return [
         'title' => 'Tentang Kami',
         'icon' => 'fa-clone',
         'tables' => [
-                'content','visimisi','management','prestasi','goodcorporategov'
+                'content','visimisi','management','prestasi','goodcorporategov','desc_prestasi'
         ],
         'panels' => [
-                'content','visimisi','management','prestasi','goodcorporategov'
+                'content','visimisi','management','prestasi','goodcorporategov','desc_prestasi'
         ]
 ];

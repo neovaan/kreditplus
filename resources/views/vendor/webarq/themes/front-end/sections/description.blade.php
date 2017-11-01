@@ -4,7 +4,7 @@
   $page = Wa::menu()->getActive()->eloquent()->getAttributes();
 ?>
 @if($page['permalink'] == "pengajuan")
-	<form method="post" action="">
+	<form method="post" action="" id="frm-a">
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
 	<div class="box-chooseproduct">
 		<div class="produk-list">
@@ -86,7 +86,7 @@
 <script>
 	$(document).ready(function(){
 		var btn = $(".box-chooseproduct button").first().click();
-		$('form').on('submit', function(){
+		$('#frm-a').on('submit', function(){
 			if(cekForm()){
 					$.ajax({
 						url:'pengajuan/form/a',

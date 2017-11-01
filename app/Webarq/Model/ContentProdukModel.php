@@ -7,5 +7,5 @@ use Webarq\Model\AbstractListingModel;
 
 class ContentProdukModel extends AbstractListingModel
 {
-    protected $table = 'content-produk';
+    protected $table = 'content_produk';
 }

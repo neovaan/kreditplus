@@ -14,8 +14,20 @@
                 <a href="{{URL('karir')}}">Karir</a>
             </div>
             <div class="right">
-               <!--  <a href="">Eng</a>
-                <a href="">Ind</a> -->
+              @foreach (Wl::getCodes() as $code)
+                            {{--@if ($code !== app()->getLocale())--}}
+                            @set(activeURL, Wa::menu()->getActive()->eloquent()->trans('permalink', $code))
+                            @if (isset($shareDetail) && $shareDetail instanceof \Illuminate\Database\Eloquent\Model && $shareDetail->count())
+                                @if (null !== Wa::menu()->getSegment('markup.key'))
+                                    @set(activeURL, $activeURL . '/' . Wa::menu()->getSegment('markup.key'))
+                                @endif
+                                @set(activeURL, $activeURL . '/' . $shareDetail->trans('permalink', $code))
+                            @else
+                            @endif
+                            <a href="{{ URL::trans($activeURL, [], null, $code) }}">{{strtoupper($code)}}
+                            </a>
+                            {{--@endif--}}
+                    @endforeach
             </div>
         </div>
         <div class="head-bottom">
@@ -31,7 +43,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <ul>
+                 <!--    <ul>
                         <li class="menures"><a>MENU</a></li->
                         <?php 
                             foreach(Wa::menu()->getNodes() as $m){
@@ -42,16 +54,17 @@
                                  } 
                              } 
                        ?>
-                    </ul>
+                    </ul> -->
+                     {!! Wa::menu()->generate(Wa::menu()->main()) !!}
                     <div class="bg-gradient"></div>
                     <div class="bg-overlay"></div>
                     <div class="box-search">
                         <span class="btn-search"></span>
                         <div class="drop-search">
-                            <form method="post">
-                                <input type="text" name="" placeholder="Search...">
-                                <button type="button" class="sub-search">
+                            <form method="get" onsubmit="search()" action="{{URL('q')}}">
+                                <input type="text" name="d" placeholder="Search...">
                             </form>
+                            <a class="sub-search"></a>
                         </div>
                     </div>
                 </div>
@@ -64,3 +77,5 @@
         </div>
     </div>
 </header>
+<script>
+</script>

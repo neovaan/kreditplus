@@ -1,11 +1,6 @@
 <?php
 
 ?>
-<div class="wrap-sm">
-	<h3 class="tblue">BERGABUNG DENGAN KREDITPLUS</h3>
-	<h3 class="tregular">Kreditplus membuka peluang bagi professional muda/lulusan baru untuk pengalaman belajar sekaligus bekerja yang mengasah dan membangun kapabilitas diri. Bergabunglah bersama kami.</h3>
-	<p>Mencari individu-individu berbakat dan berpotensi yang mampu mencerminkan tata nilai perusahaan untuk menjadi bagian dari tim yang mengakselerasi pencapaian visi. Kembangkanlah ide, kreativitas dan inovasi anda sebagai solusi dalam rangka peningkatan kualitas operasional sampai dengan pengembangan bisnis. Temukan berbagai pekerjaan dan tugas yang menantang dan berbagai pilihan tempat bekerja. Anda akan bekerja sama dengan rekan kerja dari berbagai latar belakang pendidikan, profesi dan budaya. Temukan pengalaman berharga dan rasakan bagaimana semua hal tersebut dapat mengembangkan kemampuan dan kompetensi anda.</p>
-	
 	<div class="box-acc">
 		@foreach($shareData as $data)
 
@@ -34,4 +29,3 @@
 		</div>
 		@endforeach
 	</div>
-</div>

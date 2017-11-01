@@ -6,6 +6,7 @@
  * Time: 4:02 PM
  */?>
 @extends('webarq::themes.front-end.layout.index')
+@section('content')
 <section class="banner">
     <div class="box-maps">
         <div id="map_location"></div>
@@ -24,7 +25,6 @@
         </div>
     </div>
 </section>
-@section('content')
 <section class="ctnwp">
 <div class="wrap-sm">
 @if ([] !== $shareSections)

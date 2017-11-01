@@ -9,7 +9,7 @@
 return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
-        ['master' => 'shortIntro', 'name' => 'visi', 'notnull' => true],
-        ['master' => 'description', 'name' => 'misi', 'notnull' => true],
-        ['master' => 'description', 'name' => 'nilai', 'notnull' => true]
+        ['master' => 'shortIntro', 'name' => 'visi', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'description', 'name' => 'misi', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'description', 'name' => 'nilai', 'notnull' => true, 'multilingual' => true]
        ];

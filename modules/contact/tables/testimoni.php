@@ -11,5 +11,5 @@ return [
         ['master' => 'title', 'name' => 'nama'],
         ['master' => 'title', 'name' => 'telp'],
         ['master' => 'title', 'name' => 'email'],
-        ['master' => 'description', 'name' => 'pesan']
+        ['master' => 'description', 'name' => 'pesan', 'multilingual' => true]
 ];

@@ -11,5 +11,5 @@ return [
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
         ['master' => 'title', 'name' => 'title_job'],
         ['master' => 'title', 'name' => 'penempatan'],
-        ['master' => 'description', 'name' => 'description', 'notnull']
+        ['master' => 'description', 'name' => 'description', 'multilingual' => true]
        ];

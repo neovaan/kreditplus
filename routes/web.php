@@ -11,4 +11,4 @@
 |
 */
 // Route::get('/', 'About@index');
-
+Route::get('q','SearchController@index');

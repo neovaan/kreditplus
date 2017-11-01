@@ -9,7 +9,7 @@
 return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
-        ['master' => 'title', 'name' => 'persyaratan', 'notnull' => true],
+        ['master' => 'title', 'name' => 'persyaratan', 'notnull' => true,'multilingual'=>true],
         ['master' => 'title', 'name' => 'wiraswasta', 'notnull' => true],
         ['master' => 'title', 'name' => 'karyawan', 'notnull' => true],
         ['master' => 'title', 'name' => 'profesional', 'notnull' => true]

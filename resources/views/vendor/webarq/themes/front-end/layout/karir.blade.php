@@ -28,6 +28,7 @@
 @section('content')
 <section class="ctnwp">
 <div class="wrap-sm">
+   
     @if ([] !== $shareSections)
         @foreach ($shareSections as $section)
           @if($section->getKey() != 'banner' &&  $section->getKey() != 'submenu')

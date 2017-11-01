@@ -20,7 +20,7 @@
 				<a href="" class="lbl {{ ($data->type == 'promo') ? 'lyellow' : 'lblue' }} lbl-sm">{{ ($data->type == 'promo') ? 'PROMO' : 'BERITA' }}</a>
 				<h4>{{$data->title}}</h4>
 				<p>{{$data->intro}}</p>
-				<a href="{{URL('informasi/read/'.$data->id)}}" class="link-blue">Lihat Selengkapnya</a>
+				<a href="{{URL('informasi/read/'.$data->title)}}" class="link-blue">Lihat Selengkapnya</a>
 			</div>
 		</div>
 		<?php $i++; ?>

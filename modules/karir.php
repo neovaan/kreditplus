@@ -13,9 +13,9 @@ return [
         'title' => 'Karir',
         'icon' => 'fa-clone',
         'tables' => [
-                'karir'
+                'karir','content'
         ],
         'panels' => [
-                'karir'
+                'karir','content'
         ]
 ];
