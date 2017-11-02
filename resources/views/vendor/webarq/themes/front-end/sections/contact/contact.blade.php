@@ -53,6 +53,9 @@
 				url:'contact',
 				type:$(this).attr('method'),
 				data:$(this).serialize(),
+				beforeSend:function(){
+					loader();
+				},
 				dataType:'json',
 				success:function(data){
 					if(data.response == "ok"){

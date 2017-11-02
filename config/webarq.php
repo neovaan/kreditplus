@@ -20,7 +20,7 @@ return [
         ],
 
 // Active module
-        'modules' => ['system', 'section','home','tentang-kami','produk','kreditplus','informasi','contact','pengajuan','karir','kreditplus_karir'],
+        'modules' => ['system', 'section','home','tentang-kami','produk','kreditplus','informasi','contact','pengajuan','karir','kreditplus_karir','simulasi'],
 
 // System default configuration
         'system' => [

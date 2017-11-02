@@ -22,16 +22,16 @@
 	</section>
 	<section class="ctnwp">
 		<div class="wrap-sm">
+			<h3 class="tblue">SEARCH RESULT</h3>
 			@if($data->count())
 				@foreach($data as $item)
-			<h3 class="tblue"><?php echo $item->title ;?></h3>
-			<h3 class="tregular"><?php echo $item->intro;?></p>
-			<img src="<?php echo URL::asset($item->image) ;?>" alt="information">
-			<br>
-			<br>
-			<p><?php echo $item->description ;?></p>
-			<br/>
-			<br/>
+					<div class="listver">
+						<div class="lsv">
+							<h5><?php echo $item->title ;?></h5>
+							<p><?php echo $item->intro;?></p>
+							<a class="link-blue" style="margin-bottom:10px;" href="{{URL('informasi/read/'.$item->title)}}">Selengkapnya</a>
+						</div>
+					</div>
 				@endforeach
 			@endif
 		</div>

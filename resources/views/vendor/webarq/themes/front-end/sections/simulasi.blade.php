@@ -1,4 +1,4 @@
-<h3 class="tblue">SIMULASI KREDIT</h3>
+<h3 class="tblue">{{$shareData[0]->title}}</h3>
 <?php
 	$bulan = 12;
 	$tmp_bulan = array();
@@ -11,7 +11,7 @@
 	<div class="left">
 		<form>
 			<div class="row">
-				<label>Tenor</label>
+				<label>{{$shareData[0]->field1}}</label>
 				<select id="tenor">
 					@foreach($tmp_bulan as $b)
 						<option value="{{$b}}">{{$b}} bulan</option>
@@ -19,35 +19,35 @@
 				</select>
 			</div>
 			<div class="row">
-				<label>Harga</label>
+				<label>{{$shareData[0]->field2}}</label>
 				<input type="text" name="harga" class="i">
 			</div>
 			<div class="row">
-				<label>Uang Muka</label>
+				<label>{{$shareData[0]->field3}}</label>
 				<input type="text" id="dpx" class="i">
 			</div>
 			<div class="row">
-				<label>Bunga</label>
+				<label>{{$shareData[0]->field4}}</label>
 				<input type="email" class="i" name="bunga" placeholder="Min 2%">
 			</div>
 			<div class="row">
-				<label>Admin Fee</label>
+				<label>{{$shareData[0]->txt1}}</label>
 				<label class="block"><strong>Rp 100.000,-</strong></label>
 			</div>
 			<div class="row submit">
-				<input type="button" onclick="simulasi()" class="btn-box btn-lg" value="SIMULASI">
+				<input type="button" onclick="simulasi()" class="btn-box btn-lg" value="{{$shareData[0]->txtbtn}}">
 			</div>
 		</form>
 	</div>
 	<div class="right">
 		<div class="address-box a-center">
-			<h4 class="reg">Angsuran Perbulan</h4>
+			<h4 class="reg">{{$shareData[0]->angsuran1}}</h4>
 			<h3 id="angsuran">Rp 2.000.000,-</h3>
 			<br>
-			<h4 class="reg">Angsuran Awal</h4>
+			<h4 class="reg">{{$shareData[0]->angsuran2}}</h4>
 			<h3 id="dp_awal">Rp 20.000.000,-</h3>
 		</div>
-		<div class="notsim">*Simulasi ini hanya sebagai ilustrasi</div>
+		<div class="notsim">*{{$shareData[0]->txt2}}</div>
 	</div>
 </div>
 <script>

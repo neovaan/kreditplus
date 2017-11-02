@@ -27,7 +27,13 @@
 @section('content')
 <section class="ctnwp">
 <div class="wrap-sm">
-   @include('webarq::themes.front-end.sections.simulasi')
+    @if ([] !== $shareSections)
+        @foreach ($shareSections as $section)
+          @if($section->getKey() != 'banner' &&  $section->getKey() != 'submenu')
+            {!! $section->toHtml() !!}
+          @endif          
+        @endforeach
+     @endif
 </div>
 </section>
 @endsection

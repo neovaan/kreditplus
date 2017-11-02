@@ -65,6 +65,7 @@ return [
                 'kreditpluskarir'=> [
                         'name' => 'Kreditplus Karir'
                 ]
+               
 
         ]
         
@@ -80,6 +81,16 @@ return [
                         ],
                         'panel'=>'slide',
                         'limit' => 2
+                ],
+                'simulasi'=>[
+                    'name'=> 'Simulasi',
+                        'view'=> 'simulasi',
+                        'table' => [
+                                'name' => 'simulasi',
+                                'translate'=>['title','field1','field2','field3','field4','txt1','txtbtn','angsuran1','angsuran2','txt2']
+                        ],
+                        'panel'=>'simulasi',
+                        'limit' => 1
                 ],
                 'layanan'=>[
                         'name'=> 'Layanan',
@@ -118,8 +129,8 @@ return [
                         'view' => 'tentang-kami.content',
                         'table' => [
                                 'name' => 'content',
-                                'translate'=>['intro','description'],
-                                'select'=>['image1','image2','title']
+                                'translate'=>['intro','description','title'],
+                                'select'=>['image1','image2']
                         ],
                         'panel' => 'content',
                         'limit' => 1    
