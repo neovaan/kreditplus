@@ -209,6 +209,7 @@ return [
                                 'translate'=>['description','title','intro'],
                                 'select'=>['image','type']
                         ],
+                        'paginate'=>5,
                         'panel' => 'informasi',
                         'limit' => 10
                 ],

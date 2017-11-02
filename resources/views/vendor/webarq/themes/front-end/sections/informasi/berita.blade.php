@@ -25,4 +25,5 @@
 		</div>
 		<?php $i++; ?>
 	@endforeach
+	{!! $shareData->render('pagination') !!}
 </div>

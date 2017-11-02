@@ -22,12 +22,18 @@
 	</section>
 	<section class="ctnwp">
 		<div class="wrap-sm">
-			<h3 class="tblue"><?php echo $data[0]->title ;?></h3>
-			<h3 class="tregular"><?php echo $data[0]->intro;?></p>
-			<img src="<?php echo URL::asset($data[0]->image) ;?>" alt="information">
+			@if($data->count())
+				@foreach($data as $item)
+			<h3 class="tblue"><?php echo $item->title ;?></h3>
+			<h3 class="tregular"><?php echo $item->intro;?></p>
+			<img src="<?php echo URL::asset($item->image) ;?>" alt="information">
 			<br>
 			<br>
-			<p><?php echo $data[0]->description ;?></p>
+			<p><?php echo $item->description ;?></p>
+			<br/>
+			<br/>
+				@endforeach
+			@endif
 		</div>
 	</section>
 @endsection

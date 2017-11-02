@@ -16,7 +16,7 @@
             <div class="right">
               @foreach (Wl::getCodes() as $code)
                             {{--@if ($code !== app()->getLocale())--}}
-                            @set(activeURL, Wa::menu()->getActive()->eloquent()->trans('permalink', $code))
+                            @set(activeURL, Wa::menu()->getActive() ? Wa::menu()->getActive()->eloquent()->trans('permalink', $code) : '')
                             @if (isset($shareDetail) && $shareDetail instanceof \Illuminate\Database\Eloquent\Model && $shareDetail->count())
                                 @if (null !== Wa::menu()->getSegment('markup.key'))
                                     @set(activeURL, $activeURL . '/' . Wa::menu()->getSegment('markup.key'))

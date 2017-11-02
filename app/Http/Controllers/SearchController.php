@@ -7,10 +7,9 @@ use App\Webarq\Model\InformasiModel;
 use App\Http\Controllers\Site\BaseController;
 class SearchController extends BaseController
 {
-    function index(){
-    	$data = InformasiModel::where('description', 'like','%'.$_GET['d'].'%')->limit(1)->get();
-    	dd($data[0]->image);
+    function index(Request $r){
+    	$data = InformasiModel::where('description', 'like','%'.$r->input('d').'%')->get();
     	$view = "vendor.webarq.themes.front-end.layout.search";
-        return view($view, ['metaTitle'=>$_GET['d'],'data' => $data] );
+        return view($view, ['metaTitle'=>$r->input('d'),'data' => $data] );
     }
 }
