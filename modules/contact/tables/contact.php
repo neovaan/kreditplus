@@ -14,5 +14,9 @@ return [
         ['master' => 'longTitle', 'name' => 'alamat'],
         ['master' => 'title', 'name' => 'fax'],
         ['master' => 'title','name'=>'email'],
-        ['master' => 'title','name'=>'telp']
+        ['master' => 'title','name'=>'telp'],
+        ['master' => 'title','name'=>'field1','multilingual' => true],
+        ['master' => 'title','name'=>'field2','multilingual' => true],
+        ['master' => 'title','name'=>'field3','multilingual' => true],
+        ['master' => 'title','name'=>'field4','multilingual' => true],
 ];

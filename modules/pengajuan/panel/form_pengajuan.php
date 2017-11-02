@@ -11,7 +11,7 @@ return [
         'listing' => [
                 'headers' => [
                         'columns' => [
-                                'title'
+                                'field1'
                         ]
                 ]
         ],
@@ -20,7 +20,7 @@ return [
                         'form' => [
                                 'pengajuan.form_pengajuan.section_id' => [
                                         'type' => 'select template',
-                                        'title' => 'Field',
+                                        'title' => 'Menu',
                                         'section' => 'form_pengajuan'
                                 ],
                                 'pengajuan.form_pengajuan.field1',
@@ -32,14 +32,17 @@ return [
                                 'pengajuan.form_pengajuan.field7',
                                 'pengajuan.form_pengajuan.field8',
                                 'pengajuan.form_pengajuan.field9',
-                                'pengajuan.form_pengajuan.field10'
+                                'pengajuan.form_pengajuan.field10',
+                                'pengajuan.form_pengajuan.field11',
+                                'pengajuan.form_pengajuan.field12',
+                                'pengajuan.form_pengajuan.field13'
                         ]
                 ],
                 'edit' => [
                         'form' => [
-                                'pengajuan.form_pengajuan.section_id' => [
+                                 'pengajuan.form_pengajuan.section_id' => [
                                         'type' => 'select template',
-                                        'title' => 'Field',
+                                        'title' => 'Menu',
                                         'section' => 'form_pengajuan'
                                 ],
                                 'pengajuan.form_pengajuan.field1',
@@ -51,7 +54,10 @@ return [
                                 'pengajuan.form_pengajuan.field7',
                                 'pengajuan.form_pengajuan.field8',
                                 'pengajuan.form_pengajuan.field9',
-                                'pengajuan.form_pengajuan.field10'
+                                'pengajuan.form_pengajuan.field10',
+                                'pengajuan.form_pengajuan.field11',
+                                'pengajuan.form_pengajuan.field12',
+                                'pengajuan.form_pengajuan.field13'
                         ]
                 ],
                 'delete'

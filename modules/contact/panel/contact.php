@@ -29,7 +29,12 @@ return [
                                 'contact.contact.email',
                                 'contact.contact.alamat' => ['type'=>'textarea'],
                                 'contact.contact.title',
-                                'contact.contact.description' => [ 'type'=>'textarea','class'=>'ckeditor']
+                                'contact.contact.description' => [ 'type'=>'textarea','class'=>'ckeditor'],
+                                'contact.contact.field1',
+                                'contact.contact.field2',
+                                'contact.contact.field3',
+                                'contact.contact.field4',
+
                         ]
                 ],
                 'edit' => [
@@ -44,7 +49,11 @@ return [
                                 'contact.contact.email',
                                 'contact.contact.alamat' => ['type'=>'textarea'],
                                 'contact.contact.title',
-                                'contact.contact.description' => [ 'type'=>'textarea','class'=>'ckeditor']
+                                'contact.contact.description' => [ 'type'=>'textarea','class'=>'ckeditor'],
+                                'contact.contact.field1',
+                                'contact.contact.field2',
+                                'contact.contact.field3',
+                                'contact.contact.field4',
                         ]
                 ],
                 'delete'

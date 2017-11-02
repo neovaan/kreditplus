@@ -217,7 +217,7 @@ return [
                         'view' => 'contact.contact',
                         'table' => [
                                 'name' => 'contact',
-                                'translate'=>['description','title'],
+                                'translate'=>['description','title','field1','field2','field3','field4'],
                                 'select'=>['alamat','telp','email','fax']
                         ],
                         'panel' => 'contact',
@@ -277,7 +277,7 @@ return [
                         'view' => 'form_pengajuan',
                         'table' => [
                                 'name' => 'form_pengajuan',
-                                'translate'=>['filed1','filed2','filed3','filed4','filed5','filed6','filed7','filed8','filed9','filed10']
+                                'translate'=>['field1','field2','field3','field4','field5','field6','field7','field8','field9','field10','field11','field12','field13']
                         ],
                         'limit'=>1
                  ],

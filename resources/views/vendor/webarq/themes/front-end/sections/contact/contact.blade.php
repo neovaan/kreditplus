@@ -6,8 +6,8 @@
 		<form method="post" id="frm-c">
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 			<div class="row">
-				<label>Nama</label>
-				<input type="text" name="nama" placeholder="Nama anda">
+				<label>{{$shareData[0]->field1}}</label>
+				<input type="text" name="nama" placeholder="">
 			</div>
 			<!-- <div class="row">
 				<label>Subjek</label>
@@ -17,19 +17,19 @@
 				</select>
 			</div> -->
 			<div class="row">
-				<label>Nomor Telephone</label>
-				<input type="text" name="telp" placeholder="Nama anda">
+				<label>{{$shareData[0]->field2}}</label>
+				<input type="text" name="telp" placeholder="">
 			</div>
 			<div class="row">
-				<label>Email</label>
-				<input type="email" name="email" placeholder="Nama anda">
+				<label>{{$shareData[0]->field3}}</label>
+				<input type="email" name="email" placeholder="">
 			</div>
 			<div class="row">
-				<label>Pesan</label>
+				<label>{{$shareData[0]->field4}}</label>
 				<textarea name="pesan"></textarea>
 			</div>
 			<div class="row submit">
-				<input type="submit" class="btn-box btn-lg" value="KIRIM">
+				<input type="submit" class="btn-box btn-lg" value="SUBMIT">
 			</div>
 		</form>
 	</div>
