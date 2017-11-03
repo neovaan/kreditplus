@@ -68,6 +68,22 @@
             <div class="foot-top">
                 <div class="wrapper">
                     <div class="foot-menu">
+                        <?php $id=array();?>
+                        @foreach(Wa::menu()->getNodes() as $c)
+                            @if($c['permalink'] != "/" && $c['parent_id'] == "0")
+                                 <div class="list-foot-menu">
+                                    <h6>{{$c['title']}}</h6>
+                                    <ul>
+                                         @foreach(Wa::menu()->getNodes() as $m)
+                                            @if(in_array($m['parent_id'],(array($c['id']))) || $m['id'] == $c['id'])
+                                                <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                        @endforeach
+                        {{-- 
                         <div class="list-foot-menu">
                             <h6>Tentang kami</h6>
                             <ul>
@@ -91,8 +107,11 @@
                         <div class="list-foot-menu">
                             <h6>Information</h6>
                             <ul>
-                                <li><a href="{{URL('informasi')}}">Promo Material</a></li>
-                                <li><a href="{{URL('informasi')}}">Berita</a></li>
+                               @foreach(Wa::menu()->getNodes() as $m)
+                                    @if($m['id'] == "13" )
+                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
                         <div class="list-foot-menu">
@@ -103,8 +122,6 @@
                                         <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
-                                <!-- <li><a href="{{URL('karir')}}">Lowongan Kerja</a></li>
-                                <li><a href="{{URL('kreditplus-karir')}}">Mengapa Bekerja di Kreditplus?</a></li> -->
                             </ul>
                         </div>
                         <div class="list-foot-menu">
@@ -115,9 +132,6 @@
                                         <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
-                                <!-- <li><a href="{{URL('kreditplus-mobile')}}">Kreditplus Mobile</a></li>
-                                <li><a href="{{URL('kreditmu')}}">KreditMu</a></li>
-                                <li><a href="{{URL('simulasi')}}">Simulasi Kredit</a></li> -->
                             </ul>
                         </div>
                         <div class="list-foot-menu">
@@ -128,10 +142,9 @@
                                         <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
-                                <!-- <li><a href="{{URL('contact')}}">Form Kontak</a></li>
-                                <li><a href="{{URL('kantor-cabang')}}">Kantor Cabang</a></li> -->
                             </ul>
                         </div>
+                        --}}
                     </div>
                     <div class="foot-subs">
                         <div class="box-subscribe">

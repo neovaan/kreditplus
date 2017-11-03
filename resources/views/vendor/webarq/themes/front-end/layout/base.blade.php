@@ -7,6 +7,7 @@
  */ ?>
 
 @extends('webarq::themes.front-end.layout.index')
+@section('content')
 @if ([] !== $shareSections)
     @foreach ($shareSections as $section)
       @if($section->getKey() == 'slide')
@@ -14,7 +15,6 @@
       @endif          
     @endforeach
 @endif
-@section('content')
 @if ([] !== $shareSections)
     @foreach ($shareSections as $section)
       @if($section->getKey() != 'slide')

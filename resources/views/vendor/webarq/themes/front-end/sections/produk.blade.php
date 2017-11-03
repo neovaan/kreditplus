@@ -29,17 +29,22 @@
 		</div>
 	</div>
 </section>
-
+<?php $link = ""; ?>
+ @foreach(Wa::menu()->getNodes() as $m)
+    @if($m['id'] == "13" )
+        <?php $link =  $m['permalink'];?>
+    @endif
+@endforeach
 <section class="infohome">
 	<div class="trig-info"></div>
 	<div class="wrapper">
 		<div class="title-infohome a-from-left" delay=".3" trigger-anim=".trig-info">
 			<h3>INFORMASI</h3>
-			<a href="#">Lihat Semua</a>
+			<a href="{{URL($link)}}">Lihat Semua</a>
 		</div>
 		<div class="box-infohome">
 			<div class="lg-info a-from-left" delay=".5" trigger-anim=".trig-info">
-				<a href="information_promo_detail.php">
+				<a href="{{URL($link)}}">
 					<figure>
 						<img src="{{URL($info[0]['image'])}}" alt="{{$info[0]['type']}}">
 						<span class="lbl <?php echo ( ($info[0]['type'] == "berita") ? "lblue" : "lyellow") ;?>">{{$info[0]['type']}}</span>
@@ -60,7 +65,7 @@
 								continue;
 						?>
 						<div class="list-info-sm a-from-right" delay=".8" trigger-anim=".trig-info">
-							<a href="#">
+							<a href="{{URL($link.'/read/'.$q['title'])}}">
 								<figure>
 									<img src="{{URL($q['image'])}}" alt="{{$q['type']}}">
 									<span class="lbl <?php echo ( ($q['type'] == "berita") ? "lblue" : "lyellow") ;?>">{{$q['type']}}</span>

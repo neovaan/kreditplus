@@ -17,6 +17,7 @@ use App\Webarq\Model\AreaModel;
 use App\Webarq\Model\BrandModel;
 use App\Webarq\Model\PengajuanUserModel;
 use App\Http\Controllers\Site\BaseController;
+
 class PengajuanController extends BaseController
 {
     function actionAjaxPostSet(Request $req){
