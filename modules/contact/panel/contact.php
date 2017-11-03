@@ -30,10 +30,10 @@ return [
                                 'contact.contact.alamat' => ['type'=>'textarea'],
                                 'contact.contact.title',
                                 'contact.contact.description' => [ 'type'=>'textarea','class'=>'ckeditor'],
-                                'contact.contact.field1',
-                                'contact.contact.field2',
-                                'contact.contact.field3',
-                                'contact.contact.field4',
+                                'contact.contact.field2'=>['title'=>'Field Nama'],
+                                'contact.contact.field1'=>['title'=>'Field No Telephone'],
+                                'contact.contact.field3'=>['title'=>'Field Email'],
+                                'contact.contact.field4'=>['title'=>'Field Pesan']
 
                         ]
                 ],
@@ -50,10 +50,10 @@ return [
                                 'contact.contact.alamat' => ['type'=>'textarea'],
                                 'contact.contact.title',
                                 'contact.contact.description' => [ 'type'=>'textarea','class'=>'ckeditor'],
-                                'contact.contact.field1',
-                                'contact.contact.field2',
-                                'contact.contact.field3',
-                                'contact.contact.field4',
+                                'contact.contact.field2'=>['title'=>'Field Nama'],
+                                'contact.contact.field1'=>['title'=>'Field No Telephone'],
+                                'contact.contact.field3'=>['title'=>'Field Email'],
+                                'contact.contact.field4'=>['title'=>'Field Pesan']
                         ]
                 ],
                 'delete'

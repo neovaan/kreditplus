@@ -88,22 +88,6 @@ class BaseController extends Webarq
      */
     public function actionGetIndex()
     {
-        
-        $page = Wa::menu()->getActive()->eloquent()->getAttributes();
-        if($page['permalink'] == "/"){
-            $data = DB::select("SELECT * FROM informasi LIMIT 3");
-            $data = json_decode(json_encode($data),true);
-            $testimoni = DB::select("SELECT nama,pesan FROM testimoni LIMIT 3");
-            $testimoni = json_decode(json_encode($testimoni),true);
-            view()->share(['info'=>$data,'testimoni'=>$testimoni]);
-        }
-         if($page['permalink'] == "pengajuan"){
-            $data = DB::select("SELECT * FROM produk LIMIT 4");
-            $data = json_decode(json_encode($data),true);
-            $area = DB::select("SELECT * FROM area");
-            $area = json_decode(json_encode($area),true);
-            view()->share(['produk'=>$data,'area'=>$area]);
-        }
         $this->layout->{'shareSections'} = $this->listSectionManager();
     }
 

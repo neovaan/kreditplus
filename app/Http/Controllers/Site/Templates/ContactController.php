@@ -6,7 +6,7 @@
  * Time: 11:23 AM
  */
 
-namespace App\Http\Controllers\Site;
+namespace App\Http\Controllers\Site\Templates;
 
 
 use Illuminate\Http\Request;

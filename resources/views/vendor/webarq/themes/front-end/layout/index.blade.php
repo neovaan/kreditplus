@@ -64,27 +64,28 @@
             <i class="icwp ic_chat"></i> Online Chat
         </div>
     </div> -->
-<footer>
+<footer>  {{-- dd(Wa::menu()->main()) --}}
             <div class="foot-top">
                 <div class="wrapper">
                     <div class="foot-menu">
                         <div class="list-foot-menu">
                             <h6>Tentang kami</h6>
                             <ul>
-                                <li><a href="{{URL('about')}}">Profil Perusahaan</a></li>
-                                <li><a href="{{URL('visimisi')}}">Visi Misi & Nilai Perusahaan</a></li>
-                                <li><a href="{{URL('manajement')}}">Manajemen</a></li>
-                                <li><a href="{{URL('prestasi')}}">Prestasi Perusahaan</a></li>
-                                <li><a href="{{URL('gcg')}}">Good Corporate Governance</a></li>
+                                 @foreach(Wa::menu()->getNodes() as $m)
+                                    @if(in_array($m['parent_id'],(array('02')))  || $m['id'] == "02" )
+                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
                         <div class="list-foot-menu">
                             <h6>Produk</h6>
                             <ul>
-                                <li><a href="{{URL('produk')}}">Pembelian Elektronik</a></li>
-                                <li><a href="{{URL('produk-mobil')}}">Pembelian Mobil</a></li>
-                                <li><a href="{{URL('produk-motor')}}">Pembelian Motor</a></li>
-                                <li><a href="{{URL('pinjaman-usaha')}}">Pinjaman Modal Usaha</a></li>
+                                @foreach(Wa::menu()->getNodes() as $m)
+                                    @if(in_array($m['parent_id'],(array('07')))  || $m['id'] == "07" )
+                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </div>
                         <div class="list-foot-menu">
@@ -97,23 +98,38 @@
                         <div class="list-foot-menu">
                             <h6>Karir</h6>
                             <ul>
-                                <li><a href="{{URL('karir')}}">Lowongan Kerja</a></li>
-                                <li><a href="{{URL('kreditplus-karir')}}">Mengapa Bekerja di Kreditplus?</a></li>
+                                  @foreach(Wa::menu()->getNodes() as $m)
+                                    @if(in_array($m['parent_id'],(array('17'))) || $m['id'] == "17")
+                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                    @endif
+                                @endforeach
+                                <!-- <li><a href="{{URL('karir')}}">Lowongan Kerja</a></li>
+                                <li><a href="{{URL('kreditplus-karir')}}">Mengapa Bekerja di Kreditplus?</a></li> -->
                             </ul>
                         </div>
                         <div class="list-foot-menu">
                             <h6>Kreditplusku</h6>
                             <ul>
-                                <li><a href="{{URL('kreditplus-mobile')}}">Kreditplus Mobile</a></li>
+                                @foreach(Wa::menu()->getNodes() as $m)
+                                    @if(in_array($m['parent_id'],(array('11'))) )
+                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                    @endif
+                                @endforeach
+                                <!-- <li><a href="{{URL('kreditplus-mobile')}}">Kreditplus Mobile</a></li>
                                 <li><a href="{{URL('kreditmu')}}">KreditMu</a></li>
-                                <li><a href="{{URL('simulasi')}}">Simulasi Kredit</a></li>
+                                <li><a href="{{URL('simulasi')}}">Simulasi Kredit</a></li> -->
                             </ul>
                         </div>
                         <div class="list-foot-menu">
                             <h6>Hi! Kreditplus</h6>
                             <ul>
-                                <li><a href="{{URL('contact')}}">Form Kontak</a></li>
-                                <li><a href="{{URL('kantor-cabang')}}">Kantor Cabang</a></li>
+                                 @foreach(Wa::menu()->getNodes() as $m)
+                                    @if(in_array($m['parent_id'],(array('14')))  || $m['id'] == "14" )
+                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                    @endif
+                                @endforeach
+                                <!-- <li><a href="{{URL('contact')}}">Form Kontak</a></li>
+                                <li><a href="{{URL('kantor-cabang')}}">Kantor Cabang</a></li> -->
                             </ul>
                         </div>
                     </div>

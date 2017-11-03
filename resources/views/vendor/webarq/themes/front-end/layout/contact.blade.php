@@ -17,8 +17,13 @@
                 <div class="btn-submenu">Submenu</div>
                 <div class="drop-submenu">
                     <ul>
-                        <li class="active"><a href="{{URL('contact')}}">Contact Form</a></li>
-                        <li><a href="{{URL('kantor-cabang')}}">Kantor Cabang</a></li>
+                        @foreach(Wa::menu()->getNodes() as $m)
+                            @if(in_array($m['parent_id'],(array('14')))  || $m['id'] == "14" )
+                                <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                            @endif
+                        @endforeach
+                      <!--   <li class="active"><a href="{{URL('contact')}}">Contact Form</a></li>
+                        <li><a href="{{URL('kantor-cabang')}}">Kantor Cabang</a></li> -->
                     </ul>
                 </div>
             </div>

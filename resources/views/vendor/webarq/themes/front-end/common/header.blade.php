@@ -11,7 +11,11 @@
         <div class="head-top">
             <div class="left">
                 <a href="tel:02129333646"><i class="icwp ic_wa"></i> 021-2933 3646</a>
-                <a href="{{URL('karir')}}">Karir</a>
+                 @foreach(Wa::menu()->getNodes() as $m)
+                    @if($m['id'] == "17")
+                     <a href="{{URL($m['permalink'])}}">{{$m['title']}}</a>
+                    @endif
+                @endforeach
             </div>
             <div class="right">
               @foreach (Wl::getCodes() as $code)
@@ -69,9 +73,13 @@
                     </div>
                 </div>
                 <div class="request-head">
-                    <a href="{{URL('pengajuan')}}" class="btn-request">
-                        Ajukan Kredit
-                    </a>
+                    @foreach(Wa::menu()->getNodes() as $m)
+                        @if($m['id'] == "16")
+                         <a href="{{URL($m['permalink'])}}" class="btn-request">
+                            {{$m['title']}}
+                        </a>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
