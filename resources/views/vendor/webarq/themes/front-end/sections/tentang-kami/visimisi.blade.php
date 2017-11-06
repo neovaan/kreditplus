@@ -1,4 +1,4 @@
-<h3 class="tblue">VISI MISI & NILAI-NILAI PERUSAHAAN</h3>
+<h3 class="tblue">{{$shareData[0]->title}}</h3>
 <div class="box-vis">
 	<div class="left">
 		<div class="box-nilvis">

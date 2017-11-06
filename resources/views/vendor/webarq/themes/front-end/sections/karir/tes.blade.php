@@ -1,4 +1,5 @@
 <?php
+	echo $a;
 ?>
 <div class="wrap-sm">
 	@foreach($shareData as $data)

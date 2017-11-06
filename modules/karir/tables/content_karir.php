@@ -9,8 +9,9 @@
 return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
-        ['master' => 'title', 'name' => 'image1', 'notnull' => true],
-        ['master' => 'title', 'name' => 'image2', 'notnull' => true],
+        ['master' => 'title', 'name' => 'txt1', 'notnull' => true,'multilingual' => true],
+        ['master' => 'title', 'name' => 'txt2', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'title', 'name' => 'email', 'notnull' => true],
         ['master' => 'title', 'name' => 'title', 'notnull' => true, 'multilingual' => true],
         ['master' => 'shortIntro', 'name' => 'intro', 'notnull' => true, 'multilingual' => true],
         ['master' => 'description', 'name' => 'description', 'notnull' => true, 'multilingual' => true]

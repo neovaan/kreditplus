@@ -12,6 +12,7 @@ namespace App\Http\Controllers\Site;
 use Wa;
 use Webarq\Http\Controllers\Webarq;
 use Webarq\Manager\Site\MenuManager;
+use App\Webarq\Model\FooterModel;
 use DB;
 
 class BaseController extends Webarq
@@ -88,6 +89,8 @@ class BaseController extends Webarq
      */
     public function actionGetIndex()
     {
+        $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image')->get();
+        view()->share(['footer'=>$footer]);
         $this->layout->{'shareSections'} = $this->listSectionManager();
     }
 

@@ -141,7 +141,7 @@ return [
                         'view' => 'tentang-kami.visimisi',
                         'table' => [
                                 'name' => 'visimisi',
-                                'translate'=>['visi','misi','nilai']
+                                'translate'=>['visi','misi','nilai','title']
                         ],
                         'panel' => 'visi',
                         'limit' => 1    
@@ -217,7 +217,7 @@ return [
                         'view' => 'informasi.berita',
                         'table' => [
                                 'name' => 'informasi',
-                                'translate'=>['description','title','intro'],
+                                'translate'=>['description','title','intro','permalink'],
                                 'select'=>['image','type']
                         ],
                         'paginate'=>5,
@@ -259,8 +259,9 @@ return [
                         'name' => 'Karir Content',
                         'view' => 'produk.content',
                         'table' => [
-                                'name' => 'content',
-                                'translate'=>['title','intro','description']
+                                'name' => 'content_karir',
+                                'translate'=>['title','intro','description','txt1','txt2'],
+                                'select'=>['email']
                         ],
                         'limit'=>1,
                         'panel' => 'content-karir'
@@ -270,7 +271,7 @@ return [
                         'view' => 'karir.tes',
                         'table' => [
                                 'name' => 'kreditplus_karir',
-                                'translate'=>['title','intro','description']
+                                'translate'=>['title','intro','description','txt2','txt1']
                         ],
                         'limit'=>1,
                         'panel' => 'kreditplus_karir'
@@ -297,11 +298,12 @@ return [
                         'name' => 'Description Prestasi',
                         'view' => 'produk.content',
                         'table' => [
-                                'name' => 'content',
+                                'name' => 'desc_prestasi',
                                 'translate'=>['title','intro','description']
                         ],
                         'limit'=>1
-                 ]    
+                 ]
+                
                 // 'banner' => [
                 //         'name' => 'Banner',
                 //         'view' => 'banner',

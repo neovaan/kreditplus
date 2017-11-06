@@ -10,15 +10,18 @@ namespace App\Http\Controllers\Site\Templates;
 
 use App\Http\Controllers\Site\BaseController;
 use App\Webarq\Model\InformasiModel;
+use App\Webarq\Model\FooterModel;
 use Wa;
 use DB;
 class InformasiController extends BaseController
 {
     public function actionGetRead($id){
-        $data = InformasiModel::whereTitle($id)->get();
+
+        $data = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image')->whereTranslate('permalink',$id)->get();
         $list = InformasiModel::where('type','=',$data[0]->type)->where('id','!=',$data[0]->id)->limit(2)->get();
+        $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image')->get();
         $view = "vendor.webarq.themes.front-end.layout.detail_informasi";
-        return view($view, ['metaTitle'=>$id,'data' => $data, 'list'=>$list] );
+        return view($view, ['metaTitle'=>$id,'data' => $data, 'list'=>$list,'footer'=>$footer] );
     }
 
     // public function actionGetDetail($id){

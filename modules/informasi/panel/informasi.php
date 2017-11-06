@@ -27,7 +27,12 @@ return [
                                         'title' => 'Template',
                                         'section' => 'informasi'
                                 ],
-                                'informasi.informasi.title',
+                                'informasi.informasi.title' => [
+                                    'referrer' => '.permalink-informasi'
+                                ],
+                                'informasi.informasi.permalink' => [
+                                    'class' => 'permalink-informasi'
+                                ],
                                 'informasi.informasi.type'=>[
                                         'type' => 'select',
                                         'options'=> ['berita'=>'Berita','promo'=>'Promo']
@@ -55,7 +60,12 @@ return [
                                         'title' => 'Template',
                                         'section' => 'informasi'
                                 ],
-                                'informasi.informasi.title',
+                                'informasi.informasi.title' => [
+                                    'referrer' => '.permalink-informasi'
+                                ],
+                                'informasi.informasi.permalink' => [
+                                    'class' => 'permalink-informasi'
+                                ],
                                 'informasi.informasi.type'=>[
                                         'type' => 'select',
                                         'options'=> ['berita'=>'Berita','promo'=>'Promo']

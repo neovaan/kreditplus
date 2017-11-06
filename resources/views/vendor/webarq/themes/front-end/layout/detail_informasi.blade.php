@@ -1,4 +1,5 @@
 @extends('webarq::themes.front-end.layout.index')
+@section('content')
 <section class="banner">
   <figure>
     <img src="{{URL::asset('vendor/webarq/front-end/images/content/banner-simulasi.jpg')}}" alt="banner">
@@ -9,15 +10,19 @@
         <div class="btn-submenu">Submenu</div>
         <div class="drop-submenu">
           <ul>
-            <li class="active"><a href="{{URL('simulasi')}}">Simulasi</a></li>
-            <li><a href="{{URL('pengajuan')}}">Pengajuan Kredit</a></li>
+          	<?php $page = Wa::menu()->getActive()->eloquent()->getAttributes(); ?>
+          	@foreach(Wa::menu()->getNodes() as $d)
+          		@if($page['id'] == $d['id'])
+          			<li class="active"><a href="{{URL($d['permalink'])}}">{{$d['title']}}</a></li>
+          		@endif
+          	@endforeach
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-@section('content')
+
 <section class="ctnwp">
 	<div class="wrap-sm">
 		<h3 class="tblue"><?php echo $data[0]->title ;?></h3>
@@ -27,7 +32,7 @@
 		<br>
 		<p><?php echo $data[0]->description ;?></p>
 
-		<a href="{{URL('informasi')}}" class="link-blue">Back to List</a>
+		<a href="{{URL($page['permalink'])}}" class="link-blue">Back to List</a>
 		
 		<div class="related-news">
 			<h4>Berita Lainnya</h4>
@@ -39,7 +44,7 @@
 						<div class="desc-news">
 							<h4><?php echo $l->title;?></h4>
 							<p><?php echo $l->intro;?></p>
-							<a href="{{URL('informasi/read/'.$l->id)}}" class="link-blue">Lihat Selengkapnya</a>
+							<a href="{{URL($page['permalink'].'/read/'.$l->id)}}" class="link-blue">Lihat Selengkapnya</a>
 						</div>
 					</div>
 					<?php $var++;?>

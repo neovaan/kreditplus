@@ -24,6 +24,7 @@ return [
                                         'title' => 'Banner',
                                         'section' => 'visimisi'
                                 ],
+                                'tentang-kami.visimisi.title',
                                 'tentang-kami.visimisi.visi' => [
                                         'type' => 'textarea'
                                 ],
@@ -36,6 +37,7 @@ return [
                                         'class'=>'ckeditor'
                                 ]
                                 
+                                
                         ]
                 ],
                 'edit' => [
@@ -45,6 +47,7 @@ return [
                                         'title' => 'Banner',
                                         'section' => 'visimisi'
                                 ],
+                                'tentang-kami.visimisi.title',
                                 'tentang-kami.visimisi.visi' => [
                                         'type' => 'textarea'
                                 ],

@@ -19,26 +19,26 @@ return [
         'actions' => [
                 'create' => [
                         'form' => [
-                                'tentang-kami.content.section_id' => [
+                                'tentang-kami.desc_prestasi.section_id' => [
                                         'type' => 'select template',
                                         'title' => 'Banner',
                                         'section' => 'desc_prestasi'
                                 ],
-                                'tentang-kami.content.title',
-                                'tentang-kami.content.intro'=>['type'=>'textarea'],
-                                'tentang-kami.content.description'=>['type'=>'textarea','class'=>'ckeditor']
+                                'tentang-kami.desc_prestasi.title',
+                                'tentang-kami.desc_prestasi.intro'=>['type'=>'textarea'],
+                                'tentang-kami.desc_prestasi.description'=>['type'=>'textarea','class'=>'ckeditor']
                         ]
                 ],
                 'edit' => [
                         'form' => [
-                               'tentang-kami.content.section_id' => [
+                               'tentang-kami.desc_prestasi.section_id' => [
                                         'type' => 'select template',
                                         'title' => 'Banner',
                                         'section' => 'desc_prestasi'
                                 ],
-                                'tentang-kami.content.title',
-                                'tentang-kami.content.intro'=>['type'=>'textarea'],
-                                'tentang-kami.content.description'=>['type'=>'textarea','class'=>'ckeditor']
+                                'tentang-kami.desc_prestasi.title',
+                                'tentang-kami.desc_prestasi.intro'=>['type'=>'textarea'],
+                                'tentang-kami.desc_prestasi.description'=>['type'=>'textarea','class'=>'ckeditor']
                         ]
                 ],
                 'delete'

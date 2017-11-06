@@ -7,7 +7,7 @@
 		<div class="list-acc active">
 			<div class="btn-acc">
 				<h5>{{$data->title_job}}</h5>
-				<span>Penempatan : {{$data->penempatan}}</span>
+				<span>{{$karir[0]->txt1}} : {{$data->penempatan}}</span>
 				<div class="plusacc">
 					<span></span>
 					<span></span>
@@ -24,7 +24,7 @@
 				<?php echo $data->description; ?>
 				<br>
 				<br>
-				Apply dengan mengirimkan CV Anda ke : <a href="mailto:recruitment@finansia.com" class="link-black">recruitment@finansia.com</a>
+				{{$karir[0]->txt2}}:<a href="mailto:recruitment@finansia.com" class="link-black">{{$karir[0]->email}}</a>
 			</div>
 		</div>
 		@endforeach
