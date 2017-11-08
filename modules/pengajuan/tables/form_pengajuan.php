@@ -22,4 +22,5 @@ return [
         ['master' => 'title', 'name' => 'field11', 'notnull' => true, 'multilingual' => true],
         ['master' => 'title', 'name' => 'field12', 'notnull' => true, 'multilingual' => true],
         ['master' => 'title', 'name' => 'field13', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'title', 'name' => 'captcha', 'notnull' => true]
        ];

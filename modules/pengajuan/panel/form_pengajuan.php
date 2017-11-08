@@ -35,6 +35,7 @@ return [
                                 'pengajuan.form_pengajuan.field10'=>['title'=>'Text Ya'],
                                 'pengajuan.form_pengajuan.field11'=>['title'=>'Text Tidak'],
                                 'pengajuan.form_pengajuan.field12'=>['title'=>'Field Pesan'],
+                                'pengajuan.form_pengajuan.captcha'=>['title'=>'Captcha Site Key'],
                                 'pengajuan.form_pengajuan.field13'=>['title'=>'Text Button'],
                         ]
                 ],
@@ -57,6 +58,7 @@ return [
                                 'pengajuan.form_pengajuan.field10'=>['title'=>'Text Ya'],
                                 'pengajuan.form_pengajuan.field11'=>['title'=>'Text Tidak'],
                                 'pengajuan.form_pengajuan.field12'=>['title'=>'Field Pesan'],
+                                'pengajuan.form_pengajuan.captcha'=>['title'=>'Captcha Site Key'],
                                 'pengajuan.form_pengajuan.field13'=>['title'=>'Text Button'],
                         ]
                 ],

@@ -68,7 +68,7 @@
 					</div>
 					<div class="col col_5 subcap col_xsml">
 						<div class="left">
-							<div class="g-recaptcha" data-sitekey="6LeNHTYUAAAAAAy8SIrkraJo9wdZVpW_hnw5mljT"></div>
+							<div class="g-recaptcha" data-sitekey="{{$shareData[0]->captcha}}"></div>
 						</div>
 						<div class="right">
 							<input type="submit" class="btn-box btn-lg" value="{{$shareData[0]->field13}}">
