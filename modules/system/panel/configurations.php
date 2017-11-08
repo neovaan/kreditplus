@@ -83,7 +83,7 @@ return [
                                         'type'=>'text',
                                         'rules' => 'url',
                                 ],
-                                'tweter'=>[
+                                'twitter'=>[
                                         'type'=>'text',
                                         'rules' => 'url',
                                 ],
@@ -91,17 +91,17 @@ return [
                                         'type'=>'text',
                                         'rules' => 'url',
                                 ],
-                                'siteMetaTitle' => [
-                                        'type' => 'text',
-                                        'rules' => 'required|max:150',
-                                        'title' => 'Meta Title',
-                                        'notnull'=>false
-                                ],
-                                'siteMetaDescription' => [
-                                        'type' => 'textarea',
-                                        'title' => 'Meta Description',
-                                        'notnull'=>false
-                                ],
+                                // 'siteMetaTitle' => [
+                                //         'type' => 'text',
+                                //         'rules' => 'required|max:150',
+                                //         'title' => 'Meta Title',
+                                //         'notnull'=>false
+                                // ],
+                                // 'siteMetaDescription' => [
+                                //         'type' => 'textarea',
+                                //         'title' => 'Meta Description',
+                                //         'notnull'=>false
+                                // ],
                                 'siteCopyright' => [
                                         'type' => 'text',
                                         'length' => 100

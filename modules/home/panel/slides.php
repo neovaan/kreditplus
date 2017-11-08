@@ -46,7 +46,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 1920px width 990px height',
                                         'title'=>'Image Large'
                                 ],
                                 'home.slides.image_desktop' => [
@@ -56,7 +56,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 768px width 540px height',
                                         'title'=>'Image Medium'
                                 ],
                                 'home.slides.image_phone' => [
@@ -66,7 +66,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 480px width 480px height',
                                         'title'=>'Image Small'
                                 ]
                                 
@@ -102,7 +102,7 @@ return [
                                         ],
                                         'notnull'=>false,
                                         'ignored'=>true,
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 1920px width 990px height',
                                         'title'=>'Image Large'
                                 ],
                                 'home.slides.image_desktop' => [
@@ -112,7 +112,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 768px width 540px height',
                                         'title'=>'Image Medium',
                                         'notnull'=>false,
                                         'ignored'=>true
@@ -124,7 +124,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 480px width 480px height',
                                         'title'=>'Image Small',
                                         'notnull'=>false,
                                         'ignored'=>true,

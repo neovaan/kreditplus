@@ -32,7 +32,8 @@ return [
                 'admins',
                 'roles',
                 'menus',
-                'sections'
+                'sections',
+                'localization'
                 
         ],
 ];

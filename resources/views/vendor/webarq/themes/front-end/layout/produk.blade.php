@@ -42,6 +42,26 @@
           @endif          
         @endforeach
     @endif
+    @if($produk->count())
+        <div class="related-product">
+            <h4>{{Wa::trans('site.label_produklain')}}</h4>
+            <div class="prod-list-h">
+                <?php $i=0;?>
+                @foreach($produk as $q)
+                    <?php if($i == 3) break;?>
+                    <div class="list-prod">
+                        <a href="#">
+                            <figure><img src="{{URL::asset($q->image)}}" alt="product 1"></figure>
+                            <div class="desc-prod">
+                                <h4>{{$q->title}}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <?php $i++;?>
+                @endforeach
+            </div>
+        </div>
+    @endif
 </div>
 </section>
 @endsection

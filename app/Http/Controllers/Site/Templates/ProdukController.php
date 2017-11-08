@@ -9,7 +9,8 @@ use App\Webarq\Model\ProdukModel;
 class ProdukController extends BaseController
 {
     public function actionGetIndex(){
-    	//$produk = ProdukModel::select('')
+    	$produk = ProdukModel::select('image','title','intro')->get();
+    	view()->share(['produk'=>$produk]);
     	parent::actionGetIndex();
     }
 }

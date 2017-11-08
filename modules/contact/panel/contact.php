@@ -49,7 +49,8 @@ return [
                                                 'mimes' => ['jpg', 'jpeg', 'png'],
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slidess'
-                                        ]
+                                        ],
+                                        'info' => 'Image recommendation size: 60px width 60px height'
                                 ]
 
                         ]
@@ -88,6 +89,7 @@ return [
                                         ],
                                         'notnull'=>false,
                                         'ignored'=>true,
+                                        'info' => 'Image recommendation size: 60px width 60px height'
                                 ]
                         ]
                 ],

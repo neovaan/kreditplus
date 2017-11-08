@@ -37,7 +37,7 @@
         <div class="head-bottom">
             <div class="logo">
                 <a href="{{URL::trans('/')}}">
-                    <img src="{{URL::asset('vendor/webarq/front-end/images/material/logo.png')}}" alt="logo">
+                    <img src="{{URL(Wa::config('system.site.logo'))}}" alt="logo">
                 </a>
             </div>
             <div class="head-right">

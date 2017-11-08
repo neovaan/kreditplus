@@ -40,7 +40,8 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'title'=>'icon kantor cabang'
+                                        'title'=>'icon kantor cabang',
+                                        'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
 
                                 'home.layanan.txt4'=>['title'=>'text Simulasi Kredit'],
@@ -51,7 +52,8 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'title'=>'icon Simulasi Kredit'
+                                        'title'=>'icon Simulasi Kredit',
+                                        'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
 
                                  'home.layanan.txt5'=>['title'=>'text telepon hotline'],
@@ -62,7 +64,8 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'title'=>'icon telepon hotline'
+                                        'title'=>'icon telepon hotline',
+                                        'info'=>'Image recommendation size: 60px width 60px height'
                                        
                                 ],
 
@@ -75,7 +78,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 248px width 248px height'
                                 ],
                                 'home.layanan.image2' => [
                                         'file' => [
@@ -84,7 +87,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 212px width 166px height'
                                 ]
                                 
                         ]
@@ -114,6 +117,7 @@ return [
                                         'title'=>'icon kantor cabang',
                                         'notnull'=>false,
                                         'ignored'=>true,
+                                        'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
 
                                 'home.layanan.txt4'=>['title'=>'text Simulasi Kredit'],
@@ -127,6 +131,7 @@ return [
                                         'title'=>'icon Simulasi Kredit',
                                         'notnull'=>false,
                                         'ignored'=>true,
+                                        'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
 
                                  'home.layanan.txt5'=>['title'=>'text telepon hotline'],
@@ -140,6 +145,8 @@ return [
                                         'title'=>'icon telepon hotline',
                                         'notnull'=>false,
                                         'ignored'=>true,
+                                        'info'=>'Image recommendation size: 60px width 60px height'
+
                                        
                                 ],
                                 'home.layanan.intro' => [ 'type'=>'textarea'],
@@ -151,9 +158,10 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 248px width 248px height',
                                         'notnull'=>false,
                                         'ignored'=>true,
+
                                 ],
                                 'home.layanan.image2' => [
                                         'file' => [
@@ -162,7 +170,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 212px width 166px height',
                                         'notnull'=>false,
                                         'ignored'=>true,
                                 ]

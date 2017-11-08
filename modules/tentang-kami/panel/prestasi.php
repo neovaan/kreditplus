@@ -36,7 +36,9 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+
+                                        'title'=>'Image Popup',
+                                        'info' => 'Image recommendation size: 629px width 486px height'
                                 ]
                         ]
                 ],
@@ -59,7 +61,8 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Popup',
+                                        'info' =>'Image recommendation size: 629px width 486px height'
                                 ]
                         ]
                 ],

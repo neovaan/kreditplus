@@ -4,7 +4,7 @@
 		<h3 class="tblue">{{$page['title']}}</h3>
 	</div>
 	<div class="right">
-		<label>Tampilkan : </label>
+		<label>{{Wa::trans('site.label_tampilkan')}} : </label>
 		<select onchange="tampil(this.value)">
 			<option value="">Promo & Berita</option>
 			<option value="promo">Promo</option>
@@ -21,7 +21,7 @@
 				<a href="" class="lbl {{ ($data->type == 'promo') ? 'lyellow' : 'lblue' }} lbl-sm">{{ strtoupper($data->type)  }}</a>
 				<h4>{{$data->title}}</h4>
 				<p>{{$data->intro}}</p>
-				<a href="{{URL::trans($page['permalink'].'/read/'.$data->permalink)}}" class="link-blue">Lihat Selengkapnya</a>
+				<a href="{{URL::trans($page['permalink'].'/read/'.$data->permalink)}}" class="link-blue">{{Wa::trans('site.label_lihat_selengkapnya')}}</a>
 			</div>
 		</div>
 		<?php $i++; ?>

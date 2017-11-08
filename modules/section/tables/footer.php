@@ -10,5 +10,6 @@ return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'image', 'notnull' => true],
         ['master' => 'title', 'name' => 'txt1', 'notnull' => true,'multilingual' => true],
-        ['master' => 'title', 'name' => 'txt2', 'notnull' => true,'multilingual' => true]
+        ['master' => 'title', 'name' => 'txt2', 'notnull' => true,'multilingual' => true],
+        ['master' => 'title', 'name' => 'link', 'notnull' => true]
        ];

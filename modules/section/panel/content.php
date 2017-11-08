@@ -36,8 +36,7 @@ return [
                                                 'mimes' => ['jpg', 'jpeg', 'png'],
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
-                                        ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        ]
                                 ],
                                 'section.content.image2' => [
                                         'file' => [
@@ -45,8 +44,7 @@ return [
                                                 'mimes' => ['jpg', 'jpeg', 'png'],
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
-                                        ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        ]
                                 ]
                         ]
                 ],
@@ -70,7 +68,6 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
                                         'notnull'=>false,
                                         'ignored'=>true,
                                 ],
@@ -81,7 +78,6 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
                                         'notnull'=>false,
                                         'ignored'=>true,
                                 ]

@@ -19,7 +19,7 @@ class InformasiController extends BaseController
     public function actionGetRead($id){
         $data = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image','type')->whereTranslate('permalink',$id)->get();
         $list = InformasiModel::where('type','=',$data[0]->type)->where('id','==',$data[0]->id)->limit(2)->get();
-        $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image')->get();
+        $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
         $view = "vendor.webarq.themes.front-end.layout.detail_informasi";
         return view($view, ['metaTitle'=>$id,'data' => $data, 'list'=>$list,'footer'=>$footer,'metaDescription'=>$data[0]->description] );
     }

@@ -93,7 +93,7 @@
                         </div>
                         <div class="box-ojk">
                             <h6>{{$footer[0]->txt2}}</h6>
-                            <a href="">
+                            <a href="{{$footer[0]->link}}" target="_blank">
                                 <figure><img src="{{URL($footer[0]->image)}}"></figure>
                             </a>
                         </div>
@@ -104,22 +104,22 @@
             <div class="foot-bottom">
                 <div class="wrapper">
                     <div class="logo-foot">
-                        <a href=""><img src="{{URL('vendor/webarq/front-end/images/material/logo-footer.png')}}"></a>
+                        <a href=""><img src="{{URL(Wa::config('system.site.logo'))}}"></a>
                     </div>
                     <div class="copyright">{!! html_entity_decode(Wa::config('system.site.copyright')) !!}<a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
                     <div class="sosmed-foot">
                         <span>Follow Us</span>
                         @if(!empty(Wa::config('system.facebook')))
-                            <a href="{{Wa::config('system.facebook')}}"><i class="icwp ic_fb"></i></a>
+                            <a href="{{Wa::config('system.facebook')}}" target="_blank"><i class="icwp ic_fb"></i></a>
                         @endif
                         @if(!empty(Wa::config('system.instagram')))
-                            <a href=""><i class="icwp ic_ig"></i></a>   
+                            <a href="{{Wa::config('system.instagram')}}" target="_blank"><i class="icwp ic_ig"></i></a>   
                         @endif
                         @if(!empty(Wa::config('system.twitter')))
-                              <a href=""><i class="icwp ic_tw"></i></a>
+                              <a href="{{Wa::config('system.twitter')}}" target="_blank"><i class="icwp ic_tw"></i></a>
                         @endif
                         @if(!empty(Wa::config('system.linkedin')))
-                             <a href=""><i class="icwp ic_in"></i></a>
+                             <a href="{{Wa::config('system.linkedin')}}" target="_blank"><i class="icwp ic_in"></i></a>
                         @endif
                     </div>
                 </div>

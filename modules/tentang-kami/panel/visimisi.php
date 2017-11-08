@@ -40,6 +40,8 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title' => 'Icon Visi',
+                                        'info'=>'Image recommendation size: 54px width 54px height'
+
                                 ],
                                 'tentang-kami.visimisi.misi' => [
                                         'type' => 'textarea',
@@ -54,6 +56,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title' => 'Icon Misi',
+                                        'info'=>'Image recommendation size: 54px width 54px height'
                                 ],
                                 'tentang-kami.visimisi.nilai' => [
                                         'type' => 'textarea',
@@ -68,6 +71,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title' => 'Icon Nilai',
+                                        'info'=>'Image recommendation size: 54px width 54px height'
                                 ]
                                 
                                 
@@ -97,7 +101,8 @@ return [
                                         ],
                                         'title' => 'Icon Visi',
                                         'ignored'=>true,
-                                        'notnull'=>false
+                                        'notnull'=>false,
+                                        'info'=>'Image recommendation size: 54px width 54px height'
                                 ],
                                 'tentang-kami.visimisi.misi' => [
                                         'type' => 'textarea',
@@ -113,7 +118,8 @@ return [
                                         ],
                                         'title' => 'Icon Misi',
                                         'ignored'=>true,
-                                        'notnull'=>false
+                                        'notnull'=>false,
+                                        'info'=>'Image recommendation size: 54px width 54px height'
                                 ],
                                 'tentang-kami.visimisi.nilai' => [
                                         'type' => 'textarea',
@@ -129,7 +135,8 @@ return [
                                         ],
                                         'title' => 'Icon Nilai',
                                         'ignored'=>true,
-                                        'notnull'=>false
+                                        'notnull'=>false,
+                                        'info'=>'Image recommendation size: 54px width 54px height'
                                 ]
                         ]
                 ],

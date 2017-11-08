@@ -43,7 +43,8 @@ return [
                                                 'mimes' => ['jpg', 'jpeg', 'png'],
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
-                                        ]
+                                        ],
+                                        'info'=>'Image recommendation size: 116px width 45px height'
                                 ]
                         ]
                 ],
@@ -74,6 +75,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
+                                        'info'=>'Image recommendation size: 116px width 45px height',
                                         'notnull'=>false,
                                         'ignored'=>true,
                                 ]

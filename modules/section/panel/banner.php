@@ -35,7 +35,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Large',
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 1920px width 550px height',
                                 ],
                                 'section.banner.image_medium' => [
                                         'file' => [
@@ -45,7 +45,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Medium',
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 768px width 540px height',
                                 ],
                                 'section.banner.image_small' => [
                                         'file' => [
@@ -55,7 +55,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Small',
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 480px width 480px height',
                                 ]
                         ]
                 ],
@@ -76,7 +76,8 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Large',
+                                        'info' => 'Image recommendation size: 1920px width 550px height',
                                         'ignored'=>true,
                                         'notnull'=>false
                                 ],
@@ -88,7 +89,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Medium',
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 768px width 540px height',
                                 ],
                                 'section.banner.image_small' => [
                                         'file' => [
@@ -98,7 +99,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Small',
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 480px width 480px height',
                                 ]
                         ]
                 ],
