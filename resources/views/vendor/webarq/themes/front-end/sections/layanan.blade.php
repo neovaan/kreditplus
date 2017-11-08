@@ -30,8 +30,8 @@
 				</div>
 			</div>
 			<div class="right-service">
-				<div class="mcycle"><img src="{{URL::asset($shareData[0]->image1)}}" alt="motorcycle"></div>
-				<div class="scar"><img src="{{URL::asset($shareData[0]->image2)}}" alt="car"></div>
+				<div class="mcycle"><img src="{{URL($shareData[0]->image1)}}" alt="motorcycle"></div>
+				<div class="scar"><img src="{{URL($shareData[0]->image2)}}" alt="car"></div>
 				<div class="dots"></div>
 				<div class="inright-service">
 					<div class="servicekredit scbtm">

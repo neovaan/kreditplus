@@ -35,7 +35,7 @@
 	</div>
 	<div class="right">
 		<div class="address-box">
-			<i class="icwp ic_building" style="background-image:url({{URL::asset($shareData[0]->icon)}});"></i>
+			<i class="icwp ic_building" style="background-image:{{URL::asset($shareData[0]->icon)}}"></i>
 			<h4>{{$shareData[0]->nm_persh}}</h4>
 			<p>{{$shareData[0]->alamat}}</p>
 			<div class="laddress">

@@ -40,8 +40,8 @@
 								html+='<p>'+val.alamat+'</p>';
 								html+='<div class="laddress">';
 									html+='Telp. <a href="tel:02129333646">'+val.telp+'</a><br/>';
-									html+='Fax. <a href="tel:02129333648">'+val.fax+'</a><br/>';
-									html+='Email. <a href="mailto:'+v.email+'">'+val.email+'</a>';
+									html+='Telp. <a href="tel:02129333648">'+val.fax+'</a><br/>';
+									html+='Telp. <a href="mailto:'+v.email+'">'+val.email+'</a>';
 								html+='</div>';
 							html+='</div>';
 						html+="</div>";
