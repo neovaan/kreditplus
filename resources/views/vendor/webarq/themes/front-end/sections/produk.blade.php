@@ -85,7 +85,7 @@
 	</div>
 </section>
 @endif
-@if(@testimoni->count())
+@if(testimoni->count())
 <section class="testimonihome">
 	<div class="trig-testimoni"></div>
 	<div class="intestimonihome a-from-bottom" delay=".3" trigger-anim=".trig-testimoni" style="background-image: url('{{URL('vendor/webarq/front-end/images/content/bg-testimoni.jpg')}}');">
