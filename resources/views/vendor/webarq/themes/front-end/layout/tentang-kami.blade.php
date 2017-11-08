@@ -35,7 +35,7 @@
           @endif          
         @endforeach
     @endif
-    @include('webarq::themes.front-end.sections.footer_content')
+
 </div>
 </section>
 @endsection

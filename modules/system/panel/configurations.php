@@ -75,6 +75,9 @@ return [
                                                 'preview' => true
                                         ]
                                 ],
+                                'facebook'=>[
+                                        'type'=>'text'
+                                ],
                                 'siteMetaTitle' => [
                                         'type' => 'text',
                                         'rules' => 'required|max:150',

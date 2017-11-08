@@ -14,6 +14,7 @@ use Webarq\Http\Controllers\Webarq;
 use Webarq\Manager\Site\MenuManager;
 use App\Webarq\Model\FooterModel;
 use App\Webarq\Model\TestimoniUserModel;
+use App\Webarq\Model\SosmedModel;
 use DB;
 
 class BaseController extends Webarq
@@ -91,6 +92,7 @@ class BaseController extends Webarq
     public function actionGetIndex()
     {
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image')->get();
+        //$sosmed = SosmedModel::select('link','logo')->get();
         view()->share(['footer'=>$footer]);
         $this->layout->{'shareSections'} = $this->listSectionManager();
     }

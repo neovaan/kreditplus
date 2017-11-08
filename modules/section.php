@@ -14,6 +14,6 @@ return [
         // 'panels' => [
         //         'contact','banner','content','pengajuan','informasi','pengajuan_kredit','karir','kreditplus_karir','prestasi','visimisi','desc_prestasi','informasi_home'
         // ]
-        'tables' => ['banner','footer','content'],
-        'panels' => ['banner','footer','content']
+        'tables' => ['banner','footer','content','mini_banner'],
+        'panels' => ['banner','footer','content','mini_banner']
 ];

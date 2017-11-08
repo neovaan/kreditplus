@@ -12,7 +12,7 @@
 		<div class="box-nilvis">
 			<div class="icon-nilvis icwp ic_mision" style="background-image:url('{{URL::asset($data->img_misi)}}');"></div>
 			<div class="desc-nilvis">
-				<h3 class="tregular">{{$data->txt_visi}}</h3>
+				<h3 class="tregular">{{$data->txt_misi}}</h3>
 				<?php echo $data->misi;?>
 			</div>
 		</div>

@@ -92,6 +92,15 @@ return [
                         'panel'=>'simulasi',
                         'limit' => 1
                 ],
+                'sponsor'=>[
+                        'name'=> 'Sponsor',
+                        'view'=> 'sponsor',
+                        'table' => [
+                                'name' => 'sponsor',
+                                'select'=>['link','logo']
+                        ],
+                        'panel'=>'sponsor'
+                ],
                 'layanan'=>[
                         'name'=> 'Layanan',
                         'view'=> 'layanan',
@@ -122,6 +131,17 @@ return [
                         ],
                         'limit' => 1,
                         'panel' => 'banner'
+                ], 
+                'mini_banner' => [
+                        'name' => 'Mini Banner',
+                        'view' => 'footer_content',
+                        'table' => [
+                                'name' => 'mini_banner',
+                                'translate'=>['txt','txtbtn'],
+                                'select'=>['background','link']
+                        ],
+                        'limit' => 1,
+                        'panel' => 'mini_banner'
                 ], 
 
                 'content' => [
@@ -251,7 +271,11 @@ return [
                         'table' => [
                                 'name' => 'karir',
                                 'translate'=>['description'],
-                                'select'=>['title_job','penempatan']
+                                'select'=>['title_job','penempatan','id'],                                
+                                'orderby'=>[
+                                            'id'=>'asc'
+                                        ]
+
                         ],
                         'limit'=>10,
                         'panel' => 'karir'
@@ -282,8 +306,7 @@ return [
                         'view' => 'contact.cabang',
                         'table' => [
                                 'name' => 'cabang',
-                                'select'=>['kota','alamat','fax','email','telp']
-                        ],
+                                'select'=>['kota','alamat','fax','email','telp']                        ],
                         'limit'=>100,
                  ],
                  'form_pengajuan'=>[

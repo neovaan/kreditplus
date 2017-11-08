@@ -34,7 +34,7 @@
              {!! $section->toHtml() !!}
           @endif          
         @endforeach
-        @include('webarq::themes.front-end.sections.footer_content')
+       
     @endif
 </div>
 </section>

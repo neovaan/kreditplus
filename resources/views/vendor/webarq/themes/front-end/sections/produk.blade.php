@@ -85,13 +85,14 @@
 	</div>
 </section>
 @endif
-@if($testimoni->count())
+
 <section class="testimonihome">
 	<div class="trig-testimoni"></div>
 	<div class="intestimonihome a-from-bottom" delay=".3" trigger-anim=".trig-testimoni" style="background-image: url('{{URL('vendor/webarq/front-end/images/content/bg-testimoni.jpg')}}');">
 		<div class="wrapper">
 			<h3 class="a-from-bottom" delay=".8" trigger-anim=".trig-testimoni">Testimonial Nasabah Kami</h3>
 			<div class="box-list-testimoni">
+				@if($testimoni->count())
 				@foreach($testimoni as $testi)
 				<div class="list-testimoni">
 					<div class="inner-testimoni">
@@ -108,38 +109,7 @@
 					</div>
 				</div>
 				@endforeach
-			</div>
-		</div>
-	</div>
-</section>
-@endif
-<section class="sponsorhome">
-	<div class="trig-sponsor"></div>
-	<div class="wrapper">
-		<div class="box-list-sponsor">
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-elevania.png')}}" alt="elevania"></a>
-			</div>
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-home.png')}}" alt="home"></a>
-			</div>
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-jdid.png')}}" alt="jdid"></a>
-			</div>
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-target.png')}}" alt="target"></a>
-			</div>
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-elevania.png')}}')}}" alt="elevania"></a>
-			</div>
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-home.png')}}" alt="home"></a>
-			</div>
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-jdid.png')}}" alt="jdid"></a>
-			</div>
-			<div class="list-sponsor">
-				<a href=""><img src="{{URL('vendor/webarq/front-end/images/content/spons-target.png')}}" alt="target"></a>
+				@endif
 			</div>
 		</div>
 	</div>

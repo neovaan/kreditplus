@@ -30,12 +30,18 @@
 <div class="wrap-sm">
     @if ([] !== $shareSections)
         @foreach ($shareSections as $section)
-          @if($section->getKey() != 'banner' &&  $section->getKey() != 'submenu')
+          @if($section->getKey() != 'banner' &&  $section->getKey() != 'submenu' && $section->getKey() != 'mini_banner')
             {!! $section->toHtml() !!}
           @endif          
         @endforeach
     @endif
-    @include('webarq::themes.front-end.sections.footer_content')
+     @if ([] !== $shareSections)
+        @foreach ($shareSections as $section)
+          @if($section->getKey() == 'mini_banner')
+            {!! $section->toHtml() !!}
+          @endif          
+        @endforeach
+    @endif
 </div>
 </section>
 @endsection

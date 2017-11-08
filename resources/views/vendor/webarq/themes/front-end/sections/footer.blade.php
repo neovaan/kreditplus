@@ -100,6 +100,7 @@
                     </div>
                 </div>
             </div>
+            {{-- dd(Wa::config('system.site')) --}}
             <div class="foot-bottom">
                 <div class="wrapper">
                     <div class="logo-foot">
@@ -108,7 +109,7 @@
                     <div class="copyright">{!! html_entity_decode(Wa::config('system.site.copyright')) !!}<a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
                     <div class="sosmed-foot">
                         <span>Follow Us</span>
-                        <a href=""><i class="icwp ic_fb"></i></a>
+                        <a href="{{Wa::config('system.site.facebook')}}"><i class="icwp ic_fb"></i></a>
                         <a href=""><i class="icwp ic_ig"></i></a>
                         <a href=""><i class="icwp ic_tw"></i></a>
                         <a href=""><i class="icwp ic_in"></i></a>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Webarq\Model\InformasiModel;
 use App\Webarq\Model\FooterModel;
+use App\Webarq\Model\SosmedModel;
 use App\Http\Controllers\Site\BaseController;
 class SearchController extends BaseController
 {
