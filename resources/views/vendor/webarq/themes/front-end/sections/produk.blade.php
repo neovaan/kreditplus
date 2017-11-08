@@ -40,8 +40,8 @@
 	<div class="trig-info"></div>
 	<div class="wrapper">
 		<div class="title-infohome a-from-left" delay=".3" trigger-anim=".trig-info">
-			<h3>INFORMASI</h3>
-			<a href="{{URL::trans($link)}}">Lihat Semua</a>
+			<h3>{{Wa::trans('site.label_title_informasi')}}</h3>
+			<a href="{{URL::trans($link)}}">{{Wa::trans('site.label_lihat_semua')}}</a>
 		</div>
 		<div class="box-infohome">
 			<div class="lg-info a-from-left" delay=".5" trigger-anim=".trig-info">
@@ -74,7 +74,7 @@
 								<div class="desc-sm-info">
 									<h4>{{$q->title}}</h4>
 									<p>{{$q->intro}}</p>
-									<span class="link-blue">Lihat Selengkapnya</span>
+									<span class="link-blue">{{Wa::trans('site.label_lihat_selengkapnya')}}</span>
 								</div>
 							</a>
 						</div>

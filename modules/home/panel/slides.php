@@ -32,7 +32,7 @@ return [
                                 'home.slides.txtbtn'=>['title'=>'text button'],
                                 'home.slides.link'=>[
                                         'type' => 'select table',
-                                        'title' => 'Menu',
+                                        'title' => 'Link',
                                         'sources' => [
                                                'table' => 'menus',
                                                'column' => ['permalink', 'title']
@@ -86,7 +86,7 @@ return [
                                 'home.slides.txtbtn'=>['title'=>'text button'],
                                 'home.slides.link'=>[
                                         'type' => 'select table',
-                                        'title' => 'Menu',
+                                        'title' => 'Link',
                                         'sources' => [
                                                'table' => 'menus',
                                                'column' => ['permalink', 'title']

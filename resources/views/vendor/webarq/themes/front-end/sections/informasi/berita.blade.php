@@ -48,7 +48,7 @@
 								html+='<a href="'+url+"/"+vals.permalink+'" class="lbl '+cls[vals.type]+' lbl-sm">'+t.toUpperCase()+'</a>';
 								html+='<h4>'+vals.title+'</h4>';
 								html+='<p>'+vals.intro+'</p>';
-								html+="<a href='"+url+"/read/"+vals.permalink+"' class='link-blue'>Lihat Selengkapnya</a>";
+								html+="<a href='"+url+"/read/"+vals.permalink+"' class='link-blue'>{{Wa::trans('site.label_lihat_selengkapnya')}}</a>";
 							html+="</div>";
 						html+="</div>";
 					});

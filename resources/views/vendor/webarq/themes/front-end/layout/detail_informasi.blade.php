@@ -31,11 +31,13 @@
 		<br>
 		<br>
 		<p><?php echo $data[0]->description ;?></p>
-
-		<a href="{{URL($page['permalink'])}}" class="link-blue">Back to List</a>
+		
+			<a href="{{URL($page['permalink'])}}" class="link-blue">{{Wa::trans('site.label_kembali')}}</a>
 		
 		<div class="related-news">
-			<h4>Berita Lainnya</h4>
+			@if($list->count())
+			<h4>{{Wa::trans('site.label_berita_lainya')}}</h4>
+			@endif
 			<div class="news-list">
 				<?php $var = 1;?>
 				@foreach($list as $l)
@@ -44,7 +46,7 @@
 						<div class="desc-news">
 							<h4><?php echo $l->title;?></h4>
 							<p><?php echo $l->intro;?></p>
-							<a href="{{URL::trans($page['permalink'].'/read/'.$l->permalink)}}" class="link-blue">Lihat Selengkapnya</a>
+							<a href="{{URL::trans($page['permalink'].'/read/'.$l->permalink)}}" class="link-blue">{{Wa::trans('site.label_lihat_selengkapnya')}}</a>
 						</div>
 					</div>
 					<?php $var++;?>

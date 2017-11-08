@@ -11,7 +11,7 @@
                                     <ul>
                                          @foreach(Wa::menu()->getNodes() as $m)
                                             @if(in_array($m['parent_id'],(array($c['id']))) || $m['id'] == $c['id'])
-                                                <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                                <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                             @endif
                                         @endforeach
                                     </ul>
@@ -24,7 +24,7 @@
                             <ul>
                                  @foreach(Wa::menu()->getNodes() as $m)
                                     @if(in_array($m['parent_id'],(array('02')))  || $m['id'] == "02" )
-                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
                             </ul>
@@ -34,7 +34,7 @@
                             <ul>
                                 @foreach(Wa::menu()->getNodes() as $m)
                                     @if(in_array($m['parent_id'],(array('07')))  || $m['id'] == "07" )
-                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
                             </ul>
@@ -44,7 +44,7 @@
                             <ul>
                                @foreach(Wa::menu()->getNodes() as $m)
                                     @if($m['id'] == "13" )
-                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
                             </ul>
@@ -54,7 +54,7 @@
                             <ul>
                                   @foreach(Wa::menu()->getNodes() as $m)
                                     @if(in_array($m['parent_id'],(array('17'))) || $m['id'] == "17")
-                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
                             </ul>
@@ -64,7 +64,7 @@
                             <ul>
                                 @foreach(Wa::menu()->getNodes() as $m)
                                     @if(in_array($m['parent_id'],(array('11'))) )
-                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
                             </ul>
@@ -74,7 +74,7 @@
                             <ul>
                                  @foreach(Wa::menu()->getNodes() as $m)
                                     @if(in_array($m['parent_id'],(array('14')))  || $m['id'] == "14" )
-                                        <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a></li>
+                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                     @endif
                                 @endforeach
                             </ul>
@@ -94,7 +94,7 @@
                         <div class="box-ojk">
                             <h6>{{$footer[0]->txt2}}</h6>
                             <a href="{{$footer[0]->link}}" target="_blank">
-                                <figure><img src="{{URL($footer[0]->image)}}"></figure>
+                                <figure><img src="{{URL::asset($footer[0]->image)}}"></figure>
                             </a>
                         </div>
                     </div>
