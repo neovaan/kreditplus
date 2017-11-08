@@ -10,13 +10,13 @@
 				</div>
 				<div class="box-simservice">
 					<div class="list-simservice a-from-bottom" delay=".9" trigger-anim=".trig-service">
-						<a href="kantor_cabang.php">
+						<a href="{{URL::trans('/')}}">
 							<figure><img src="{{URL($shareData[0]->image3)}}" alt="kantor cabang"></figure>
 							<span>{{$shareData[0]->txt3}}</span>
 						</a>
 					</div>
 					<div class="list-simservice a-from-bottom" delay="1" trigger-anim=".trig-service">
-						<a href="simulasi.php">
+						<a href="{{URL::trans('simulasi')}}">
 							<figure><img src="{{URL($shareData[0]->image4)}}" alt="simulasi kredit"></figure>
 							<span>{{$shareData[0]->txt4}}</span>
 						</a>

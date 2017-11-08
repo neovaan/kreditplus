@@ -34,7 +34,7 @@ class InformasiController extends BaseController
         if($data->count()){
             echo json_encode(array('response'=>'ok','val'=>$data) );
         }else{
-            echo json_decode(array('response'=>'error'));
+            echo json_encode(array('response'=>'error'));
         }
         die;
     }
