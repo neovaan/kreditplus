@@ -50,4 +50,24 @@ class ContactController extends BaseController
       }
       die;
     }
+
+    public function actionPostXy(Request $req){
+      $data = $req->input('val');
+      if($data == "jabodetabek"){
+          $q = CabangModel::select('kota','alamat','fax','email','telp')->where('kota','like','%jakarta%')
+               ->orWhere('kota','like','%bogor%')
+               ->orWhere('kota','like','%depok%')
+               ->orWhere('kota','like','%tanggerang%')
+               ->orWhere('kota','like','%bekasi%')
+               ->get();
+      }else if($data == "indo"){
+          $q = CabangModel::select('kota','alamat','fax','email','telp')->get();
+      }
+      if($q->count()){
+        echo json_encode(array('response'=>'ok','val'=>$q));
+      }else{
+        echo json_encode(array('response'=>'error'));
+      }
+      die;
+    }
 }

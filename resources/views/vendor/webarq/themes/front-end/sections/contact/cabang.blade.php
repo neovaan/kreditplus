@@ -26,7 +26,8 @@
 <script type="text/javascript">	
 	function kota(v){
 		$.ajax({
-			url:'contact/xy/a',
+			// url:'contact/xy/a',
+			url:'{{URL::trans(Wa::menu()->getActive()->permalink."/xy/a")}}',
 			data:"val="+v+"&_token={{csrf_token()}}",
 			type:'POST',
 			dataType:'json',
