@@ -13,6 +13,7 @@ use Wa;
 use Webarq\Http\Controllers\Webarq;
 use Webarq\Manager\Site\MenuManager;
 use App\Webarq\Model\FooterModel;
+use App\Webarq\Model\TestimoniUserModel;
 use DB;
 
 class BaseController extends Webarq

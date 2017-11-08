@@ -12,3 +12,8 @@
 */
 // Route::get('/', 'About@index');
 Route::get('q','SearchController@index');
+Route::post('image',['as' => 'upload',function(){
+	dd($_FILES);
+	//return view('browseImage');
+
+}]);

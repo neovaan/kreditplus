@@ -36,7 +36,7 @@
         </div>
         <div class="head-bottom">
             <div class="logo">
-                <a href="index.php">
+                <a href="{{URL::trans('/')}}">
                     <img src="{{URL::asset('vendor/webarq/front-end/images/material/logo.png')}}" alt="logo">
                 </a>
             </div>

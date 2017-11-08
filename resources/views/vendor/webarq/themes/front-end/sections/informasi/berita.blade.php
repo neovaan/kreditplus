@@ -5,10 +5,10 @@
 	</div>
 	<div class="right">
 		<label>Tampilkan : </label>
-		<select>
-			<option>Promo & Berita</option>
-			<option>Promo</option>
-			<option>Berita</option>
+		<select onchange="tampil(this.value)">
+			<option value="">Promo & Berita</option>
+			<option value="promo">Promo</option>
+			<option value="berita">Berita</option>
 		</select>
 	</div>
 </div>
@@ -28,3 +28,35 @@
 	@endforeach
 	{!! $shareData->render('pagination') !!}
 </div>
+<script>
+	function tampil(v){
+		var cls = {'promo':'lyellow','berita':'lblue'};
+		$.ajax({
+			url:"{{$page['permalink']}}/xy/a",
+			data:"val="+v+"&_token=<?php echo csrf_token();?>",
+			type:"POST",
+			dataType:"json",
+			success:function(data){
+				if(data.response == "ok"){
+					var html="";
+					$.each(data.val, function(k,vals){
+						var t = vals.type;
+						var url = "{{URL::trans('informasi')}}";
+						html+="<div class='list-promo'>";
+							html+='<figure><img src="{{URL::asset("/")}}'+vals.image+'" alt="'+v+'"></figure>';
+							html+='<div class="desc-promo">';
+								html+='<a href="'+url+"/"+vals.permalink+'" class="lbl '+cls[vals.type]+' lbl-sm">'+t.toUpperCase()+'</a>';
+								html+='<h4>'+vals.title+'</h4>';
+								html+='<p>'+vals.intro+'</p>';
+								html+="<a href='"+url+"/read/"+vals.permalink+"' class='link-blue'>Lihat Selengkapnya</a>";
+							html+="</div>";
+						html+="</div>";
+					});
+					if(html != ""){
+						$(".promo-list").html(html);
+					}
+				}
+			}
+		});
+	}
+</script>

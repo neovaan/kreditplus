@@ -4,10 +4,10 @@
 	</div>
 	<div class="right">
 		<label>Tampilkan : </label>
-		<select>
-			<option>Promo & Berita</option>
-			<option>Promo</option>
-			<option>Berita</option>
+		<select onchange="tampil(this.value)">
+			<option value="">Promo & Berita</option>
+			<option value="promo">Promo</option>
+			<option value="berita">Berita</option>
 		</select>
 	</div>
 </div>
@@ -26,3 +26,16 @@
 		<?php $i++; ?>
 	@endforeach
 </div>
+<script>
+	function tampil(v){
+		$.ajax({
+			url:"{{URL('Informasi/tampil/type')}}",
+			data:"val="+v,
+			type:"POST",
+			dataType:"json",
+			success:function(data){
+
+			}
+		});
+	}
+</script>

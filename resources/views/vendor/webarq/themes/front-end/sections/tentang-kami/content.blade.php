@@ -10,23 +10,38 @@
 ?>
 @foreach ($shareData as $data)
    <h3 class="tblue"><?php echo $data->title;?></h3>
-      <h3 class="tregular"><?php echo str_replace('"','',$data->intro);?></h3>
-      <?php
-           $desc = explode("<p>",$data->description);
-           $i=0;
-           foreach($desc as $d){
-            if($i == 2){
-      ?>
-               	<div class="imgctn">
-            			<div class="left"><img src="{{URL::asset($data->image1)}}" alt="office 1"></div>
-            			<div class="right"><img src="{{URL::asset($data->image2)}}" alt="office 2"></div>
-            		</div>
-          <?php 
-            } 
-            echo "<p>".$d."</p>";
-            $i++;
+   @if($data->intro != "")
+     <h3 class="tregular"><?php echo str_replace('"','',$data->intro);?></h3>
+   @endif
+   @if($data->description != "")
+      @if($data->image1 != "" && $data->image2 == "")
+          <div class="a-center">
+            <img src="{{URL($data->image1)}}" alt="">
+          </div>
+          <?php echo $data->description;?>
+      @endif
+      @if($data->image1 != "" && $data->image2 != "")
+          <?php
+               $desc = explode("<p>",$data->description);
+               $i=0;
+               foreach($desc as $d){
+                if($i == 2){
           ?>
-    <?php } ?>
+                   	<div class="imgctn">
+                			<div class="left"><img src="{{URL::asset($data->image1)}}" alt="office 1"></div>
+                			<div class="right"><img src="{{URL::asset($data->image2)}}" alt="office 2"></div>
+                		</div>
+              <?php 
+                } 
+                echo "<p>".$d."</p>";
+                $i++;
+              ?>
+            <?php } ?>
+       @endif
+       @if($data->image1 == "" && $data->image2 == "")
+           <?php echo $data->description;?>
+       @endif
+     @endif
 @endforeach
 <script>
    $(function(){

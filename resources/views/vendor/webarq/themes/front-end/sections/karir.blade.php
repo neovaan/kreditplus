@@ -22,9 +22,6 @@
 					<li>Berdedikasi, memiliki integritas, loyalitas yang tinggi, cekatan, kreatif, self motivated, good on teamwork</li>
 				</ol> -->
 				<?php echo $data->description; ?>
-				<br>
-				<br>
-				{{$karir[0]->txt2}}:<a href="mailto:recruitment@finansia.com" class="link-black">{{$karir[0]->email}}</a>
 			</div>
 		</div>
 		@endforeach

@@ -23,7 +23,7 @@ return [
         ],
 // URL segment which is use to separate menu permalink with item permalink
         'markup-url' => [
-               'set','form','read'
+               'set','form','read','xy'
         ],
 // Non cms url
         'bypass-url' => [

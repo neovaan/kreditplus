@@ -78,11 +78,15 @@ return [
                                 ],
                                 'system.roles.is_active' => [
 // Mean current login admin must have activeness permission
-                                        'permissions' => 'activeness-x',
+                                        'permissions' => 'activeness',
 // Impermissible value, used when input permission not fulfilled
                                         'impermissible' => 0,
                                 ],
-                                'system.roles.is_system'
+                                'system.roles.is_system' => [
+                                          'permissions' => 'is_system',
+// Impermissible value, used when input permission not fulfilled
+                                          'impermissible' => 0,
+                                ]
                         ]
                 ],
                 'edit' => [
@@ -118,7 +122,11 @@ return [
 // Guarded value, use when input permission not fulfilled
                                         'guarded-value' => 0
                                 ],
-                                'system.roles.is_system'
+                               'system.roles.is_system' => [
+                                          'permissions' => 'is_system',
+// Impermissible value, used when input permission not fulfilled
+                                          'impermissible' => 0,
+                                ]
                         ]
                 ],
                 'delete' => [
@@ -126,6 +134,7 @@ return [
                                 ['admin.level' => ['<', 'item.role_level']]
                         ]
                 ],
+                'activeness',
                 'is_system',
                 'permission' => [
                         'permalink' => true,

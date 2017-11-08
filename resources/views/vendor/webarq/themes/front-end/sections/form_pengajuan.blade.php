@@ -79,6 +79,7 @@
 </form>	
 <script>
 	$(document).ready(function(){
+		//overlay();
 		var btn = $(".box-chooseproduct button").first().click();
 		$('#frm-a').on('submit', function(){
 			if(cekForm()){
@@ -109,6 +110,11 @@
 		$.post('pengajuan/set/a',{_token:"<?php echo csrf_token();?>",val:val}, function(data){
 			$('[name="brand"]').html(data);
 		});
+	}
+
+	function overlay(){
+		$('body').prepend('<div class="ovr"></div>');
+		$('.ovr').css({'width':$('body').width(),'height':$('body').height(),'z-index':6000,'position':'absolute','opacity':0.2,'background-color':'black'});
 	}
 
 	function cekForm(){

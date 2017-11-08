@@ -10,6 +10,10 @@ return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
         ['master' => 'title', 'name' => 'image', 'notnull' => true],
+        ['master' => 'title', 'name' => 'image_phone', 'notnull' => true],
+        ['master' => 'title', 'name' => 'image_desktop', 'notnull' => true],
         ['master' => 'title', 'name' => 'title', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'title', 'name' => 'link', 'notnull' => true],
+        ['master' => 'title', 'name' => 'txtbtn', 'notnull' => true, 'multilingual' => true],
         ['master' => 'description', 'name' => 'intro', 'notnull' => true, 'multilingual' => true]
        ];

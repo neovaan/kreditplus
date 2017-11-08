@@ -20,7 +20,7 @@ return [
         ],
 
 // Active module
-        'modules' => ['system', 'section','home','tentang-kami','produk','kreditplus','informasi','contact','pengajuan','karir','kreditplus_karir','simulasi'],
+        'modules' => ['system', 'section','home','tentang-kami','produk','informasi','contact','pengajuan','karir','simulasi'],
 
 // System default configuration
         'system' => [
@@ -46,10 +46,17 @@ return [
                 ],
                 'themes' => 'admin-lte',
                 'site' => [
+                        'meta' => [
+                                'author' => 'Daniel Simangunsong',
+                                'description' => 'Some description',
+                                'keyword' => 'Separate,with,comma',
+                                'title' => 'Some title'
+                        ],
                         'name' => 'WEBARQ',
                         'offline' => false,
                         'themes' => 'front-end',
-                        'auto-template' => true
+                        'auto-template' => true,
+                        'copyright'=>'tescopyright',
                 ],
                 'url-lang-section' => 1
         ],

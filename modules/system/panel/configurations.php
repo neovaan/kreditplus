@@ -22,21 +22,22 @@ return [
                                         'enctype' => 'multipart/form-data'
                                 ],
 // Cms block
-                                'cmsLogo' => [
-                                        'info' => 'Please use image in 145px X 54px dimension',
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['png', 'jpg', 'jpeg', 'gif'],
-                                                'max' => 200,
-                                                'resize' => [
-                                                        'width' => 145,
-                                                        'height' => 70
-                                                ],
-                                                'preview' => true
-                                        ]
-                                ],
+                                // 'cmsLogo' => [
+                                //         'info' => 'Please use image in 145px X 54px dimension',
+                                //         'file' => [
+                                //                 'type' => 'image',
+                                //                 'mimes' => ['png', 'jpg', 'jpeg', 'gif'],
+                                //                 'max' => 200,
+                                //                 'resize' => [
+                                //                         'width' => 145,
+                                //                         'height' => 70
+                                //                 ],
+                                //                 'preview' => true
+                                //         ]
+                                // ],
                                 'cmsTitle' => [
                                         'type' => 'text'
+
                                 ],
                                 'cmsShortTitle' => [
                                         'type' => 'text',
@@ -77,11 +78,13 @@ return [
                                 'siteMetaTitle' => [
                                         'type' => 'text',
                                         'rules' => 'required|max:150',
-                                        'title' => 'Meta Title'
+                                        'title' => 'Meta Title',
+                                        'notnull'=>false
                                 ],
                                 'siteMetaDescription' => [
                                         'type' => 'textarea',
-                                        'title' => 'Meta Description'
+                                        'title' => 'Meta Description',
+                                        'notnull'=>false
                                 ],
                                 'siteCopyright' => [
                                         'type' => 'text',

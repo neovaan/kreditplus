@@ -8,11 +8,11 @@
 
 return [
         ['master' => 'id'],
-        ['master' => 'title', 'name' => 'section_id'],
-        ['master' => 'title', 'name' => 'title','multilingual' => true],
-        ['master' => 'title', 'name' => 'img_left','notnull' => false],
-        ['master' => 'title', 'name' => 'img_right','notnull' => false],
-        ['master' => 'title', 'name' => 'img_information','notnull' => false],
-        ['master' => 'shortIntro', 'name' => 'intro'],
-        ['master' => 'description', 'name' => 'description', 'notnull'=>false]
+        ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
+        ['master' => 'title', 'name' => 'title', 'notnull' => true,'multilingual' => true],
+        ['master' => 'shortIntro', 'name' => 'intro', 'notnull' => false,'multilingual' => true],
+        ['master' => 'title', 'name' => 'flag', 'notnull' => false],
+        ['master' => 'description', 'name' => 'description','multilingual' => true],
+        ['master' => 'title', 'name' => 'image1','notnull' => false],
+        ['master' => 'title', 'name' => 'image2','notnull' => false]
        ];

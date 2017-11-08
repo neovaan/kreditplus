@@ -29,6 +29,15 @@ return [
                                         'section' => 'slides'
                                 ],
                                 'home.slides.title',
+                                'home.slides.txtbtn'=>['title'=>'text button'],
+                                'home.slides.link'=>[
+                                        'type' => 'select table',
+                                        'title' => 'Menu',
+                                        'sources' => [
+                                               'table' => 'menus',
+                                               'column' => ['permalink', 'title']
+                                        ]
+                                ],
                                 'home.slides.intro' => [ 'type'=>'textarea'],
                                 'home.slides.image' => [
                                         'file' => [
@@ -38,6 +47,27 @@ return [
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
                                         'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Large'
+                                ],
+                                'home.slides.image_desktop' => [
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/slides'
+                                        ],
+                                        'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Medium'
+                                ],
+                                'home.slides.image_phone' => [
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/slides'
+                                        ],
+                                        'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Small'
                                 ]
                                 
                         ]
@@ -52,7 +82,16 @@ return [
                                         'title' => 'Template',
                                         'section' => 'slides'
                                 ],
-                                'home.slides.title',
+                                'home.slides.title',      
+                                'home.slides.txtbtn'=>['title'=>'text button'],
+                                'home.slides.link'=>[
+                                        'type' => 'select table',
+                                        'title' => 'Menu',
+                                        'sources' => [
+                                               'table' => 'menus',
+                                               'column' => ['permalink', 'title']
+                                        ]
+                                ],
                                 'home.slides.intro' => [ 'type'=>'textarea'],
                                 'home.slides.image' => [
                                         'file' => [
@@ -61,7 +100,34 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slidess'
                                         ],
+                                        'notnull'=>false,
+                                        'ignored'=>true,
                                         'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Large'
+                                ],
+                                'home.slides.image_desktop' => [
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/slides'
+                                        ],
+                                        'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Medium',
+                                        'notnull'=>false,
+                                        'ignored'=>true
+                                ],
+                                'home.slides.image_phone' => [
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/slides'
+                                        ],
+                                        'info' => 'Image recommendation size: 1920px width',
+                                        'title'=>'Image Small',
+                                        'notnull'=>false,
+                                        'ignored'=>true,
                                 ]
                         ]
                 ],

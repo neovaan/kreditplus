@@ -13,9 +13,9 @@ return [
         'title' => 'Home',
         'icon' => 'fa-clone',
         'tables' => [
-                'slides','layanan','produk'
+                'slides','layanan','produk','testimoni_user'
         ],
         'panels' => [
-                'slides','layanan','produk'
+                'slides','layanan','produk','testimoni_user'
         ]
 ];

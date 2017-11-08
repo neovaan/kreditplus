@@ -76,8 +76,8 @@ return [
                         'view'=> 'slide',
                         'table' => [
                                 'name' => 'slides',
-                                'translate'=>['title','intro'],
-                                'select'=>['image']
+                                'translate'=>['title','intro','txtbtn'],
+                                'select'=>['image','image_phone','image_desktop','link']
                         ],
                         'panel'=>'slide',
                         'limit' => 2
@@ -97,8 +97,8 @@ return [
                         'view'=> 'layanan',
                         'table' => [
                                 'name' => 'layanan',
-                                'translate'=>['title','description','intro'],
-                                'select'=>['image1','image2']
+                                'translate'=>['title','description','intro','txt1','txt2','txt3','txt4','txt5'],
+                                'select'=>['image1','image2','image3','image4','image5']
                         ],
                         'panel'=>'layanan',
                         'limit' => 1
@@ -118,7 +118,7 @@ return [
                         'view' => 'tentang-kami.banner',
                         'table' => [
                                 'name' => 'banner',
-                                'select'=>['path']
+                                'select'=>['path','image_medium','image_small']
                         ],
                         'limit' => 1,
                         'panel' => 'banner'
@@ -141,7 +141,8 @@ return [
                         'view' => 'tentang-kami.visimisi',
                         'table' => [
                                 'name' => 'visimisi',
-                                'translate'=>['visi','misi','nilai','title']
+                                'translate'=>['visi','misi','nilai','title','txt_visi','txt_misi','txt_nilai'],
+                                'select'=>['img_visi','img_misi','img_nilai']
                         ],
                         'panel' => 'visi',
                         'limit' => 1    
@@ -230,7 +231,7 @@ return [
                         'table' => [
                                 'name' => 'contact',
                                 'translate'=>['description','title','field1','field2','field3','field4'],
-                                'select'=>['alamat','telp','email','fax']
+                                'select'=>['alamat','telp','email','fax','icon','nm_persh','lat','long','title_name','contact_name']
                         ],
                         'panel' => 'contact',
                         'limit' => 1
@@ -300,6 +301,15 @@ return [
                         'table' => [
                                 'name' => 'desc_prestasi',
                                 'translate'=>['title','intro','description']
+                        ],
+                        'limit'=>1
+                 ],
+                 'map_cabang'=>[
+                        'name' => 'Peta Cabang',
+                        'view' => 'contact.mapcabang',
+                        'table' => [
+                                'name' => 'map_cabang',
+                                'select'=>['lat','long','title_name','contact_name']
                         ],
                         'limit'=>1
                  ]

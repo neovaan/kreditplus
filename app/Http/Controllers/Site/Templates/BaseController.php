@@ -10,15 +10,14 @@ namespace App\Http\Controllers\Site\Templates;
 
 
 use App\Http\Controllers\Site\BaseController as Base;
-use Wa;
-use DB;
+use App\Webarq\Model\TestimoniUserModel;
+use App\Webarq\Model\InformasiModel;
+
 class BaseController extends Base
 {
    function actionGetIndex(){
-        $data = DB::select("SELECT * FROM informasi LIMIT 3");
-        $data = json_decode(json_encode($data),true);
-        $testimoni = DB::select("SELECT nama,pesan FROM testimoni LIMIT 3");
-        $testimoni = json_decode(json_encode($testimoni),true);
+        $data = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image','type')->limit(3)->get();
+        $testimoni = TestimoniUserModel::select('nama','pesan')->get();
         view()->share(['info'=>$data,'testimoni'=>$testimoni]);
         parent::actionGetIndex();
    }

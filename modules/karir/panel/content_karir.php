@@ -26,8 +26,6 @@ return [
                                 ],
                                 'karir.content_karir.title',
                                 'karir.content_karir.txt1'=>['title'=>'text penempatan'],
-                                'karir.content_karir.txt2'=>['title'=>'text apply'],
-                                'karir.content_karir.email',
                                 'karir.content_karir.intro'=>['type'=>'textarea'],
                                 'karir.content_karir.description'=>['type'=>'textarea','class'=>'ckeditor']
                         ]
@@ -41,8 +39,6 @@ return [
                                 ],
                                 'karir.content_karir.title',
                                 'karir.content_karir.txt1'=>['title'=>'text penempatan'],
-                                'karir.content_karir.txt2'=>['title'=>'text apply'],
-                                'karir.content_karir.email',
                                 'karir.content_karir.intro'=>['type'=>'textarea'],
                                 'karir.content_karir.description'=>['type'=>'textarea','class'=>'ckeditor']
                         ]

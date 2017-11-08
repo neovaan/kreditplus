@@ -9,5 +9,7 @@
 return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'section_id', 'notnull' => true],
-        ['master' => 'title', 'name' => 'path', 'notnull' => true]
+        ['master' => 'title', 'name' => 'path', 'notnull' => true],
+        ['master' => 'title', 'name' => 'image_medium', 'notnull' => true],
+        ['master' => 'title', 'name' => 'image_small', 'notnull' => true]
        ];

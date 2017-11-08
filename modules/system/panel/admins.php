@@ -13,7 +13,7 @@ return [
         'icon' => 'fa-user',
         'listing' => [
                 'headers' => [
-                        'columns' => ['username', 'email', 'is_system', 'is_active' => ['guarded' => true]]
+                        'columns' => ['username', 'email',  'is_active' => ['guarded' => true]]
                 ],
                 'where' => function ($query) {
                         if (Auth::user() && !Auth::user()->isDaemon()) {

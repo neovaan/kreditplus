@@ -12,102 +12,83 @@ return [
                 'headers' => [
                         'columns' => [
                                 ':sectionMenu',
-                                'title','intro'
+                                'title'
                         ]
                 ]
         ],
         'actions' => [
                 'create' => [
-                        'form' =>['attributes' => [
+                        'form' => [
+                                'attributes' => [
                                         'enctype' => 'multipart/form-data',
                                 ],
                                 'section.content.section_id' => [
                                         'type' => 'select template',
-                                        'title' => 'Content',
+                                        'title' => 'Menu',
                                         'section' => 'content'
                                 ],
                                 'section.content.title',
-                                'section.content.intro' => [
-                                        'type' => 'textarea'
-                                ],
-                                'section.content.description' => [
-                                        'type' => 'textarea',
-                                        'class'=> 'ckeditor'
-                                ],
-                                'section.content.img_left' => [
+                                'section.content.intro'=>['type'=>'textarea'],
+                                'section.content.description'=>['type'=>'textarea','class'=>'ckeditor'],
+                                'section.content.image1' => [
                                         'file' => [
                                                 'type' => 'image',
                                                 'mimes' => ['jpg', 'jpeg', 'png'],
                                                 'max' => 3072,
-                                                'upload-dir' => 'site/uploads/images'
+                                                'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'info' => 'Image recommendation size: 1920px width',
                                 ],
-                                'section.content.img_right' => [
+                                'section.content.image2' => [
                                         'file' => [
                                                 'type' => 'image',
                                                 'mimes' => ['jpg', 'jpeg', 'png'],
                                                 'max' => 3072,
-                                                'upload-dir' => 'site/uploads/images'
-                                        ],
-                                        'info' => 'Image recommendation size: 1920px width',
-                                ],
-                                'section.content.img_information' => [
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['jpg', 'jpeg', 'png'],
-                                                'max' => 3072,
-                                                'upload-dir' => 'site/uploads/images'
+                                                'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'info' => 'Image recommendation size: 1920px width',
                                 ]
                         ]
                 ],
                 'edit' => [
-                        'form' => 
-                                ['attributes' => [
+                        'form' => [
+                                 'attributes' => [
                                         'enctype' => 'multipart/form-data',
                                 ],
                                 'section.content.section_id' => [
                                         'type' => 'select template',
-                                        'title' => 'Content'
+                                        'title' => 'Menu',
+                                        'section' => 'content'
                                 ],
                                 'section.content.title',
-                                'section.content.intro' => [
-                                        'type' => 'textarea'
-                                ],
-                                'section.content.description' => [
-                                        'type' => 'textarea',
-                                        'class'=> 'ckeditor'
-                                ],
-                                'section.content.img_left' => [
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['jpg', 'jpeg', 'png'],
-                                                'upload-dir' => 'site/uploads/images'
-                                        ],
-                                        'info' => 'Image recommendation size: 1920px width',
-                                ],
-                                'section.content.img_right' => [
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['jpg', 'jpeg', 'png'],
-                                                'upload-dir' => 'site/uploads/images'
-                                        ],
-                                        'info' => 'Image recommendation size: 1920px width',
-                                ],
-                                'section.content.img_information' => [
+                                'section.content.intro'=>['type'=>'textarea'],
+                                'section.content.description'=>['type'=>'textarea','class'=>'ckeditor'],
+                                'section.content.image1' => [
                                         'file' => [
                                                 'type' => 'image',
                                                 'mimes' => ['jpg', 'jpeg', 'png'],
                                                 'max' => 3072,
-                                                'upload-dir' => 'site/uploads/images'
+                                                'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'info' => 'Image recommendation size: 1920px width',
+                                        'notnull'=>false,
+                                        'ignored'=>true,
+                                ],
+                                'section.content.image2' => [
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/banners'
+                                        ],
+                                        'info' => 'Image recommendation size: 1920px width',
+                                        'notnull'=>false,
+                                        'ignored'=>true,
                                 ]
                         ]
                 ],
                 'delete'
 
+                
         ]
 ];

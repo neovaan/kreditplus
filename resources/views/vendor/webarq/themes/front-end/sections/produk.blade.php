@@ -35,23 +35,24 @@
         <?php $link =  $m['permalink'];?>
     @endif
 @endforeach
+@if($info->count())
 <section class="infohome">
 	<div class="trig-info"></div>
 	<div class="wrapper">
 		<div class="title-infohome a-from-left" delay=".3" trigger-anim=".trig-info">
 			<h3>INFORMASI</h3>
-			<a href="{{URL($link)}}">Lihat Semua</a>
+			<a href="{{URL::trans($link)}}">Lihat Semua</a>
 		</div>
 		<div class="box-infohome">
 			<div class="lg-info a-from-left" delay=".5" trigger-anim=".trig-info">
-				<a href="{{URL($link)}}">
+				<a href="{{URL::trans($link.'/read/'.$info[0]->permalink)}}">
 					<figure>
-						<img src="{{URL($info[0]['image'])}}" alt="{{$info[0]['type']}}">
-						<span class="lbl <?php echo ( ($info[0]['type'] == "berita") ? "lblue" : "lyellow") ;?>">{{$info[0]['type']}}</span>
+						<img src="{{URL($info[0]->image)}}" alt="{{$info[0]->type}}">
+						<span class="lbl <?php echo ( ($info[0]->type == "berita") ? "lblue" : "lyellow") ;?>">{{$info[0]->type}}</span>
 					</figure>
 					<div class="desc-lg-info">
-						<h4>{{$info[0]['title']}}</h4>
-						<p>{{$info[0]['intro']}}</p>
+						<h4>{{$info[0]->title}}</h4>
+						<p>{{$info[0]->intro}}</p>
 					</div>
 				</a>
 			</div>
@@ -65,14 +66,14 @@
 								continue;
 						?>
 						<div class="list-info-sm a-from-right" delay=".8" trigger-anim=".trig-info">
-							<a href="{{URL($link.'/read/'.$q['title'])}}">
+							<a href="{{URL::trans($link.'/read/'.$q->permalink)}}">
 								<figure>
-									<img src="{{URL($q['image'])}}" alt="{{$q['type']}}">
-									<span class="lbl <?php echo ( ($q['type'] == "berita") ? "lblue" : "lyellow") ;?>">{{$q['type']}}</span>
+									<img src="{{URL($q->image)}}" alt="{{$q->type}}">
+									<span class="lbl <?php echo ( ($q->type == "berita") ? "lblue" : "lyellow") ;?>">{{$q->type}}</span>
 								</figure>
 								<div class="desc-sm-info">
-									<h4>{{$q['title']}}</h4>
-									<p>{{$q['intro']}}</p>
+									<h4>{{$q->title}}</h4>
+									<p>{{$q->intro}}</p>
 									<span class="link-blue">Lihat Selengkapnya</span>
 								</div>
 							</a>
@@ -83,7 +84,8 @@
 		</div>
 	</div>
 </section>
-
+@endif
+@if($testimoni->count())
 <section class="testimonihome">
 	<div class="trig-testimoni"></div>
 	<div class="intestimonihome a-from-bottom" delay=".3" trigger-anim=".trig-testimoni" style="background-image: url('{{URL('vendor/webarq/front-end/images/content/bg-testimoni.jpg')}}');">
@@ -110,6 +112,7 @@
 		</div>
 	</div>
 </section>
+@endif
 <section class="sponsorhome">
 	<div class="trig-sponsor"></div>
 	<div class="wrapper">

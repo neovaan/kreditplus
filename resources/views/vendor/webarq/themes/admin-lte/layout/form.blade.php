@@ -9,13 +9,23 @@
 
 @push('view-script')
 <script src="{{URL::asset('vendor/webarq/default/js/form.js')}}"></script>
-<script src="https://cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
+<script src="{{URL::asset('vendor/webarq/admin-lte/plugins/ckeditor/ckeditor.js')}}"></script>
 <script src="{{ URL::asset('vendor/webarq/default/js/ckeditor.js') }}"></script>
 
 <script>
     $(function () {
-        CKEDITOR.config.contentsCss = '{{ URL::asset('vendor/webarq/default/css/ckeditor.css') }}';
+        $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': '<?php echo csrf_token();?>'
+                }
+            });
+        CKEDITOR.setData({"_token":"fdf"});
+        CKEDITOR.config.contentsCss = "{{ URL::asset('vendor/webarq/default/css/ckeditor.css') }}";
+       // CKEDITOR.config.filebrowserBrowseUrl = '{{URL::to("image")}}';
+        CKEDITOR.config.filebrowserUploadUrl = "{{route('upload',['_token' => csrf_token() ])}}";
+        
     });
+   
 </script>
 @if ('create' === $strAction)
     <script>

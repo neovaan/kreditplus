@@ -44,7 +44,7 @@
 						<div class="desc-news">
 							<h4><?php echo $l->title;?></h4>
 							<p><?php echo $l->intro;?></p>
-							<a href="{{URL($page['permalink'].'/read/'.$l->id)}}" class="link-blue">Lihat Selengkapnya</a>
+							<a href="{{URL::trans($page['permalink'].'/read/'.$l->permalink)}}" class="link-blue">Lihat Selengkapnya</a>
 						</div>
 					</div>
 					<?php $var++;?>

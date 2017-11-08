@@ -13,8 +13,10 @@
     <title>@yield('meta-title', $metaTitle)</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="@yield('meta-description', $metaDescription )">
+    <meta name="author" content="{{ Wa::config('system.site.meta.author', 'Webarq') }}">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="images/x-icon" href="{{ URL::asset('favicon.ico') }}"/>
+    <link rel="shortcut icon" type="images/x-icon" href="{{ URL::asset(Wa::config('system.favicon')) }}"/>
     <!-- Bootstrap 3.3.6 -->
     <!-- Font Awesome -->
 

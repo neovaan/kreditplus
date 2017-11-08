@@ -415,19 +415,16 @@ section {
 }
 
 .icwp.ic_vision {
-  background-image: url("../images/material/ic_vision.png");
   width: 54px;
   height: 54px;
 }
 
 .icwp.ic_mision {
-  background-image: url("../images/material/ic_mision.png");
   width: 54px;
   height: 54px;
 }
 
 .icwp.ic_value {
-  background-image: url("../images/material/ic_value.png");
   width: 54px;
   height: 54px;
 }
@@ -439,7 +436,6 @@ section {
 }
 
 .icwp.ic_building {
-  background-image: url("../images/material/ic_building.png");
   width: 60px;
   height: 60px;
 }

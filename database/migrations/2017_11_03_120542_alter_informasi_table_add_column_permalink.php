@@ -15,12 +15,12 @@ class AlterInformasiTableAddColumnPermalink extends Migration
     {
         Schema::table('informasi', function(Blueprint $table)
         {
-            $table->string('permalink', 255)->unique()->after('title');
+            $table->string('permalink', 255)->after('title');
 
         });
          Schema::table('informasi_i18n', function(Blueprint $table)
         {
-            $table->string('permalink', 255)->unique()->after('title');
+            $table->string('permalink', 255)->after('title');
 
         });
     }

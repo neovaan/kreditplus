@@ -105,7 +105,7 @@
                     <div class="logo-foot">
                         <a href=""><img src="{{URL('vendor/webarq/front-end/images/material/logo-footer.png')}}"></a>
                     </div>
-                    <div class="copyright">Copyright © 2017 kreditplus . Site By <a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
+                    <div class="copyright">{!! html_entity_decode(Wa::config('system.site.copyright')) !!}<a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
                     <div class="sosmed-foot">
                         <span>Follow Us</span>
                         <a href=""><i class="icwp ic_fb"></i></a>
