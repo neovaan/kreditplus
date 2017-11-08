@@ -76,7 +76,20 @@ return [
                                         ]
                                 ],
                                 'facebook'=>[
-                                        'type'=>'text'
+                                        'type'=>'text',
+                                        'rules' => 'url',
+                                ],
+                                'instagram'=>[
+                                        'type'=>'text',
+                                        'rules' => 'url',
+                                ],
+                                'tweter'=>[
+                                        'type'=>'text',
+                                        'rules' => 'url',
+                                ],
+                                'linkedin'=>[
+                                        'type'=>'text',
+                                        'rules' => 'url',
                                 ],
                                 'siteMetaTitle' => [
                                         'type' => 'text',

@@ -109,10 +109,18 @@
                     <div class="copyright">{!! html_entity_decode(Wa::config('system.site.copyright')) !!}<a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
                     <div class="sosmed-foot">
                         <span>Follow Us</span>
-                        <a href="{{Wa::config('system.site.facebook')}}"><i class="icwp ic_fb"></i></a>
-                        <a href=""><i class="icwp ic_ig"></i></a>
-                        <a href=""><i class="icwp ic_tw"></i></a>
-                        <a href=""><i class="icwp ic_in"></i></a>
+                        @if(!empty(Wa::config('system.facebook')))
+                            <a href="{{Wa::config('system.facebook')}}"><i class="icwp ic_fb"></i></a>
+                        @endif
+                        @if(!empty(Wa::config('system.instagram')))
+                            <a href=""><i class="icwp ic_ig"></i></a>   
+                        @endif
+                        @if(!empty(Wa::config('system.twitter')))
+                              <a href=""><i class="icwp ic_tw"></i></a>
+                        @endif
+                        @if(!empty(Wa::config('system.linkedin')))
+                             <a href=""><i class="icwp ic_in"></i></a>
+                        @endif
                     </div>
                 </div>
             </div>
