@@ -31,6 +31,20 @@ class ContactController extends BaseController
       die;
     }
 
+    public function actionPostSet(Request $req){
+       $data = array(
+        'name' =>$req->input('nama'),
+    );
+      unset($_POST['_token']);
+      DB::table('testimoni')->insert($_POST);
+      Mail::send('test', $data, function ($message) use($req) {
+        $message->from('meggi@webarq.co.id', 'Kreditplus');
+        $message->to($req->input('email'))->subject('tes email');
+       });
+      echo json_encode(array('response'=>'ok'));
+      die;
+    }
+
     public function actionAjaxPostXy(Request $req){
       $data = $req->input('val');
       if($data == "jabodetabek"){
