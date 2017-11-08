@@ -26,7 +26,7 @@
 <script type="text/javascript">	
 	function kota(v){
 		$.ajax({
-			url:'contact/xy/a',
+			url:'contact/xy',
 			data:"val="+v+"&_token={{csrf_token()}}",
 			type:'POST',
 			dataType:'json',
