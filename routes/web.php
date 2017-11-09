@@ -18,6 +18,7 @@ Route::get('q','SearchController@index');
 // }]);
 Route::post('imagex', function(){
     	if(count($_FILES)){
+            echo $_SERVER['DOCUMENT_ROOT'].'public/ck/';
     		if(!is_dir($_SERVER['DOCUMENT_ROOT'].'public/ck/'))
     			mkdir($_SERVER['DOCUMENT_ROOT'].'public/ck/');
     		$d = date('YmdHis');
