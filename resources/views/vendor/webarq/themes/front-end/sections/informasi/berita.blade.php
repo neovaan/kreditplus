@@ -6,9 +6,12 @@
 	<div class="right">
 		<label>{{Wa::trans('site.label_tampilkan')}} : </label>
 		<select onchange="tampil(this.value)">
-			<option value="">Promo & Berita</option>
-			<option value="promo">Promo</option>
-			<option value="berita">Berita</option>
+			<option value="">All</option>
+			@if($type->count())
+				@foreach($type as $t)
+					<option value="{{$t->title}}">{{ucfirst($t->title)}}</option>
+				@endforeach
+			@endif
 		</select>
 	</div>
 </div>
