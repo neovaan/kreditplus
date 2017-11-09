@@ -10,12 +10,16 @@
  ?>
 <ul>
 	@if($page['parent_id'] == "0")
-	    <li class="active"><a href="{{URL::trans($page['permalink'])}}">{{$page['title']}}</a></li>
-		@foreach(Wa::menu()->getNodes() as $m)
+	   <?php $e = 0;?>
+	   @foreach(Wa::menu()->getNodes() as $m)
 			@if($m['parent_id'] == $pageid)
-				<li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
+				<?php $e++;?>
+				<li class="<?php echo $e == 1 ? 'active' : '';?>"><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
 			@endif
 		@endforeach
+		@if($e == 0)
+			<li class="active"><a href="{{URL::trans($page['permalink'])}}">{{$page['title']}}</a></li>
+		@endif
 	@else
 		<?php $parent = $page['parent_id'];?>
 		@foreach(Wa::menu()->getNodes() as $m)

@@ -21,7 +21,7 @@
 		<div class="list-promo">
 			<figure><img src="{{URL::asset($data->image)}}" alt="promo {{$i}}"></figure>
 			<div class="desc-promo">
-				<a href="" class="lbl {{ ($data->type == 'promo') ? 'lyellow' : 'lblue' }} lbl-sm">{{ strtoupper($data->type)  }}</a>
+				<a href="{{URL::trans($page['permalink'].'/read/'.$data->permalink)}}" class="lbl {{ ($data->type == 'promo') ? 'lyellow' : 'lblue' }} lbl-sm">{{ strtoupper($data->type)  }}</a>
 				<h4>{{$data->title}}</h4>
 				<p>{{$data->intro}}</p>
 				<a href="{{URL::trans($page['permalink'].'/read/'.$data->permalink)}}" class="link-blue">{{Wa::trans('site.label_lihat_selengkapnya')}}</a>
