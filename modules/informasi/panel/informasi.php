@@ -37,7 +37,7 @@ return [
                                         'type' => 'select table',
                                         'sources'=>[
                                             'table'=>'type',
-                                            'column' => ['id', 'title']
+                                            'column' => ['title', 'title']
                                         ]
                                 ],
                                 'informasi.informasi.intro' => [ 'type'=>'textarea'],
