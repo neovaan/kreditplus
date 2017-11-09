@@ -18,11 +18,11 @@ Route::get('q','SearchController@index');
 // }]);
 Route::post('imagex', function(){
     	if(count($_FILES)){
-            echo $_SERVER['DOCUMENT_ROOT'].'public/ck/';
-    		if(!is_dir($_SERVER['DOCUMENT_ROOT'].'public/ck/'))
-    			mkdir($_SERVER['DOCUMENT_ROOT'].'public/ck/');
+            echo URL::asset('/').'public/ck/';
+    		if(!is_dir(URL::asset('/').'public/ck/'))
+    			mkdir(URL::asset('/').'public/ck/');
     		$d = date('YmdHis');
-    		chmod($_SERVER['DOCUMENT_ROOT'].'public/ck/', 0777);
+    		chmod(URL::to('/').'public/ck/', 0777);
     		$basename = basename($_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
     		move_uploaded_file($_FILES['upload']['tmp_name'],$_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
     		$funcNum = $_GET['CKEditorFuncNum'] ;
