@@ -90,28 +90,28 @@
 <section class="testimonihome">
 	<div class="trig-testimoni"></div>
 	<div class="intestimonihome a-from-bottom" delay=".3" trigger-anim=".trig-testimoni" style="background-image: url('{{URL('vendor/webarq/front-end/images/content/bg-testimoni.jpg')}}');">
-		<div class="wrapper">
-			<h3 class="a-from-bottom" delay=".8" trigger-anim=".trig-testimoni">Testimonial Nasabah Kami</h3>
-			<div class="box-list-testimoni">
-				@if($testimoni->count())
-				@foreach($testimoni as $testi)
-				<div class="list-testimoni">
-					<div class="inner-testimoni">
-						<div class="img-testi">
-							<figure><img src="{{URL('vendor/webarq/front-end/images/material/user.png')}}" alt="testimoni"></figure>
-							<div class="ttl-testi">
-								<h6>{{$testi['nama']}}</h6>
-								<span>Karyawan swasta</span>
-							</div>
-						</div>
-						<div class="ctn-testi">
-							{{$testi['pesan']}}
-						</div>
+	<div class="wrapper">
+	<h3 class="a-from-bottom" delay=".8" trigger-anim=".trig-testimoni">{{Wa::trans('site.label_testimoni_nasabah')}}</h3>
+	<div class="box-list-testimoni">
+		@if($testimoni->count())
+		@foreach($testimoni as $testi)
+		<div class="list-testimoni">
+			<div class="inner-testimoni">
+				<div class="img-testi">
+					<figure><img src="{{URL('vendor/webarq/front-end/images/material/user.png')}}" alt="testimoni"></figure>
+					<div class="ttl-testi">
+						<h6>{{$testi['nama']}}</h6>
+						<span>Karyawan swasta</span>
 					</div>
 				</div>
-				@endforeach
-				@endif
+				<div class="ctn-testi">
+					{{$testi['pesan']}}
+				</div>
 			</div>
 		</div>
+		@endforeach
+		@endif
+	</div>
+	</div>
 	</div>
 </section>

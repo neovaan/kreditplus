@@ -186,7 +186,8 @@ return [
                         'table' => [
                                 'name' => 'prestasi',
                                 'translate'=>['title','intro'],
-                                'select'=>['image']
+                                'select'=>['image'],
+                                'sequence'=>'prestasi.id:desc'
                         ],
                         'panel' => 'prestasi',
                         'paginate' => 6,
@@ -307,7 +308,7 @@ return [
                         'table' => [
                                 'name' => 'cabang',
                                 'select'=>['kota','alamat','fax','email','telp']                        ],
-                        'limit'=>100,
+                        'limit'=>0,
                  ],
                  'form_pengajuan'=>[
                         'name' => 'Form Pengajuan',
