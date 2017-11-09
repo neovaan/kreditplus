@@ -19,12 +19,11 @@ Route::get('q','SearchController@index');
 Route::post('imagex', function(){
     	if(count($_FILES)){
             echo $_SERVER['DOCUMENT_ROOT'].'/kreditplus-be/public/ck/';
-    		if(!is_dir('/ck/'))
-    			mkdir('/ck/');
+    		// if(!is_dir('/ck/'))
+    		// 	mkdir('/ck/');
     		$d = date('YmdHis');
-    		chmod('/ck/', 0777);
     		$basename = basename($_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
-    		move_uploaded_file($_FILES['upload']['tmp_name'],"/ck/".md5($d)."_".$_FILES['upload']['name']);
+    		move_uploaded_file($_FILES['upload']['tmp_name'],"/home/dev/apps/kreditplus-be/public/ck/".md5($d)."_".$_FILES['upload']['name']);
     		$funcNum = $_GET['CKEditorFuncNum'] ;
     		$message = "";
     		$u = URL::asset('ck/'.md5($d).'_'.$_FILES['upload']['name']);
