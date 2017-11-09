@@ -23,7 +23,7 @@
 	@else
 		<?php $parent = $page['parent_id'];?>
 		@foreach(Wa::menu()->getNodes() as $m)
-			@if($m['parent_id'] == $parent || $m['id'] == $parent)
+			@if($m['parent_id'] == $parent)
 				<li class="<?php echo $pageid == $m['id'] ? 'active' : '';?>"><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
 			@endif
 		@endforeach

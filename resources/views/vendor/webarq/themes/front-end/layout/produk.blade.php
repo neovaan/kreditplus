@@ -50,8 +50,8 @@
                 @foreach($produk as $q)
                     <?php if($i == 3) break;?>
                     <div class="list-prod">
-                        <a href="#">
-                            <figure><img src="{{URL::asset($q->image)}}" alt="product 1"></figure>
+                        <a href="{{URL($q->link)}}">
+                            <figure><img src="{{URL::asset($q->image)}}" alt="{{$q->title}}"></figure>
                             <div class="desc-prod">
                                 <h4>{{$q->title}}</h4>
                             </div>
