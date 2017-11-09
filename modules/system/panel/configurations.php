@@ -62,7 +62,7 @@ return [
                                 ],
                                 'siteLogo' => [
                                         'title' => 'Logo',
-                                        'info' => 'Please use image in 131px X 52px dimension',
+                                        'info' => 'Please use image in 160px X 35px dimension',
                                         'file' => [
                                                 'type' => 'image',
                                                 'mimes' => ['png', 'ico'],
