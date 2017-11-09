@@ -18,8 +18,9 @@ Route::get('q','SearchController@index');
 // }]);
 Route::post('imagex', function(){
     	if(count($_FILES)){
+            print_r($_SERVER);die;
             echo URL::asset('/').'public/ck/';
-    		if(!is_dir(URL::asset('/').'public/ck/'))
+    		if(!is_dir($_SERVER['DOCUMENT_ROOT'].'public/ck/'))
     			mkdir(URL::asset('/').'public/ck/');
     		$d = date('YmdHis');
     		chmod(URL::to('/').'public/ck/', 0777);
