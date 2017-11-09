@@ -13,9 +13,9 @@ return [
         'title' => 'Produk',
         'icon' => 'fa-clone',
         'tables' => [
-                'content_produk','tabel_pengajuan'
+                'content_produk'
         ],
         'panels' => [
-                'content_produk','tabel_pengajuan'
+                'content_produk'
         ]
 ];
