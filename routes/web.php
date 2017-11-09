@@ -18,14 +18,12 @@ Route::get('q','SearchController@index');
 // }]);
 Route::post('imagex', function(){
     	if(count($_FILES)){
-            print_r($_SERVER);die;
-            echo URL::asset('/').'public/ck/';
-    		if(!is_dir($_SERVER['DOCUMENT_ROOT'].'public/ck/'))
-    			mkdir(URL::asset('/').'public/ck/');
+    		if(!is_dir($_SERVER['DOCUMENT_ROOT'].'/kreditplus-be/public/ck/'))
+    			mkdir($_SERVER['DOCUMENT_ROOT'].'/kreditplus-be/public/ck/');
     		$d = date('YmdHis');
-    		chmod(URL::to('/').'public/ck/', 0777);
+    		chmod($_SERVER['DOCUMENT_ROOT'].'/kreditplus-be/public/ck/', 0777);
     		$basename = basename($_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
-    		move_uploaded_file($_FILES['upload']['tmp_name'],$_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
+    		move_uploaded_file($_FILES['upload']['tmp_name'],$_SERVER['DOCUMENT_ROOT']."/kreditplus-be/public/ck/".md5($d)."_".$_FILES['upload']['name']);
     		$funcNum = $_GET['CKEditorFuncNum'] ;
     		$message = "";
     		$u = URL::asset('ck/'.md5($d).'_'.$_FILES['upload']['name']);
