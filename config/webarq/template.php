@@ -118,7 +118,8 @@ return [
                         'table' => [
                                 'name' => 'produk',
                                 'translate'=>['title','intro'],
-                                'select'=>['image']
+                                'select'=>['image'],
+                                'sequence'=>'produk.id:desc',
                         ],
                         'panel'=>'produk',
                         'limit'=>10

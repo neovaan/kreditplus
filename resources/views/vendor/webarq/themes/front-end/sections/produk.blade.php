@@ -8,7 +8,7 @@
 				<div class="box-list-product">
 					<?php $i=0;?>
 					@foreach($shareData as $data)
-						@if($i == 5)
+						@if($i == 4)
 							@break
 						@endif
 					<div class="list-product">
