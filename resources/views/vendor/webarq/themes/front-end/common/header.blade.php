@@ -5,15 +5,16 @@
  * Date: 1/17/2017
  * Time: 2:27 PM
  */ ?>
-<?php //print_r();die('fr');?>
 <header>
     <div class="wrapper">
         <div class="head-top">
             <div class="left">
-                <a href="tel:02129333646"><i class="icwp ic_wa"></i> 021-2933 3646</a>
-                 @foreach(Wa::menu()->getNodes() as $m)
+                <?php if(!empty(Wa::config('system.telepon'))){ ?>
+                    <a href="tel:{{Wa::config('system.telepon')}}"><i class="icwp ic_wa"></i>{{Wa::config('system.telepon')}}</a>
+               <?php } ?>
+                @foreach(Wa::menu()->getNodes() as $m)
                     @if($m['id'] == "17")
-                     <a href="{{URL($m['permalink'])}}">{{$m['title']}}</a>
+                        <a href="{{URL($m['permalink'])}}">{{$m['title']}}</a>
                     @endif
                 @endforeach
             </div>
@@ -47,18 +48,6 @@
                         <span></span>
                         <span></span>
                     </div>
-                 <!--    <ul>
-                        <li class="menures"><a>MENU</a></li->
-                        <?php 
-                            foreach(Wa::menu()->getNodes() as $m){
-                                if($m['position'][0] == "main"){
-                        ?>
-                            <li><a href="{{URL($m['permalink'])}}">{{$m['title']}}</a>
-                        <?php 
-                                 } 
-                             } 
-                       ?>
-                    </ul> -->
                      {!! Wa::menu()->generate(Wa::menu()->main()) !!}
                     <div class="bg-gradient"></div>
                     <div class="bg-overlay"></div>

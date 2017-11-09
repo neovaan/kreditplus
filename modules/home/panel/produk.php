@@ -61,7 +61,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slidess'
                                         ],
-                                        'info' => 'Image recommendation size: 1920px width',
+                                        'info' => 'Image recommendation size: 212px width 166px Height',
                                         'notnull'=>false,
                                         'ignored'=>true,
                                 ]

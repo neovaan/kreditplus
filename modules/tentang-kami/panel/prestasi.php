@@ -62,7 +62,9 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Popup',
-                                        'info' =>'Image recommendation size: 629px width 486px height'
+                                        'info' =>'Image recommendation size: 629px width 486px height',
+                                        'ignored'=>true,
+                                        'notnull'=>false
                                 ]
                         ]
                 ],

@@ -13,9 +13,9 @@ return [
         'title' => 'Pengajuan',
         'icon' => 'fa-clone',
         'tables' => [
-                'brand','area','pengajuan_user','form_pengajuan'
+                'brand','area','pengajuan_user'
         ],
         'panels' => [
-                'brand','area','pengajuan_user','form_pengajuan'
+                'brand','area','pengajuan_user'
         ]
 ];

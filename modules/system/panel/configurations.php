@@ -102,6 +102,7 @@ return [
                                 //         'title' => 'Meta Description',
                                 //         'notnull'=>false
                                 // ],
+                                'telepon'=>['type'=>'text'],
                                 'siteCopyright' => [
                                         'type' => 'text',
                                         'length' => 100

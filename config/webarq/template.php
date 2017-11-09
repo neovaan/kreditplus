@@ -122,7 +122,7 @@ return [
                                 'sequence'=>'produk.id:desc',
                         ],
                         'panel'=>'produk',
-                        'limit'=>10
+                        'limit'=>0
                 ],
                 'banner' => [
                         'name' => 'Banner',
@@ -180,18 +180,18 @@ return [
                 //         'panel' => 'management',
                 //         'limit' => 1  
                 // ],
-                // 'prestasi'=>[
-                //         'name' => 'prestasi',
-                //         'view' => 'tentang-kami.prestasi',
-                //         'table' => [
-                //                 'name' => 'prestasi',
-                //                 'translate'=>['title','intro'],
-                //                 'select'=>['image']
-                //         ],
-                //         'panel' => 'prestasi',
-                //         'paginate' => 2,
-                //         'limit'=>10 
-                // ],
+                'prestasi'=>[
+                        'name' => 'prestasi',
+                        'view' => 'tentang-kami.prestasi',
+                        'table' => [
+                                'name' => 'prestasi',
+                                'translate'=>['title','intro'],
+                                'select'=>['image']
+                        ],
+                        'panel' => 'prestasi',
+                        'paginate' => 6,
+                        'limit'=>0 
+                ],
                 // 'goodcorporategov'=>[
                 //         'name' => 'Good Corporate Gov',
                 //         'view' => 'tentang-kami.gcg',
@@ -213,17 +213,17 @@ return [
                         'panel' => 'content_produk',
                         'limit' => 1
                 ],
-                'tabel_pengajuan'=>[
-                        'name' => 'Tabel Pengajuan',
-                        'view' => 'produk.tabel_pengajuan',
-                        'table' => [
-                                'name' => 'tabel_pengajuan',
-                                'translate'=>['persyaratan'],
-                                'select'=>['wiraswasta','karyawan','profesional']
-                        ],
-                        'panel' => 'tabel_pengajuan',
-                        'limit' => 5
-                ],
+                // 'tabel_pengajuan'=>[
+                //         'name' => 'Tabel Pengajuan',
+                //         'view' => 'produk.tabel_pengajuan',
+                //         'table' => [
+                //                 'name' => 'tabel_pengajuan',
+                //                 'translate'=>['persyaratan'],
+                //                 'select'=>['wiraswasta','karyawan','profesional']
+                //         ],
+                //         'panel' => 'tabel_pengajuan',
+                //         'limit' => 5
+                // ],
                 'content_kreditplus'=>[
                         'name' => 'Content Kreditplus',
                         'view' => 'kreditplus.content',
