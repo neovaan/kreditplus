@@ -10,19 +10,19 @@
 				</div>
 				<div class="box-simservice">
 					<div class="list-simservice a-from-bottom" delay=".9" trigger-anim=".trig-service">
-						<a href="{{URL::trans('/')}}">
+						<a href="{{URL::trans($shareData[0]->link1)}}">
 							<figure><img src="{{URL($shareData[0]->image3)}}" alt="kantor cabang"></figure>
 							<span>{{$shareData[0]->txt3}}</span>
 						</a>
 					</div>
 					<div class="list-simservice a-from-bottom" delay="1" trigger-anim=".trig-service">
-						<a href="{{URL::trans('simulasi')}}">
+						<a href="{{URL::trans($shareData[0]->link2)}}">
 							<figure><img src="{{URL($shareData[0]->image4)}}" alt="simulasi kredit"></figure>
 							<span>{{$shareData[0]->txt4}}</span>
 						</a>
 					</div>
 					<div class="list-simservice a-from-bottom" delay="1.1" trigger-anim=".trig-service">
-						<a href="tel:02129333646">
+						<a href="tel:{{$shareData[0]->link3}}">
 							<figure><img src="{{URL($shareData[0]->image5)}}" alt="telepon hotline"></figure>
 							<span>{{$shareData[0]->txt5}}</span>
 						</a>

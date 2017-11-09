@@ -86,6 +86,7 @@
 </section>
 @endif
 
+
 <section class="testimonihome">
 	<div class="trig-testimoni"></div>
 	<div class="intestimonihome a-from-bottom" delay=".3" trigger-anim=".trig-testimoni" style="background-image: url('{{URL('vendor/webarq/front-end/images/content/bg-testimoni.jpg')}}');">
@@ -100,7 +101,7 @@
 							<figure><img src="{{URL('vendor/webarq/front-end/images/material/user.png')}}" alt="testimoni"></figure>
 							<div class="ttl-testi">
 								<h6>{{$testi['nama']}}</h6>
-								<!--<span>Karyawan swasta</span>-->
+								<span>Karyawan swasta</span>
 							</div>
 						</div>
 						<div class="ctn-testi">

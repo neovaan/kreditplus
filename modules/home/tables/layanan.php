@@ -21,5 +21,9 @@ return [
         ['master' => 'title', 'name' => 'txt4', 'notnull' => true, 'multilingual' => true],
         ['master' => 'title', 'name' => 'txt5', 'notnull' => true, 'multilingual' => true],
         ['master' => 'description', 'name' => 'intro', 'notnull' => true, 'multilingual' => true],
-        ['master' => 'description', 'name' => 'description', 'notnull' => true, 'multilingual' => true]
+        ['master' => 'description', 'name' => 'description', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'title', 'name' => 'link1', 'notnull' => true],
+        ['master' => 'title', 'name' => 'link2', 'notnull' => true],
+        ['master' => 'title', 'name' => 'link3', 'notnull' => true]
+
        ];

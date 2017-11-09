@@ -107,7 +107,7 @@ return [
                         'table' => [
                                 'name' => 'layanan',
                                 'translate'=>['title','description','intro','txt1','txt2','txt3','txt4','txt5'],
-                                'select'=>['image1','image2','image3','image4','image5']
+                                'select'=>['image1','image2','image3','image4','image5','link1','link2','link3']
                         ],
                         'panel'=>'layanan',
                         'limit' => 1

@@ -51,7 +51,7 @@ class PengajuanController extends BaseController
     }
 
     function actionGetIndex(){
-    	 	$data = ProdukModel::limit(4)->get();
+    	 	$data = ProdukModel::limit(4)->orderBy('id','desc')->get();
             $area = AreaModel::orderBy('id','desc')->get();
             view()->share(['produk'=>$data,'area'=>$area]);
     		parent::actionGetIndex();

@@ -43,6 +43,13 @@ return [
                                         'title'=>'icon kantor cabang',
                                         'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
+                                'home.layanan.link1'=>['rules'=>'url','title'=>'Link Kantor Cabang',
+                                    'type'=>'select table',
+                                        'sources'=>[
+                                            'table'=>'menus',
+                                            'column' => ['permalink', 'title']
+                                        ]
+                                ],
 
                                 'home.layanan.txt4'=>['title'=>'text Simulasi Kredit'],
                                  'home.layanan.image4' => [
@@ -55,7 +62,13 @@ return [
                                         'title'=>'icon Simulasi Kredit',
                                         'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
-
+                                 'home.layanan.link2'=>['title'=>'Link Simulasi',
+                                        'type'=>'select table',
+                                        'sources'=>[
+                                            'table'=>'menus',
+                                            'column' => ['permalink', 'title']
+                                        ]
+                                ],
                                  'home.layanan.txt5'=>['title'=>'text telepon hotline'],
                                  'home.layanan.image5' => [
                                         'file' => [
@@ -68,6 +81,7 @@ return [
                                         'info'=>'Image recommendation size: 60px width 60px height'
                                        
                                 ],
+                                'home.layanan.link3'=>['title'=>'telepon'],
 
                                 'home.layanan.intro' => [ 'type'=>'textarea'],
                                 'home.layanan.description' => [ 'type'=>'textarea','class'=>'ckeditor'],
@@ -119,7 +133,14 @@ return [
                                         'ignored'=>true,
                                         'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
-
+                                'home.layanan.link1'=>[
+                                        'title'=>'Link Kantor Cabang',
+                                        'type'=>'select table',
+                                        'sources'=>[
+                                            'table'=>'menus',
+                                            'column' => ['permalink', 'title']
+                                        ]
+                                ],
                                 'home.layanan.txt4'=>['title'=>'text Simulasi Kredit'],
                                  'home.layanan.image4' => [
                                         'file' => [
@@ -133,7 +154,14 @@ return [
                                         'ignored'=>true,
                                         'info'=>'Image recommendation size: 60px width 60px height'
                                 ],
-
+                                 'home.layanan.link2'=>['title'=>'Link Simulasi',
+                                    'type'=>'select table',
+                                        'sources'=>[
+                                            'table'=>'menus',
+                                            'column' => ['permalink', 'title']
+                                        ]
+                                 ],
+                                 
                                  'home.layanan.txt5'=>['title'=>'text telepon hotline'],
                                  'home.layanan.image5' => [
                                         'file' => [
@@ -149,6 +177,7 @@ return [
 
                                        
                                 ],
+                                'home.layanan.link3'=>['title'=>'telepon'],
                                 'home.layanan.intro' => [ 'type'=>'textarea'],
                                 'home.layanan.description' => [ 'type'=>'textarea','class'=>'ckeditor'],
                                 'home.layanan.image1' => [

@@ -14,6 +14,5 @@ class ImageController extends BaseController
 {
     public function actionGetIndex()
     {
-       dd('ed');
     }
 }
