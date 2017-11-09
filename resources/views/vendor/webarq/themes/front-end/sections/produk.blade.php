@@ -12,7 +12,7 @@
 							@break
 						@endif
 					<div class="list-product">
-						<a href="#">
+						<a href="{{URL::trans($data->link)}}">
 							<div class="in-product">
 								<figure><img src="{{URL($data->image)}}" alt="{{$data->title}}"></figure>
 								<div class="desc">

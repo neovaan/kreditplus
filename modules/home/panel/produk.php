@@ -30,6 +30,14 @@ return [
                                 ],
                                 'home.produk.title',
                                 'home.produk.intro' => [ 'type'=>'textarea'],
+                                'home.produk.link'=>[
+                                        'type' => 'select table',
+                                        'title' => 'Link',
+                                        'sources' => [
+                                               'table' => 'menus',
+                                               'column' => ['permalink', 'title']
+                                        ]
+                                ],
                                 'home.produk.image' => [
                                         'file' => [
                                                 'type' => 'image',
@@ -54,6 +62,14 @@ return [
                                 ],
                                 'home.produk.title',
                                 'home.produk.intro' => [ 'type'=>'textarea'],
+                                'home.produk.link'=>[
+                                        'type' => 'select table',
+                                        'title' => 'Link',
+                                        'sources' => [
+                                               'table' => 'menus',
+                                               'column' => ['permalink', 'title']
+                                        ]
+                                ],
                                 'home.produk.image' => [
                                         'file' => [
                                                 'type' => 'image',
