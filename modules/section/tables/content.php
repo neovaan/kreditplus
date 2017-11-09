@@ -12,7 +12,5 @@ return [
         ['master' => 'title', 'name' => 'title', 'notnull' => true,'multilingual' => true],
         ['master' => 'shortIntro', 'name' => 'intro', 'notnull' => false,'multilingual' => true],
         ['master' => 'title', 'name' => 'flag', 'notnull' => false],
-        ['master' => 'description', 'name' => 'description','multilingual' => true],
-        ['master' => 'title', 'name' => 'image1','notnull' => false],
-        ['master' => 'title', 'name' => 'image2','notnull' => false]
+        ['master' => 'description', 'name' => 'description','multilingual' => true]
        ];

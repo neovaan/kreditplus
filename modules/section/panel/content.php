@@ -29,23 +29,23 @@ return [
                                 ],
                                 'section.content.title',
                                 'section.content.intro'=>['type'=>'textarea'],
-                                'section.content.description'=>['type'=>'textarea','class'=>'ckeditor'],
-                                'section.content.image1' => [
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['jpg', 'jpeg', 'png'],
-                                                'max' => 3072,
-                                                'upload-dir' => 'site/uploads/banners'
-                                        ]
-                                ],
-                                'section.content.image2' => [
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['jpg', 'jpeg', 'png'],
-                                                'max' => 3072,
-                                                'upload-dir' => 'site/uploads/banners'
-                                        ]
-                                ]
+                                'section.content.description'=>['type'=>'textarea','class'=>'ckeditor']
+                                // 'section.content.image1' => [
+                                //         'file' => [
+                                //                 'type' => 'image',
+                                //                 'mimes' => ['jpg', 'jpeg', 'png'],
+                                //                 'max' => 3072,
+                                //                 'upload-dir' => 'site/uploads/banners'
+                                //         ]
+                                // ],
+                                // 'section.content.image2' => [
+                                //         'file' => [
+                                //                 'type' => 'image',
+                                //                 'mimes' => ['jpg', 'jpeg', 'png'],
+                                //                 'max' => 3072,
+                                //                 'upload-dir' => 'site/uploads/banners'
+                                //         ]
+                                // ]
                         ]
                 ],
                 'edit' => [
@@ -61,26 +61,26 @@ return [
                                 'section.content.title',
                                 'section.content.intro'=>['type'=>'textarea'],
                                 'section.content.description'=>['type'=>'textarea','class'=>'ckeditor'],
-                                'section.content.image1' => [
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['jpg', 'jpeg', 'png'],
-                                                'max' => 3072,
-                                                'upload-dir' => 'site/uploads/banners'
-                                        ],
-                                        'notnull'=>false,
-                                        'ignored'=>true,
-                                ],
-                                'section.content.image2' => [
-                                        'file' => [
-                                                'type' => 'image',
-                                                'mimes' => ['jpg', 'jpeg', 'png'],
-                                                'max' => 3072,
-                                                'upload-dir' => 'site/uploads/banners'
-                                        ],
-                                        'notnull'=>false,
-                                        'ignored'=>true,
-                                ]
+                                // 'section.content.image1' => [
+                                //         'file' => [
+                                //                 'type' => 'image',
+                                //                 'mimes' => ['jpg', 'jpeg', 'png'],
+                                //                 'max' => 3072,
+                                //                 'upload-dir' => 'site/uploads/banners'
+                                //         ],
+                                //         'notnull'=>false,
+                                //         'ignored'=>true,
+                                // ],
+                                // 'section.content.image2' => [
+                                //         'file' => [
+                                //                 'type' => 'image',
+                                //                 'mimes' => ['jpg', 'jpeg', 'png'],
+                                //                 'max' => 3072,
+                                //                 'upload-dir' => 'site/uploads/banners'
+                                //         ],
+                                //         'notnull'=>false,
+                                //         'ignored'=>true,
+                                // ]
                         ]
                 ],
                 'delete'
