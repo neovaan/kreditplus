@@ -17,7 +17,10 @@ return [
                 ]
         ],
         'actions' => [
-                'delete'
+                'delete',
+                'export'=>[
+                        'placement'=>'header'
+                ]
                 
         ]
 ];

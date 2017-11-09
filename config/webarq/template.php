@@ -120,7 +120,8 @@ return [
                                 'translate'=>['title','intro'],
                                 'select'=>['image']
                         ],
-                        'panel'=>'produk'
+                        'panel'=>'produk',
+                        'limit'=>10
                 ],
                 'banner' => [
                         'name' => 'Banner',
@@ -289,16 +290,16 @@ return [
                         'limit'=>1,
                         'panel' => 'content-karir'
                ],
-               'kreditplus_karir'=>[
-                        'name' => 'Kreditplus-Karir',
-                        'view' => 'karir.tes',
-                        'table' => [
-                                'name' => 'kreditplus_karir',
-                                'translate'=>['title','intro','description','txt2','txt1']
-                        ],
-                        'limit'=>1,
-                        'panel' => 'kreditplus_karir'
-               ],
+               // 'kreditplus_karir'=>[
+               //          'name' => 'Kreditplus-Karir',
+               //          'view' => 'karir.tes',
+               //          'table' => [
+               //                  'name' => 'kreditplus_karir',
+               //                  'translate'=>['title','intro','description','txt2','txt1']
+               //          ],
+               //          'limit'=>1,
+               //          'panel' => 'kreditplus_karir'
+               // ],
                 'cabang'=>[
                         'name' => 'Kantor Cabang',
                         'view' => 'contact.cabang',
