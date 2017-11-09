@@ -34,8 +34,11 @@ return [
                                     'class' => 'permalink-informasi'
                                 ],
                                 'informasi.informasi.type'=>[
-                                        'type' => 'select',
-                                        'options'=> ['berita'=>'Berita','promo'=>'Promo']
+                                        'type' => 'select table',
+                                        'sources'=>[
+                                            'table'=>'type',
+                                            'column' => ['id', 'title']
+                                        ]
                                 ],
                                 'informasi.informasi.intro' => [ 'type'=>'textarea'],
                                 'informasi.informasi.description' => [ 'type'=>'textarea','class'=>'ckeditor'],
@@ -67,8 +70,11 @@ return [
                                     'class' => 'permalink-informasi'
                                 ],
                                 'informasi.informasi.type'=>[
-                                        'type' => 'select',
-                                        'options'=> ['berita'=>'Berita','promo'=>'Promo']
+                                        'type' => 'select table',
+                                        'sources'=>[
+                                            'table'=>'type',
+                                            'column' => ['title','title']
+                                        ]
                                 ],
                                 'informasi.informasi.intro' => [ 'type'=>'textarea'],
                                 'informasi.informasi.description' => [ 'type'=>'textarea','class'=>'ckeditor'],

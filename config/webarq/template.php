@@ -167,40 +167,40 @@ return [
                         'panel' => 'visi',
                         'limit' => 1    
                 ],
-                'management'=>[
-                        'name' => 'management',
-                        'view' => 'tentang-kami.management',
-                        'table' => [
-                                'name' => 'management',
-                                'translate'=>['title','description'],
-                                'select'=>['image']
-                        ],
-                        'panel' => 'management',
-                        'limit' => 1  
-                ],
-                'prestasi'=>[
-                        'name' => 'prestasi',
-                        'view' => 'tentang-kami.prestasi',
-                        'table' => [
-                                'name' => 'prestasi',
-                                'translate'=>['title','intro'],
-                                'select'=>['image']
-                        ],
-                        'panel' => 'prestasi',
-                        'paginate' => 2,
-                        'limit'=>10 
-                ],
-                'goodcorporategov'=>[
-                        'name' => 'Good Corporate Gov',
-                        'view' => 'tentang-kami.gcg',
-                        'table' => [
-                                'name' => 'goodcorporategov',
-                                'translate'=>['title','intro','description'],
-                                'select'=>['image']
-                        ],
-                        'panel' => 'goodcorporategov',
-                        'limit' => 1 
-                ],
+                // 'management'=>[
+                //         'name' => 'management',
+                //         'view' => 'tentang-kami.management',
+                //         'table' => [
+                //                 'name' => 'management',
+                //                 'translate'=>['title','description'],
+                //                 'select'=>['image']
+                //         ],
+                //         'panel' => 'management',
+                //         'limit' => 1  
+                // ],
+                // 'prestasi'=>[
+                //         'name' => 'prestasi',
+                //         'view' => 'tentang-kami.prestasi',
+                //         'table' => [
+                //                 'name' => 'prestasi',
+                //                 'translate'=>['title','intro'],
+                //                 'select'=>['image']
+                //         ],
+                //         'panel' => 'prestasi',
+                //         'paginate' => 2,
+                //         'limit'=>10 
+                // ],
+                // 'goodcorporategov'=>[
+                //         'name' => 'Good Corporate Gov',
+                //         'view' => 'tentang-kami.gcg',
+                //         'table' => [
+                //                 'name' => 'goodcorporategov',
+                //                 'translate'=>['title','intro','description'],
+                //                 'select'=>['image']
+                //         ],
+                //         'panel' => 'goodcorporategov',
+                //         'limit' => 1 
+                // ],
                 'content_produk'=>[
                         'name' => 'Content Produk',
                         'view' => 'produk.content',
@@ -327,16 +327,8 @@ return [
                                 'translate'=>['title','intro','description']
                         ],
                         'limit'=>1
-                 ],
-                 'map_cabang'=>[
-                        'name' => 'Peta Cabang',
-                        'view' => 'contact.mapcabang',
-                        'table' => [
-                                'name' => 'map_cabang',
-                                'select'=>['lat','long','title_name','contact_name']
-                        ],
-                        'limit'=>1
                  ]
+                 
                 
                 // 'banner' => [
                 //         'name' => 'Banner',

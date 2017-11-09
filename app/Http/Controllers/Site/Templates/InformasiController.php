@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Site\Templates;
 use App\Http\Controllers\Site\BaseController;
 use App\Webarq\Model\InformasiModel;
 use App\Webarq\Model\FooterModel;
+use App\Webarq\Model\TypeModel;
 use Illuminate\Http\Request;
 use Wa;
 use DB;
@@ -39,9 +40,11 @@ class InformasiController extends BaseController
         die;
     }
 
-    //  public function actionGetIndex(){
-    //    dd(';ed');
-    // }
+    public function actionGetIndex(){
+        $type = TypeModel::select('title')->get();
+        view()->share(['type'=>$type]);
+        parent::actionGetIndex();
+    }
 
     // public function actionGetDetail($id){
     //     $data = DB::select("SELECT * FROM informasi WHERE id='".$id."'");

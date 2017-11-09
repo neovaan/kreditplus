@@ -12,8 +12,22 @@
 */
 // Route::get('/', 'About@index');
 Route::get('q','SearchController@index');
-Route::post('image',['as' => 'upload',function(){
-	dd($_FILES);
-	//return view('browseImage');
+// Route::post('image',['as' => 'upload',function(){
+// 	dd($_FILES)
 
-}]);
+// }]);
+Route::post('imagex', function(){
+    	if(count($_FILES)){
+    		echo $_SERVER['DOCUMENT_ROOT'].'public/ck/';
+    		$d = date('YmdHis');
+    		chmod($_SERVER['DOCUMENT_ROOT'].'public/ck/', 0777);
+    		$basename = basename($_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
+    		move_uploaded_file($_FILES['upload']['tmp_name'],$_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
+    		$funcNum = $_GET['CKEditorFuncNum'] ;
+    		$message = "";
+    		$u = URL::asset('ck/'.md5($d).'_'.$_FILES['upload']['name']);
+    		echo '<script type="text/javascript">window.parent.CKEDITOR.tools.callFunction("'.$funcNum.'", "'.$u.'", "'.$message.'");</script>';
+    		
+    	}
+    }
+);

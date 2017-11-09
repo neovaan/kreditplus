@@ -12,11 +12,19 @@ namespace App\Http\Controllers\Site\Templates;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Site\BaseController;
 use App\Webarq\Model\CabangModel;
+use App\Webarq\Model\MapCabangModel;
 use DB;
 use Mail;
 use Wa;
 class ContactController extends BaseController
 {
+
+    function actionGetIndex(){
+        $cabang = MapCabangModel::select('lat','long','title_name','contact_name')->get();
+        view()->share(['map'=>$cabang]);
+        parent::actionGetIndex();
+    }
+
     public function actionAjaxPostSet(Request $req){
     	 $data = array(
         'name' =>$req->input('nama'),

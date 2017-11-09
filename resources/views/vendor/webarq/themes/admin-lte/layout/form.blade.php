@@ -14,17 +14,36 @@
 
 <script>
     $(function () {
-        $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': '<?php echo csrf_token();?>'
-                }
-            });
-        CKEDITOR.setData({"_token":"fdf"});
         CKEDITOR.config.contentsCss = "{{ URL::asset('vendor/webarq/default/css/ckeditor.css') }}";
-       // CKEDITOR.config.filebrowserBrowseUrl = '{{URL::to("image")}}';
-        CKEDITOR.config.filebrowserUploadUrl = "{{route('upload',['_token' => csrf_token() ])}}";
-        
+        CKEDITOR.config.filebrowserImageUploadUrl="{{URL::to('imagex')}}";
+        CKEDITOR.config.image_previewText = CKEDITOR.tools.repeat(' ',100);
+        CKEDITOR.on('dialogDefinition', function(ev) {
+        var dialogName = ev.data.name;
+        var dialogDefinition = ev.data.definition;
+
+        if (dialogName == 'image') {
+            dialogDefinition.onLoad = function() {
+                var dialog = CKEDITOR.dialog.getCurrent();
+
+                var uploadTab = dialogDefinition.getContents('Upload');
+                var uploadButton = uploadTab.get('uploadButton');
+
+                uploadButton['onClick'] = function(evt){
+                }
+
+                uploadButton['filebrowser']['onSelect'] = function(fileUrl, errorMessage) {
+                }
+            };
+        }
+
     });
+
+    });
+    function select_image(url) {
+        var o = opener.document.getElementById("88_textInput");
+        o.value = url;
+        self.close();
+    }
    
 </script>
 @if ('create' === $strAction)

@@ -13,9 +13,9 @@ return [
         'title' => 'Informasi',
         'icon' => 'fa-clone',
         'tables' => [
-                'informasi'
+                'informasi','type'
         ],
         'panels' => [
-                'informasi'
+                'informasi','type'
         ]
 ];

@@ -8,7 +8,6 @@
 
 return [
         ['master' => 'id'],
-        ['master' => 'title', 'name' => 'section_id','notnull'=>true],
         ['master' => 'title','name'=>'lat','notnull'=>true],
         ['master' => 'title','name'=>'long','notnull'=>true],
         ['master' => 'title','name'=>'title_name','notnull'=>true],
