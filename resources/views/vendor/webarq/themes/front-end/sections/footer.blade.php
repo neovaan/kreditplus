@@ -85,8 +85,8 @@
                         <div class="box-subscribe">
                             <h6>{{$footer[0]->txt1}}</h6>
                             <div class="boxf-mail">
-                                <form>
-                                    <input type="email" name="" placeholder="Email">
+                                <form id="sm">
+                                    <input type="email" id="em" name="email" placeholder="Email">
                                     <input type="submit" name="" value="" class="btn-fly">
                                 </form>
                             </div>
@@ -106,7 +106,7 @@
                     <div class="logo-foot">
                         <a href=""><img src="{{URL(Wa::config('system.site.logo'))}}"></a>
                     </div>
-                    <div class="copyright">{!! html_entity_decode(Wa::config('system.site.copyright')) !!}<a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
+                    <div class="copyright">{!! html_entity_decode(Wa::config('system.site.copyright')) !!} <a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
                     <div class="sosmed-foot">
                         <span>Follow Us</span>
                         @if(!empty(Wa::config('system.facebook')))
@@ -125,3 +125,21 @@
                 </div>
             </div>
         </footer>
+<script>
+    $(document).ready(function(){
+        $("#sm").submit(function(){
+            if($("#em").val() != ""){
+                $.post("{{URL::to('newsletter')}}",{'data':$("#em").val(),'_token':"{{csrf_token()}}" }, function(res){
+                    if(res.response == "ok"){
+                        alert(res.msg);
+                        $("#em").val("");
+                        $("#em").css({'border-color':''});
+                    }
+                },'json');
+            }else{
+                $("#em").css({'border-color':'red'});
+            }
+            return false;
+        });
+    });
+</script>

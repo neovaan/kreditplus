@@ -18,7 +18,8 @@ Route::get('q','SearchController@index');
 // }]);
 Route::post('imagex', function(){
     	if(count($_FILES)){
-    		echo $_SERVER['DOCUMENT_ROOT'].'public/ck/';
+    		if(!is_dir($_SERVER['DOCUMENT_ROOT'].'public/ck/'))
+    			mkdir($_SERVER['DOCUMENT_ROOT'].'public/ck/');
     		$d = date('YmdHis');
     		chmod($_SERVER['DOCUMENT_ROOT'].'public/ck/', 0777);
     		$basename = basename($_SERVER['DOCUMENT_ROOT']."public/ck/".md5($d)."_".$_FILES['upload']['name']);
@@ -31,3 +32,4 @@ Route::post('imagex', function(){
     	}
     }
 );
+Route::post('newsletter', 'Newsletter@setMail');

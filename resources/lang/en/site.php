@@ -6,5 +6,6 @@
            'label_tampilkan' => 'Tampilkan EN',
            'label_berita_lainya'=>'Berita Lainya EN',
            'label_kembali' => 'Back To List',
-           'label_lihat_semua'=>'Lihat Semua EN'
+           'label_lihat_semua'=>'Lihat Semua EN',
+           'label_btn_lowongan' => 'Lihat Lowongan Kerja EN'
        ];

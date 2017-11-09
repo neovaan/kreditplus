@@ -6,5 +6,6 @@
            'label_tampilkan' => 'Tampilkan ID',
            'label_berita_lainya' => 'Berita Lainya ID',
            'label_kembali' => 'Kembali',
-           'label_lihat_semua' => 'Lihat Semua ID'
+           'label_lihat_semua' => 'Lihat Semua ID',
+           'label_btn_lowongan' => 'Lihat Lowongan Kerja ID'
        ];

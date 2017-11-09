@@ -35,6 +35,7 @@
           @endif          
         @endforeach
     @endif
+    <a href="{{URL::trans('karir')}}" class="btn-box btn-red">{{Wa::trans('site.label_btn_lowongan')}}</a>
 </div>
 </section>
 @endsection

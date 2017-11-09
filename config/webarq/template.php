@@ -239,7 +239,8 @@ return [
                         'table' => [
                                 'name' => 'informasi',
                                 'translate'=>['description','title','intro','permalink'],
-                                'select'=>['image','type']
+                                'select'=>['image','type'],
+                                'sequence'=>'informasi.id:desc'
                         ],
                         'paginate'=>5,
                         'panel' => 'informasi',
@@ -271,11 +272,8 @@ return [
                         'table' => [
                                 'name' => 'karir',
                                 'translate'=>['description'],
-                                'select'=>['title_job','penempatan','id'],                                
-                                'orderby'=>[
-                                            'id'=>'asc'
-                                        ]
-
+                                'select'=>['title_job','penempatan'],                                
+                                'sequence'=>'karir.id:desc'
                         ],
                         'limit'=>10,
                         'panel' => 'karir'
