@@ -6,25 +6,26 @@
  * Time: 4:02 PM
  */?>
 @extends('webarq::themes.front-end.layout.index')
-<section class="banner">
-  <figure>
-    <img src="{{URL::asset('vendor/webarq/front-end/images/content/banner-simulasi.jpg')}}" alt="banner">
-  </figure>
-  <div class="submenu-banner">
-    <div class="wrap-sm">
-      <div class="box-submenu">
-        <div class="btn-submenu">Submenu</div>
-        <div class="drop-submenu">
-          <ul>
-            <li class="active"><a href="simulasi">Simulasi</a></li>
-            <li><a href="pengajuan-kredit">Pengajuan Kredit</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 @section('content')
+<section class="banner">
+   @if (isset($shareSections) && is_array($shareSections))
+        @foreach ($shareSections as $section)
+          @if($section->getKey() == 'banner')
+             {!! $section->toHtml() !!}
+          @endif          
+        @endforeach
+    @endif
+    <div class="submenu-banner">
+        <div class="wrap-sm">
+            <div class="box-submenu">
+                <div class="btn-submenu">Submenu</div>
+                <div class="drop-submenu">
+                    @include('webarq::themes.front-end.sections.submenu')
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="ctnwp">
 <div class="wrap-sm">
     @if ([] !== $shareSections)

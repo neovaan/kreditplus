@@ -45,7 +45,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Medium',
-                                        'info' => 'Image recommendation size: 768px width 540px height',
+                                        'info' => 'Image recommendation size: 1024px width 365px height',
                                 ],
                                 'section.banner.image_small' => [
                                         'file' => [
@@ -55,7 +55,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Small',
-                                        'info' => 'Image recommendation size: 480px width 480px height',
+                                        'info' => 'Image recommendation size: 768px width 294px height',
                                 ]
                         ]
                 ],
@@ -89,7 +89,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Medium',
-                                        'info' => 'Image recommendation size: 768px width 540px height',
+                                        'info' => 'Image recommendation size: 1024px width 365px height',
                                 ],
                                 'section.banner.image_small' => [
                                         'file' => [
@@ -99,7 +99,7 @@ return [
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
                                         'title'=>'Image Small',
-                                        'info' => 'Image recommendation size: 480px width 480px height',
+                                        'info' => 'Image recommendation size: 768px width 294px height',
                                 ]
                         ]
                 ],

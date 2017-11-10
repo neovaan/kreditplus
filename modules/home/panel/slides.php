@@ -31,12 +31,7 @@ return [
                                 'home.slides.title',
                                 'home.slides.txtbtn'=>['title'=>'text button'],
                                 'home.slides.link'=>[
-                                        'type' => 'select table',
-                                        'title' => 'Link',
-                                        'sources' => [
-                                               'table' => 'menus',
-                                               'column' => ['permalink', 'title']
-                                        ]
+                                    'title'=>'Link'
                                 ],
                                 'home.slides.intro' => [ 'type'=>'textarea'],
                                 'home.slides.image' => [
@@ -85,12 +80,7 @@ return [
                                 'home.slides.title',      
                                 'home.slides.txtbtn'=>['title'=>'text button'],
                                 'home.slides.link'=>[
-                                        'type' => 'select table',
-                                        'title' => 'Link',
-                                        'sources' => [
-                                               'table' => 'menus',
-                                               'column' => ['permalink', 'title']
-                                        ]
+                                    'title'=>'Link'
                                 ],
                                 'home.slides.intro' => [ 'type'=>'textarea'],
                                 'home.slides.image' => [

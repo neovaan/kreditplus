@@ -12,8 +12,8 @@ return [
         ['master' => 'title', 'name' => 'image', 'notnull' => true],
         ['master' => 'title', 'name' => 'image_phone', 'notnull' => true],
         ['master' => 'title', 'name' => 'image_desktop', 'notnull' => true],
-        ['master' => 'title', 'name' => 'title', 'notnull' => true, 'multilingual' => true],
-        ['master' => 'title', 'name' => 'link', 'notnull' => true],
+        ['master' => 'title', 'name' => 'title', 'notnull' => false, 'multilingual' => true],
+        ['master' => 'title', 'name' => 'link', 'notnull' => false],
         ['master' => 'title', 'name' => 'txtbtn', 'notnull' => true, 'multilingual' => true],
-        ['master' => 'description', 'name' => 'intro', 'notnull' => true, 'multilingual' => true]
+        ['master' => 'description', 'name' => 'intro', 'notnull' => false, 'multilingual' => true]
        ];

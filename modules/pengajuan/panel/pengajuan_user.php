@@ -12,7 +12,7 @@ return [
                 'headers' => [
                         'columns' => [
                                 'nama',
-                                'alamat','email','pesan'
+                                'alamat','email'
                         ]
                 ]
         ],
@@ -20,6 +20,9 @@ return [
                 'delete',
                 'export'=>[
                         'placement'=>'header'
+                ],
+                'view'=>[
+                        'permalink'=>true
                 ]
                 
         ]

@@ -10,7 +10,9 @@
 						<i class="dotted"></i>
 						<h1>{{$data->title}}</h1>
 						<p>{{$data->intro}}</p>
-						<a href="{{URL($data->link)}}" class="btn-box btn-red">{{$data->txtbtn}}</a>
+						@if($data->link)
+						<a href="{{URL($data->link)}}" target="_blank" class="btn-box btn-red">{{$data->txtbtn}}</a>
+						@endif
 					</div>
 				</div>
 			</div>

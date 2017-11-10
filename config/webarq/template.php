@@ -80,7 +80,7 @@ return [
                                 'select'=>['image','image_phone','image_desktop','link']
                         ],
                         'panel'=>'slide',
-                        'limit' => 2
+                        'limit' => 0
                 ],
                 'simulasi'=>[
                     'name'=> 'Simulasi',
