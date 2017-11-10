@@ -75,8 +75,18 @@ $(function () {
         var target = $(this).attr('data-referrer-target');
         var regex = new RegExp('\\W+', 'g');
 
-        $(target).val(prettyURL($(this).val(), '-', regex));
+        $(target).first().val(prettyURL($(this).val(), '-', regex));
     });
+
+    var d = $(".referrer").length;
+    if(d > 1){
+         $('.referrer').eq(1).keyup(function () {
+            var target = $(this).attr('data-referrer-target');
+            var regex = new RegExp('\\W+', 'g');
+
+            $(target).eq(1).val(prettyURL($(this).val(), '-', regex));
+        });
+    }
 
     $('.datepicker').datepicker({
         autoclose: true
