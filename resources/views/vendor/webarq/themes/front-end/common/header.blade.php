@@ -65,10 +65,15 @@
                     @foreach(Wa::menu()->getNodes() as $m)
                         @if($m['id'] == "16")
                          <a href="{{URL($m['permalink'])}}" class="btn-request">
-                            {{$m['title']}}
+                          {{Wa::trans('site.label_btn_pengajuan_kredit')}}
                         </a>
                         @endif
                     @endforeach
+                    {{-- 
+                    <a href="{{URL::trans(Wa::menu()->getNode('16')->permalink)}}" class="btn-request">
+                        
+                    </a>
+                   --}}
                 </div>
             </div>
         </div>

@@ -101,7 +101,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 212px width 166px height'
+                                        'info' => 'Image recommendation size: 548px width 313px height'
                                 ]
                                 
                         ]
@@ -199,7 +199,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/slides'
                                         ],
-                                        'info' => 'Image recommendation size: 212px width 166px height',
+                                        'info' => 'Image recommendation size: 548px width 313px height',
                                         'notnull'=>false,
                                         'ignored'=>true,
                                 ]

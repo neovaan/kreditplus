@@ -40,6 +40,9 @@
        @endif
        @if($data->image1 == "" && $data->image2 == "")
            <?php echo $data->description;?>
+           @if($data->link && $data->txtbtn_pelajari)
+               <a href="{{URL::trans($data->link)}}" class="btn-box btn-red">{{$data->txtbtn_pelajari}}</a>
+            @endif
        @endif
      @endif
 @endforeach

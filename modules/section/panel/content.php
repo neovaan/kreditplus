@@ -29,7 +29,17 @@ return [
                                 ],
                                 'section.content.title',
                                 'section.content.intro'=>['type'=>'textarea'],
-                                'section.content.description'=>['type'=>'textarea','class'=>'ckeditor']
+                                'section.content.description'=>['type'=>'textarea','class'=>'ckeditor'],
+                                'section.content.txtbtn_pelajari' =>['Title' => 'Text Button Pelajari','info'=>'Optional'],
+                                'section.content.link' =>[
+                                        'type' => 'select table',
+                                        'title' => 'Link',
+                                        'sources' => [
+                                               'table' => 'menus',
+                                               'column' => ['permalink', 'title']
+                                        ],
+                                        'info'=>'Optional'
+                                ]
                                 // 'section.content.image1' => [
                                 //         'file' => [
                                 //                 'type' => 'image',
@@ -61,6 +71,16 @@ return [
                                 'section.content.title',
                                 'section.content.intro'=>['type'=>'textarea'],
                                 'section.content.description'=>['type'=>'textarea','class'=>'ckeditor'],
+                                'section.content.txtbtn_pelajari' =>['Title' => 'Text Button Pelajari','info'=>'Optional'],
+                                'section.content.link' =>[
+                                        'type' => 'select table',
+                                        'title' => 'Link',
+                                        'sources' => [
+                                               'table' => 'menus',
+                                               'column' => ['permalink', 'title']
+                                        ],
+                                        'info'=>'Optional'
+                                ]
                                 // 'section.content.image1' => [
                                 //         'file' => [
                                 //                 'type' => 'image',

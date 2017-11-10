@@ -150,7 +150,6 @@ return [
                         ]
                 ],
                 'activeness',
-                'delete',
                 'section' => [
                         'permalink' => true
                 ]

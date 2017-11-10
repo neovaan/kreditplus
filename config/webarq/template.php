@@ -163,8 +163,8 @@ return [
                         'view' => 'tentang-kami.content',
                         'table' => [
                                 'name' => 'content',
-                                'translate'=>['intro','description','title'],
-                                'select'=>['image1','image2']
+                                'translate'=>['intro','description','title','txtbtn_pelajari'],
+                                'select'=>['image1','image2','link']
                         ],
                         'panel' => 'content',
                         'limit' => 1    
