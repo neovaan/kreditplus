@@ -4,9 +4,7 @@
 <br>
 <br>
 <?php echo $shareData[0]->description;?>
-<?php
-  $page = Wa::menu()->getActive()->eloquent()->getAttributes();
-?>
+{{--
 @if($page['permalink'] == "kreditplus-mobile")
 	<div class="downloadapps margtop">
 		<div class="left">Download Kreditplus Mobile di google Play</div>
@@ -18,3 +16,4 @@
 @if($page['permalink'] == "kreditmu")
 	<a href="" class="btn-box btn-red">PELAJARI LEBIH LANJUT</a>
 @endif
+--}}

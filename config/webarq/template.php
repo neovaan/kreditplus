@@ -101,6 +101,17 @@ return [
                         ],
                         'panel'=>'sponsor'
                 ],
+                'google_play'=>[
+                        'name'=> 'Google Play',
+                        'view'=> 'google',
+                        'table' => [
+                                'name' => 'google_play',
+                                'translate'=>['txt'],
+                                'select'=>['link','image']
+                        ],
+                        'panel'=>'google_play',
+                        'limit'=>1
+                ],
                 'layanan'=>[
                         'name'=> 'Layanan',
                         'view'=> 'layanan',
@@ -225,17 +236,17 @@ return [
                 //         'panel' => 'tabel_pengajuan',
                 //         'limit' => 5
                 // ],
-                'content_kreditplus'=>[
-                        'name' => 'Content Kreditplus',
-                        'view' => 'kreditplus.content',
-                        'table' => [
-                                'name' => 'content_kreditplus',
-                                'translate'=>['description','title','intro'],
-                                'select'=>['image']
-                        ],
-                        'panel' => 'content_kreditplus',
-                        'limit' => 1
-                ],
+                // 'content_kreditplus'=>[
+                //         'name' => 'Content Kreditplus',
+                //         'view' => 'kreditplus.content',
+                //         'table' => [
+                //                 'name' => 'content_kreditplus',
+                //                 'translate'=>['description','title','intro'],
+                //                 'select'=>['image']
+                //         ],
+                //         'panel' => 'content_kreditplus',
+                //         'limit' => 1
+                // ],
                 'informasi'=>[
                         'name' => 'Informasi',
                         'view' => 'informasi.berita',
@@ -319,16 +330,16 @@ return [
                                 'select'=>['captcha']
                         ],
                         'limit'=>1
-                 ],
-                 'desc_prestasi'=>[
-                        'name' => 'Description Prestasi',
-                        'view' => 'produk.content',
-                        'table' => [
-                                'name' => 'desc_prestasi',
-                                'translate'=>['title','intro','description']
-                        ],
-                        'limit'=>1
                  ]
+                 // 'desc_prestasi'=>[
+                 //        'name' => 'Description Prestasi',
+                 //        'view' => 'produk.content',
+                 //        'table' => [
+                 //                'name' => 'desc_prestasi',
+                 //                'translate'=>['title','intro','description']
+                 //        ],
+                 //        'limit'=>1
+                 // ]
                  
                 
                 // 'banner' => [
