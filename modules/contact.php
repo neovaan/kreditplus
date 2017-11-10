@@ -13,9 +13,9 @@ return [
         'title' => 'Contact',
         'icon' => 'fa-clone',
         'tables' => [
-                'contact','testimoni','cabang','map_cabang'
+                'contact','testimoni','cabang'
         ],
         'panels' => [
-                'contact','testimoni','cabang','map_cabang'
+                'contact','testimoni','cabang'
         ]
 ];

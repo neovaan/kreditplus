@@ -21,20 +21,20 @@ return [
                                 'attributes' => [
                                         'enctype' => 'multipart/form-data'
                                 ],
-// Cms block
-                                // 'cmsLogo' => [
-                                //         'info' => 'Please use image in 145px X 54px dimension',
-                                //         'file' => [
-                                //                 'type' => 'image',
-                                //                 'mimes' => ['png', 'jpg', 'jpeg', 'gif'],
-                                //                 'max' => 200,
-                                //                 'resize' => [
-                                //                         'width' => 145,
-                                //                         'height' => 70
-                                //                 ],
-                                //                 'preview' => true
-                                //         ]
-                                // ],
+//Cms block
+                                'cmsLogo' => [
+                                        'info' => 'Please use image in 145px X 54px dimension',
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['png', 'jpg', 'jpeg', 'gif'],
+                                                'max' => 200,
+                                                'resize' => [
+                                                        'width' => 145,
+                                                        'height' => 70
+                                                ],
+                                                'preview' => true
+                                        ]
+                                ],
                                 'cmsTitle' => [
                                         'type' => 'text'
 
@@ -62,6 +62,21 @@ return [
                                 ],
                                 'siteLogo' => [
                                         'title' => 'Logo',
+                                        'info' => 'Please use image in 160px X 35px dimension',
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['png', 'ico'],
+                                                'upload-dir' => 'site/uploads/logo',
+                                                'max' => 1024,
+                                                'resize' => [
+                                                        'width' => 131,
+                                                        'height' => 52
+                                                ],
+                                                'preview' => true
+                                        ]
+                                ],
+                                'siteLogofooter' => [
+                                        'title' => 'Logo Footer',
                                         'info' => 'Please use image in 160px X 35px dimension',
                                         'file' => [
                                                 'type' => 'image',

@@ -27,7 +27,6 @@
 	<div class="wrap-sm">
 		<h3 class="tblue"><?php echo $data[0]->title ;?></h3>
 		<h3 class="tregular"><?php echo $data[0]->intro;?></p>
-		<img src="<?php echo URL::asset($data[0]->image) ;?>" alt="information">
 		<br>
 		<br>
 		<p><?php echo $data[0]->description ;?></p>
@@ -42,7 +41,7 @@
 				<?php $var = 1;?>
 				@foreach($list as $l)
 					<div class="list-news">
-						<figure><img src="<?php echo URL::asset($l->image);?>" alt="news {{$var}}"></figure>
+						<figure><img src="<?php echo URL::asset($l->image2);?>" alt="news {{$var}}"></figure>
 						<div class="desc-news">
 							<h4><?php echo $l->title;?></h4>
 							<p><?php echo $l->intro;?></p>

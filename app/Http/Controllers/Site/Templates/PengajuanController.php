@@ -26,14 +26,14 @@ class PengajuanController extends BaseController
 		$html="";
     	if($data->count()){
     		foreach($data as $key){
-    			$html.="<option value='".$key->id."'>".$key->title."</option>";
+    			$html.="<option value='".$key->title."'>".ucfirst($key->title)."</option>";
     		}
     	}
     	echo $html; die;
     }
 
     function actionAjaxPostForm(Request $req){
-    	$secretKey="6LeD3DYUAAAAAJvpFG_zKDzu_GGj3DrBSJEv1ifS";
+    	$secretKey="6Lfb_DcUAAAAACC7qrBFulgRycbsq9J-kZggk2tn";
     	$captcha= $_POST["g-recaptcha-response"];
 		$respond=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
 		$hasil=json_decode($respond,true);

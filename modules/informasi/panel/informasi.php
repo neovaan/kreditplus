@@ -49,6 +49,17 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
+                                        'title'=>'Thumbnail',
+                                        'info' => 'Image recommendation size: 1171px width 401px height',
+                                ],
+                                'informasi.informasi.image2' => [
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/banners'
+                                        ],
+                                        'title'=>'Thumbnail Listing ',
                                         'info' => 'Image recommendation size: 1171px width 401px height',
                                 ]
                         ]
@@ -85,6 +96,19 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
+                                        'info' => 'Image recommendation size: 1171px width 401px height',
+                                        'notnull'=>false,
+                                        'ignored'=>true,
+                                        'title'=>'Thumbnail',
+                                ],
+                                 'informasi.informasi.image2' => [
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/banners'
+                                        ],
+                                        'title'=>'Thumbnail Listing ',
                                         'info' => 'Image recommendation size: 1171px width 401px height',
                                         'notnull'=>false,
                                         'ignored'=>true,

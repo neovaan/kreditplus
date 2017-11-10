@@ -14,6 +14,7 @@ return [
         ['master' => 'shortIntro', 'name' => 'intro', 'notnull' => true, 'multilingual' => true],
         ['master' => 'description', 'name' => 'description', 'notnull' => true, 'multilingual' => true],
         ['master' => 'title', 'name' => 'image', 'notnull' => true],
+        ['master' => 'title', 'name' => 'image2', 'notnull' => true],
         ['master' => 'title', 'name' => 'type', 'notnull' => true]
 
        ];

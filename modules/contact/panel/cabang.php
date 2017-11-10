@@ -27,7 +27,11 @@ return [
                                 'contact.cabang.fax',
                                 'contact.cabang.email',
                                 'contact.cabang.alamat' => ['type'=>'textarea'],
-                                'contact.cabang.kota'
+                                'contact.cabang.kota',
+                                'contact.cabang.lat'=>['title'=>'Latitude'],
+                                'contact.cabang.long'=>['title'=>'Longtitude'],
+                                'contact.cabang.title_name'=>['title'=>'Title Name'],
+                                'contact.cabang.contact_name'=>['title'=>'Contact']
                         ]
                 ],
                 'edit' => [
@@ -41,7 +45,11 @@ return [
                                 'contact.cabang.fax',
                                 'contact.cabang.email',
                                 'contact.cabang.alamat' => ['type'=>'textarea'],
-                                'contact.cabang.kota'
+                                'contact.cabang.kota',
+                                'contact.cabang.lat'=>['title'=>'Latitude'],
+                                'contact.cabang.long'=>['title'=>'Longtitude'],
+                                'contact.cabang.title_name'=>['title'=>'Title Name'],
+                                'contact.cabang.contact_name'=>['title'=>'Contact']
                         ]
                 ],
                 'delete'

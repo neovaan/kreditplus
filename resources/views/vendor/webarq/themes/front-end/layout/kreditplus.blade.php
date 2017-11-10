@@ -6,6 +6,8 @@
  * Time: 4:02 PM
  */?>
 @extends('webarq::themes.front-end.layout.index')
+
+@section('content')
 <section class="banner">
     @if (isset($shareSections) && is_array($shareSections))
         @foreach ($shareSections as $section)
@@ -26,7 +28,6 @@
         </div>
     </div>
 </section>
-@section('content')
 <section class="ctnwp">
 <div class="wrap-sm">
     @if ([] !== $shareSections)

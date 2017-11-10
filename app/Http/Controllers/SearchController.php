@@ -13,6 +13,6 @@ class SearchController extends BaseController
     	$data = InformasiModel::where('description', 'like','%'.$r->input('d').'%')->get();
     	$footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
     	$view = "vendor.webarq.themes.front-end.layout.search";
-        return view($view, ['metaTitle'=>$r->input('d'),'data' => $data,'footer'=>$footer] );
+        return view($view, ['metaTitle'=>$r->input('d'),'data' => $data,'footer'=>$footer,'metaDescription'=>$r->input('d')]);
     }
 }

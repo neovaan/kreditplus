@@ -104,7 +104,7 @@
             <div class="foot-bottom">
                 <div class="wrapper">
                     <div class="logo-foot">
-                        <a href=""><img src="{{URL(Wa::config('system.site.logo'))}}"></a>
+                        <a href="{{URL::trans('/')}}"><img src="{{URL(Wa::config('system.site.logofooter'))}}"></a>
                     </div>
                     <div class="copyright">{!! html_entity_decode(Wa::config('system.site.copyright')) !!} <a href="https://www.webarq.com" target="_blank">WEBARQ</a></div>
                     <div class="sosmed-foot">

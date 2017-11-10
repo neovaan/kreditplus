@@ -99,7 +99,8 @@ return [
                                 'name' => 'sponsor',
                                 'select'=>['link','logo']
                         ],
-                        'panel'=>'sponsor'
+                        'panel'=>'sponsor',
+                        'limit'=>0
                 ],
                 'google_play'=>[
                         'name'=> 'Google Play',
@@ -110,7 +111,7 @@ return [
                                 'select'=>['link','image']
                         ],
                         'panel'=>'google_play',
-                        'limit'=>1
+                        'limit'=>0
                 ],
                 'layanan'=>[
                         'name'=> 'Layanan',
@@ -318,7 +319,8 @@ return [
                         'view' => 'contact.cabang',
                         'table' => [
                                 'name' => 'cabang',
-                                'select'=>['kota','alamat','fax','email','telp']                        ],
+                                'select'=>['kota','alamat','fax','email','telp','lat','long','title_name','contact_name']                        
+                        ],
                         'limit'=>0,
                  ],
                  'form_pengajuan'=>[

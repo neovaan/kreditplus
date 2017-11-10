@@ -25,7 +25,7 @@
 					<label>{{$shareData[0]->field2}}</label>
 					<select name="area">
 						@foreach($area as $q)
-							<option value="{{$q['id']}}">{{$q['title']}}</option>
+							<option value="{{$q['title']}}">{{$q['title']}}</option>
 						@endforeach
 					</select>
 				</div>

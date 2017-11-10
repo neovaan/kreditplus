@@ -9,7 +9,21 @@
 </div>
 
 <div class="office-list">
+    <?php $res=array(); ?>
 	@foreach($shareData as $data)
+        @if($data->lat)
+            <?php
+                 $a =[
+                    'name' => $data->title_name,
+                    'contact' => $data->contact_name,
+                    'href' => '<a href="#location1">View Detail</a>',
+                    'lat' => $data->lat,
+                    'long'=> $data->long,
+                    'icmark'=> URL::asset('vendor/webarq/front-end/images/material/ic_marker.png')
+                    ];
+                    array_push($res,$a);
+            ?>
+        @endif
 	<div class="list-office">
 		<div class="in-office">
 			<h5>{{$data->kota}}</h5>
@@ -56,19 +70,6 @@
 	}
 </script>
 <?php
-$res=array();
-foreach($map as $data){
-    // ganti value ini dari DataBase    
-        $a =     [
-                'name' => $data->title_name,
-                'contact' => $data->contact_name,
-                'href' => '<a href="#location1">View Detail</a>',
-                'lat' => $data->lat,
-                'long'=> $data->long,
-                'icmark'=> URL::asset('vendor/webarq/front-end/images/material/ic_marker.png')
-            ];
-        array_push($res,$a);
-}
 $json = [];
 foreach ($res AS $val) {
     $key = $val['lat'].'|'.$val['long'].'|'.$val['icmark'];

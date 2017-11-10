@@ -92,7 +92,6 @@ class BaseController extends Webarq
     public function actionGetIndex()
     {
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
-        //$sosmed = SosmedModel::select('link','logo')->get();
         view()->share(['footer'=>$footer]);
         $this->layout->{'shareSections'} = $this->listSectionManager();
     }
