@@ -12,7 +12,7 @@ return [
                 'headers' => [
                         'columns' => [
                                 ':sectionMenu',
-                                'title','type','intro'
+                                'title','type'
                         ]
                 ]
         ],
