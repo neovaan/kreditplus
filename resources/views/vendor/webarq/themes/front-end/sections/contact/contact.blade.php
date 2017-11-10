@@ -9,7 +9,7 @@
 				<label>{{$shareData[0]->field1}}</label>
 				<input type="text" class="i" name="nama" placeholder="">
 			</div>
-			<!-- <div class="row">
+			<!-- <div class="row">  
 				<label>Pekerjaan</label>
 				<select>
 					<option>Subjek option</option>
