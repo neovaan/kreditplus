@@ -70,21 +70,27 @@ $(function () {
     $('input.previewLoader').change(function () {
         previewLoader(this);
     });
-
-    $('.referrer').first().keyup(function () {
-        var target = $(this).attr('data-referrer-target');
-        var regex = new RegExp('\\W+', 'g');
-
-        $(target).first().val(prettyURL($(this).val(), '-', regex));
-    });
-
-    var d = $(".referrer").length;
-    if(d > 1){
-         $('.referrer').eq(1).keyup(function () {
+    if(idx != '16' || uri6 != "menus" || uri5 != "system"){
+        $('.referrer').first().keyup(function () {
             var target = $(this).attr('data-referrer-target');
             var regex = new RegExp('\\W+', 'g');
 
-            $(target).eq(1).val(prettyURL($(this).val(), '-', regex));
+            $(target).first().val(prettyURL($(this).val(), '-', regex));
+        });
+        var d = $(".referrer").length;
+        if(d){
+            $('.referrer').eq(1).keyup(function () {
+                var target = $(this).attr('data-referrer-target');
+                var regex = new RegExp('\\W+', 'g');
+
+                $(target).eq(1).val(prettyURL($(this).val(), '-', regex));
+            });
+        }
+    }else{
+         $('form input').each(function(k,v){
+            if($(v).attr('name') == "permalink" || $(v).attr('name') == "permalink_id"){
+                $(v).attr('readonly','readonly');
+            }
         });
     }
 

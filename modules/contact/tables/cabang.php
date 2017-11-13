@@ -9,13 +9,10 @@
 return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'section_id'],
-        ['master' => 'title', 'name' => 'kota','notnull'=>true],
-        ['master' => 'title', 'name' => 'alamat','notnull'=>true],
-        ['master' => 'title', 'name' => 'fax','notnull'=>true],
-        ['master' => 'title','name'=>'email','notnull'=>true],
-        ['master' => 'title','name'=>'telp','notnull'=>true],
-        ['master' => 'title','name'=>'lat','notnull'=>true],
-        ['master' => 'title','name'=>'long','notnull'=>true],
-        ['master' => 'title','name'=>'title_name','notnull'=>true],
-        ['master' => 'title','name'=>'contact_name','notnull'=>true]
+        ['master' => 'title', 'name' => 'kota'],
+        ['master' => 'title', 'name' => 'alamat'],
+        ['master' => 'title', 'name' => 'fax'],
+        ['master' => 'title','name'=>'email'],
+        ['master' => 'title','name'=>'telp'],
+        ['master' => 'title','name'=>'provinsi']
 ];

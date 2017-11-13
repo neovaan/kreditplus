@@ -1,7 +1,7 @@
 <div class="box-filter">
 	<div class="right">
 		<label>Provinsi : </label>
-		<select onchange="kota(this.value)">
+		<select onchange="kota(this.value)" id="prof">
 			<option value="jabodetabek">Jabodetabek</option>
 			<option value="indo">Indonesia</option>
 		</select>
@@ -9,21 +9,7 @@
 </div>
 
 <div class="office-list">
-    <?php $res=array(); ?>
 	@foreach($shareData as $data)
-        @if($data->lat)
-            <?php
-                 $a =[
-                    'name' => $data->title_name,
-                    'contact' => $data->contact_name,
-                    'href' => '<a href="#location1">View Detail</a>',
-                    'lat' => $data->lat,
-                    'long'=> $data->long,
-                    'icmark'=> URL::asset('vendor/webarq/front-end/images/material/ic_marker.png')
-                    ];
-                    array_push($res,$a);
-            ?>
-        @endif
 	<div class="list-office">
 		<div class="in-office">
 			<h5>{{$data->kota}}</h5>
@@ -38,6 +24,14 @@
 	@endforeach
 </div>
 <script type="text/javascript">	
+    $(document).ready(function(){
+        var json_prov = [{"id":"11","name":"ACEH"},{"id":"12","name":"SUMATERA UTARA"},{"id":"13","name":"SUMATERA BARAT"},{"id":"14","name":"RIAU"},{"id":"15","name":"JAMBI"},{"id":"16","name":"SUMATERA SELATAN"},{"id":"17","name":"BENGKULU"},{"id":"18","name":"LAMPUNG"},{"id":"19","name":"KEPULAUAN BANGKA BELITUNG"},{"id":"21","name":"KEPULAUAN RIAU"},{"id":"31","name":"DKI JAKARTA"},{"id":"32","name":"JAWA BARAT"},{"id":"33","name":"JAWA TENGAH"},{"id":"34","name":"DI YOGYAKARTA"},{"id":"35","name":"JAWA TIMUR"},{"id":"36","name":"BANTEN"},{"id":"51","name":"BALI"},{"id":"52","name":"NUSA TENGGARA BARAT"},{"id":"53","name":"NUSA TENGGARA TIMUR"},{"id":"61","name":"KALIMANTAN BARAT"},{"id":"62","name":"KALIMANTAN TENGAH"},{"id":"63","name":"KALIMANTAN SELATAN"},{"id":"64","name":"KALIMANTAN TIMUR"},{"id":"65","name":"KALIMANTAN UTARA"},{"id":"71","name":"SULAWESI UTARA"},{"id":"72","name":"SULAWESI TENGAH"},{"id":"73","name":"SULAWESI SELATAN"},{"id":"74","name":"SULAWESI TENGGARA"},{"id":"75","name":"GORONTALO"},{"id":"76","name":"SULAWESI BARAT"},{"id":"81","name":"MALUKU"},{"id":"82","name":"MALUKU UTARA"},{"id":"91","name":"PAPUA BARAT"},{"id":"94","name":"PAPUA"}];
+        var html = '';
+        $.each(json_prov,function(k,v){
+            html+="<option value='"+v.id+"'>"+v.name.toLowerCase()+"</option>";
+        });
+        $("#prof").append(html);
+    });
 	function kota(v){
 		$.ajax({
 			// url:'contact/xy/a',
@@ -70,6 +64,19 @@
 	}
 </script>
 <?php
+$res=array();
+foreach($map as $data){
+    // ganti value ini dari DataBase    
+        $a =     [
+                'name' => $data->title_name,
+                'contact' => $data->contact_name,
+                'href' => '<a href="#location1">View Detail</a>',
+                'lat' => $data->lat,
+                'long'=> $data->long,
+                'icmark'=> URL::asset('vendor/webarq/front-end/images/material/ic_marker.png')
+            ];
+        array_push($res,$a);
+}
 $json = [];
 foreach ($res AS $val) {
     $key = $val['lat'].'|'.$val['long'].'|'.$val['icmark'];

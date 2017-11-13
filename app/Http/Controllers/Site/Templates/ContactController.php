@@ -64,6 +64,8 @@ class ContactController extends BaseController
                ->get();
       }else if($data == "indo"){
           $q = CabangModel::select('kota','alamat','fax','email','telp')->get();
+      }else{
+          $q = CabangModel::select('kota','alamat','fax','email','telp')->where('provinsi',$data)->get();
       }
       if($q->count()){
         echo json_encode(array('response'=>'ok','val'=>$q));
