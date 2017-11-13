@@ -42,10 +42,10 @@
 	<div class="right">
 		<div class="address-box a-center">
 			<h4 class="reg">{{$shareData[0]->angsuran1}}</h4>
-			<h3 id="angsuran">Rp 2.000.000,-</h3>
+			<h3 id="angsuran"></h3>
 			<br>
 			<h4 class="reg">{{$shareData[0]->angsuran2}}</h4>
-			<h3 id="dp_awal">Rp 20.000.000,-</h3>
+			<h3 id="dp_awal"></h3>
 		</div>
 		<div class="notsim">*{{$shareData[0]->txt2}}</div>
 	</div>
