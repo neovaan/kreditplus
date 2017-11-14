@@ -18,9 +18,8 @@
 <script>
     $(function () {
         CKEDITOR.config.contentsCss = "{{ URL::asset('vendor/webarq/default/css/ckeditor.css') }}";
-       // CKEDITOR.config.filebrowserImageUploadUrl='/imagex';
+        CKEDITOR.config.filebrowserImageUploadUrl="{{URL::to('imagex')}}";
         CKEDITOR.config.image_previewText = CKEDITOR.tools.repeat(' ',100);
-        
         CKEDITOR.config.filebrowserImageBrowseUrl = "{{URL('vendor/webarq/admin-lte/plugins/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images')}}";
 
     });
