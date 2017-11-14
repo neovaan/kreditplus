@@ -33,7 +33,7 @@ class PengajuanController extends BaseController
     }
 
     function actionAjaxPostForm(Request $req){
-    	$secretKey="6Lfb_DcUAAAAACC7qrBFulgRycbsq9J-kZggk2tn";
+    	$secretKey="6LeD3DYUAAAAAJvpFG_zKDzu_GGj3DrBSJEv1ifS";
     	$captcha= $_POST["g-recaptcha-response"];
 		$respond=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
 		$hasil=json_decode($respond,true);
