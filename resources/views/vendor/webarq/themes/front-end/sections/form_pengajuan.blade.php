@@ -58,8 +58,8 @@
 					<div class="col col_5 col_xsml">
 						<label>{{$shareData[0]->field9}}</label>
 						<div class="box-radio-button">
-							<label class="radio-custom"><input type="radio" value="1" name="rya"> {{$shareData[0]->field10}}</label>
-							<label class="radio-custom"><input type="radio" value="0" name="rya"> {{$shareData[0]->field11}}</label>
+							<label class="radio-custom"><input type="radio" value="yes" name="yes/no"> {{$shareData[0]->field10}}</label>
+							<label class="radio-custom"><input type="radio" value="no" name="yes/no"> {{$shareData[0]->field11}}</label>
 						</div>
 					</div>
 					<div class="col col_5 col_xsml">
