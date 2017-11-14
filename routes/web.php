@@ -18,9 +18,6 @@ Route::get('q','SearchController@index');
 // }]);
 Route::post('imagex', function(){
         if(count($_FILES)){
-            echo $_SERVER['DOCUMENT_ROOT'].'/kreditplus-be/public/ck/';
-            // if(!is_dir('/ck/'))
-            //  mkdir('/ck/');
             $d = date('YmdHis');
             $basename = basename($_SERVER['DOCUMENT_ROOT']."ck/".md5($d)."_".$_FILES['upload']['name']);
             move_uploaded_file($_FILES['upload']['tmp_name'],"/home/dev/apps/kreditplus-be/public/ck/".md5($d)."_".$_FILES['upload']['name']);
