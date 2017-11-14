@@ -62,16 +62,12 @@ return [
                                 ],
                                 'siteLogo' => [
                                         'title' => 'Logo',
-                                        'info' => 'Please use image in 160px X 35px dimension',
+                                        'info' => 'Please use image in 199px X 44px dimension',
                                         'file' => [
                                                 'type' => 'image',
                                                 'mimes' => ['png', 'ico'],
                                                 'upload-dir' => 'site/uploads/logo',
                                                 'max' => 1024,
-                                                'resize' => [
-                                                        'width' => 131,
-                                                        'height' => 52
-                                                ],
                                                 'preview' => true
                                         ]
                                 ],
@@ -83,10 +79,6 @@ return [
                                                 'mimes' => ['png', 'ico'],
                                                 'upload-dir' => 'site/uploads/logo',
                                                 'max' => 1024,
-                                                'resize' => [
-                                                        'width' => 131,
-                                                        'height' => 52
-                                                ],
                                                 'preview' => true
                                         ]
                                 ],

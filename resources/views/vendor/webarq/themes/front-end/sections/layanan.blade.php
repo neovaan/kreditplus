@@ -4,9 +4,10 @@
 		<div class="box-servicehome">
 			<div class="left-service">
 				<div class="ctn-service">
-					<h4 class="tblue a-from-left" delay=".4" trigger-anim=".trig-service">{{$shareData[0]->title}}</h4>
-					<h2 class="a-from-left" delay=".5" trigger-anim=".trig-service">{{$shareData[0]->intro}}</h2>
-					<p class="a-from-left" delay=".6" trigger-anim=".trig-service"><?php echo $shareData[0]->description; ?></p>
+					<h4 class="tblue a-from-left" delay=".4" trigger-anim=".trig-service"><?php echo trim($shareData[0]->title);?></h4>
+					<h2 class="a-from-left" delay=".5" trigger-anim=".trig-service"><?php echo trim($shareData[0]->intro);?></h2>
+					<p class="a-from-left" delay=".6" trigger-anim=".trig-service"><?php echo $clear = trim(preg_replace('/ +/', ' ', preg_replace('/[^A-Za-z0-9 ]/', ' ', urldecode(html_entity_decode(strip_tags($shareData[0]->description))))));
+ ?></p>
 				</div>
 				<div class="box-simservice">
 					<div class="list-simservice a-from-bottom" delay=".9" trigger-anim=".trig-service">

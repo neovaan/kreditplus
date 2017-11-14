@@ -9,7 +9,21 @@
 </div>
 
 <div class="office-list">
+    <?php $res=array();?>
 	@foreach($shareData as $data)
+        <?php 
+            if($data->lat && $data->long){
+                $a = [
+                    'name' => $data->title_name,
+                    'contact' => $data->contact_name,
+                    'href' => '<a href="#location1">View Detail</a>',
+                    'lat' => $data->lat,
+                    'long'=> $data->long,
+                    'icmark'=> 'vendor/webarq/front-end/images/material/ic_marker.png'
+                ];
+                array_push($res,$a);
+            }
+       ?>
 	<div class="list-office">
 		<div class="in-office">
 			<h5>{{$data->kota}}</h5>
@@ -64,47 +78,24 @@
 	}
 </script>
 <?php
-$res=array();
-foreach($map as $data){
-    // ganti value ini dari DataBase    
-        $a =     [
-                'name' => $data->title_name,
-                'contact' => $data->contact_name,
-                'href' => '<a href="#location1">View Detail</a>',
-                'lat' => $data->lat,
-                'long'=> $data->long,
-                'icmark'=> URL::asset('vendor/webarq/front-end/images/material/ic_marker.png')
-            ];
-        array_push($res,$a);
-}
 $json = [];
 foreach ($res AS $val) {
-    $key = $val['lat'].'|'.$val['long'].'|'.$val['icmark'];
+    $key = $val['lat'].':'.$val['long'].':'.$val['icmark'];
     if (array_key_exists($key, $json)) {
         array_push($json[$key], $val);
         continue;
     }
     $json[$key] = [$val];
 }
+
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmS8x7WCej7xbfM134RQYiNm_W_k4g5t8" type="text/javascript"></script>
 <script type="text/javascript">
 
         var rmarker = new Array();
-
         var json = <?php echo json_encode($json); ?>;
     $(document).ready(function () {
         var mapIcon = '{{URL::asset("vendor/webarq/front-end/images/material/ico_map.png")}}';
-
-                /*var markers = [
-                    ["Lokasi Kantor",3.5653088,98.5470958], 
-                    ["Lokasi Kantor",-6.2079179,106.827408], 
-                    ["Lokasi Kantor",-1.255499,131.9832697], 
-                    ["Lokasi Kantor",-2.9154406,107.7473872], 
-                    ["Lokasi Kantor",-1.496066,110.4699927], 
-                    ["Lokasi Kantor",-6.2333863,106.8306576],
-                ];*/ 
-
         var map;
         var center= {lat:-6.1561976, lng: 106.8410695},
             zoom = 1;
@@ -129,7 +120,7 @@ foreach ($res AS $val) {
 
         // Display a map on the page
         map = new google.maps.Map(document.getElementById('map_location'), mapOptions);
-        map.setTilt(50);
+         map.setTilt(50);
 
         //intializeGmaps('map_location', [-1.0469665, 118.1623948], markers, baseUrl, zoom);
         //storeLocatorMaps('map_location', baseUrl);
@@ -150,15 +141,13 @@ foreach ($res AS $val) {
 
         
         $.each(json, function(k, v) {
-            var latLong = k.split('|');
+            var latLong = k.split(':');
             var marker = new google.maps.Marker({
                 uniqueId: k,
                 position: new google.maps.LatLng(parseFloat(latLong[0]), parseFloat(latLong[1])),
                 icon: latLong[2],
                 map: map,
             });
-            // console.log(latLong[2]);
-
             rmarker[k] = marker;
 
             marker.addListener('click', function () {

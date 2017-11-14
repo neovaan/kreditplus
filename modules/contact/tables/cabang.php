@@ -14,5 +14,9 @@ return [
         ['master' => 'title', 'name' => 'fax'],
         ['master' => 'title','name'=>'email'],
         ['master' => 'title','name'=>'telp'],
-        ['master' => 'title','name'=>'provinsi']
+        ['master' => 'title','name'=>'provinsi'],
+        ['master' => 'title','name'=>'lat'],
+        ['master' => 'title','name'=>'long'],
+        ['master' => 'title','name'=>'title_name'],
+        ['master' => 'title','name'=>'contact_name']
 ];

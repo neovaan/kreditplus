@@ -8,7 +8,7 @@
 
 return [
         'wrapper' => [
-                'outer-level-0' => '<ul class="sidebar-menu"></ul>',
+                'outer-level-0' => '<ul></ul>',
                 'outer-level-n' => '<ul class="treeview-menu"></ul>',
                 'inner-no-child' => '<li></li>',
                 'inner-with-child' => '<li class="treeview"></li>',

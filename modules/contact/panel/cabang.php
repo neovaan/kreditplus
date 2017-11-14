@@ -35,6 +35,10 @@ return [
                                 ],
                                 'contact.cabang.kota'=>['type'=>'select','option'=>''],
                                 'contact.cabang.alamat' => ['type'=>'textarea','title'=>'Alamat Detail'],
+                                'contact.cabang.lat' => ['title'=>'Latitude'],
+                                'contact.cabang.long' => ['title'=>'Longtitude'],
+                                'contact.cabang.title_name' => ['title'=>'Title Name'],
+                                'contact.cabang.contact_name' => ['title'=>'Contact Name']
                         ]
                 ],
                 'edit' => [
@@ -56,6 +60,10 @@ return [
                                 ],
                                 'contact.cabang.kota'=>['type'=>'select','option'=>''],
                                 'contact.cabang.alamat' => ['type'=>'textarea','title'=>'Alamat Detail'],
+                                'contact.cabang.lat' => ['title'=>'Latitude'],
+                                'contact.cabang.long' => ['title'=>'Longtitude'],
+                                'contact.cabang.title_name' => ['title'=>'Title Name'],
+                                'contact.cabang.contact_name' => ['title'=>'Contact Name']
                         ]
                 ],
                 'delete'

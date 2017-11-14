@@ -9,10 +9,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>@yield('meta-title', $metaTitle)</title>
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="description" content="@yield('meta-description', $metaDescription )">
     <meta name="author" content="{{ Wa::config('system.site.meta.author', 'Webarq') }}">
     <!-- Favicon -->

@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: DanielSimangunsong
- * Date: 1/17/2017
- * Time: 2:27 PM
- */ ?>
+
 <header>
     <div class="wrapper">
         <div class="head-top">
@@ -14,7 +8,7 @@
                <?php } ?>
                 @foreach(Wa::menu()->getNodes() as $m)
                     @if($m['id'] == "17")
-                        <a href="{{URL($m['permalink'])}}">{{$m['title']}}</a>
+                        <a href="{{URL($m['permalink'])}}">{{trim($m['title'])}}</a>
                     @endif
                 @endforeach
             </div>
@@ -48,7 +42,13 @@
                         <span></span>
                         <span></span>
                     </div>
-                     {!! Wa::menu()->generate(Wa::menu()->main()) !!}
+                        <ul>
+                            <li class="menures"><a>MENU</a></li>
+                            <?php $page = Wa::menu()->getActive()->eloquent()->getAttributes();?>
+                            @foreach(Wa::menu()->main() as $key=>$menu)
+                                <li><a href="{{$menu->permalink}}">{{$menu->title}}</a></li>
+                            @endforeach
+                        </ul>
                     <div class="bg-gradient"></div>
                     <div class="bg-overlay"></div>
                     <div class="box-search">
@@ -56,8 +56,8 @@
                         <div class="drop-search">
                             <form method="get" onsubmit="search()" action="{{URL('q')}}">
                                 <input type="text" name="d" placeholder="Search...">
+                                <button type="button" class="sub-search">
                             </form>
-                            <a class="sub-search"></a>
                         </div>
                     </div>
                 </div>
@@ -69,11 +69,6 @@
                         </a>
                         @endif
                     @endforeach
-                    {{-- 
-                    <a href="{{URL::trans(Wa::menu()->getNode('16')->permalink)}}" class="btn-request">
-                        
-                    </a>
-                   --}}
                 </div>
             </div>
         </div>
