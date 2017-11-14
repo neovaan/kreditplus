@@ -30,16 +30,20 @@
     @endif
 
    
+
+           
                 <!-- Theme style -->
         <link rel="stylesheet" href="{{URL::asset('vendor/webarq/front-end/js/slick/slick.css')}}">
         <link rel="stylesheet" href="{{URL::asset('vendor/webarq/front-end/js/slick/slick-theme.css')}}">
         <link rel="stylesheet" href="{{URL::asset('vendor/webarq/front-end/css/style.css')}}">
         <link rel="stylesheet" href="{{URL::asset('vendor/webarq/front-end/css/desktop.css')}}">
         <link rel="stylesheet" href="{{URL::asset('vendor/webarq/front-end/css/tablet.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('vendor/webarq/front-end/css/mobile.css')}}">
         <!--endbuild-->
         
         <!--js-->
         <!--build:js js/main.min.js -->
+        
         <script type="text/javascript" src="{{URL::asset('vendor/webarq/front-end/js/jquery-1.11.2.min.js')}}"></script>
         <script type="text/javascript" src="{{URL::asset('vendor/webarq/front-end/js/TweenMax.min.js')}}"></script>
         <script type="text/javascript" src="{{URL::asset('vendor/webarq/front-end/js/ScrollToPlugin.min.js')}}"></script>
