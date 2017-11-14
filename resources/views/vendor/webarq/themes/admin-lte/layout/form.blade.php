@@ -17,6 +17,7 @@
 
 <script>
     $(function () {
+        
         CKEDITOR.config.contentsCss = "{{ URL::asset('vendor/webarq/default/css/ckeditor.css') }}";
         CKEDITOR.config.filebrowserImageUploadUrl="{{URL::to('imagex')}}";
         CKEDITOR.config.image_previewText = CKEDITOR.tools.repeat(' ',100);
