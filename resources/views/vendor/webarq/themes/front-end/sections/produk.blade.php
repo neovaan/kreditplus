@@ -100,12 +100,12 @@
 				<div class="img-testi">
 					<figure><img src="{{URL::asset($testi['image_user'])}}" alt="testimoni"></figure>
 					<div class="ttl-testi">
-						<h6>{{$testi['nama']}}</h6>
-						<span>{{$testi['pekerjaan']}}</span>
+						<h6>{{$testi->nama}}</h6>
+						<span>{{$testi->pekerjaan}}</span>
 					</div>
 				</div>
 				<div class="ctn-testi">
-					{{$testi['pesan']}}
+					{{$testi->pesan}}
 				</div>
 			</div>
 		</div>

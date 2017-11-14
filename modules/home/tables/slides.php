@@ -14,6 +14,6 @@ return [
         ['master' => 'title', 'name' => 'image_desktop', 'notnull' => true],
         ['master' => 'title', 'name' => 'title', 'notnull' => false, 'multilingual' => true],
         ['master' => 'title', 'name' => 'link', 'notnull' => false],
-        ['master' => 'title', 'name' => 'txtbtn', 'notnull' => true, 'multilingual' => true],
+        ['master' => 'title', 'name' => 'txtbtn', 'notnull' => false, 'multilingual' => true],
         ['master' => 'description', 'name' => 'intro', 'notnull' => false, 'multilingual' => true]
        ];

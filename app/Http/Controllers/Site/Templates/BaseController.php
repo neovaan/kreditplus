@@ -17,7 +17,7 @@ class BaseController extends Base
 {
    function actionGetIndex(){
         $data = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image','type')->limit(3)->get();
-        $testimoni = TestimoniUserModel::select('nama','pesan','pekerjaan','image_user')->orderBy('id','desc')->limit(3)->get();
+        $testimoni = TestimoniUserModel::selectTranslate('pesan')->addSelect('nama','pekerjaan','image_user')->limit(3)->get();
         view()->share(['info'=>$data,'testimoni'=>$testimoni]);
         parent::actionGetIndex();
    }

@@ -23,8 +23,11 @@
                             <h6>Tentang kami</h6>
                             <ul>
                                  @foreach(Wa::menu()->getNodes() as $m)
+                                 {{dd($m)}}
                                     @if(in_array($m['parent_id'],(array('02')))  || $m['id'] == "02" )
-                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
+
+                                        <li><a href="{{URL::trans(array_get($m,'permalink_'.App::getLocale()))}}">{{$m['title']}}</a></li>
+                                        }
                                     @endif
                                 @endforeach
                             </ul>
