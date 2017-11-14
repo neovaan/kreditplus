@@ -9,5 +9,6 @@
            'label_lihat_semua' => 'Lihat Semua ID',
            'label_btn_lowongan' => 'Lihat Lowongan Kerja ID',
            'label_testimoni_nasabah'=>'Testimoni Nasabah Kami ID',
-           'label_btn_pengajuan_kredit' => 'Pengajuan Kredit ID'
+           'label_btn_pengajuan_kredit' => 'Pengajuan Kredit ID',
+           'label_produk_kreditplus' =>'Produk Kreditplus ID'
        ];

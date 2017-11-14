@@ -9,5 +9,6 @@
            'label_lihat_semua'=>'Lihat Semua EN',
            'label_btn_lowongan' => 'Lihat Lowongan Kerja EN',
            'label_testimoni_nasabah'=>'Testimoni Nasabah Kami EN',
-           'label_btn_pengajuan_kredit' => 'Pengajuan Kredit EN'
+           'label_btn_pengajuan_kredit' => 'Pengajuan Kredit EN',
+           'label_produk_kreditplus' => 'Produk Kreditplus EN'
        ];

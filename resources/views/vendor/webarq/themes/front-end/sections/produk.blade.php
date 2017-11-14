@@ -3,7 +3,7 @@
 	<div class="inprodukkredit a-from-bottom" delay=".3" trigger-anim=".trig-produk" style="background-image: url('{{URL('vendor/webarq/front-end/images/content/bg-kredibilitas.jpg')}}');">
 		<div class="bgcirc"></div>
 		<div class="inprokre">
-			<h3 class="a-from-bottom" delay=".8" trigger-anim=".trig-produk">Produk Kreditplus</h3>
+			<h3 class="a-from-bottom" delay=".8" trigger-anim=".trig-produk">{{Wa::trans('site.label_produk_kreditplus')}}</h3>
 			<div class="circwhite">
 				<div class="box-list-product">
 					<?php $i=0;?>
