@@ -9,5 +9,6 @@
 return [
         ['master' => 'id'],
         ['master' => 'title', 'name' => 'produk_id', 'notnull' => true],
-        ['master' => 'title', 'name' => 'title', 'notnull' => true]
+        ['master' => 'title', 'name' => 'title', 'notnull' => true],
+        ['master' => 'title', 'name' => 'sequence', 'notnull' => true]
        ];

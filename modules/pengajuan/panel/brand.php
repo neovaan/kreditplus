@@ -25,8 +25,10 @@ return [
                                                'table' => 'produk',
                                                'column' => ['id', 'title']
                                         ]
+
                                 ],
-                                'pengajuan.brand.title'
+                                'pengajuan.brand.title',
+                                'pengajuan.brand.sequence'
                         ]
                 ],
                 'edit' => [
@@ -39,7 +41,8 @@ return [
                                                'column' => ['id', 'title']
                                         ]
                                 ],
-                                'pengajuan.brand.title'
+                                'pengajuan.brand.title',
+                                'pengajuan.brand.sequence'
                         ]
                 ],
                 'delete'

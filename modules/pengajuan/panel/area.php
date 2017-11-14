@@ -18,12 +18,14 @@ return [
         'actions' => [
                 'create' => [
                         'form' => [
-                                'pengajuan.area.title'
+                                'pengajuan.area.title',
+                                'pengajuan.area.sequence'
                         ]
                 ],
                 'edit' => [
                         'form' => [
-                                'pengajuan.area.title'
+                                'pengajuan.area.title',
+                                'pengajuan.area.sequence'
                         ]
                 ],
                 'delete'

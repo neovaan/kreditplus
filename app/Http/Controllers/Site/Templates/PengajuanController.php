@@ -22,7 +22,7 @@ class PengajuanController extends BaseController
 {
     function actionAjaxPostSet(Request $req){
     	$produk_id = $req->input('val');
-        $data = BrandModel::where('produk_id','=',$produk_id)->orderBy('id','desc')->get();
+        $data = BrandModel::where('produk_id','=',$produk_id)->orderBy('sequence','asc')->get();
 		$html="";
     	if($data->count()){
     		foreach($data as $key){
@@ -52,7 +52,7 @@ class PengajuanController extends BaseController
 
     function actionGetIndex(){
     	 	$data = ProdukModel::limit(4)->orderBy('id','desc')->get();
-            $area = AreaModel::orderBy('id','desc')->get();
+            $area = AreaModel::orderBy('sequence','asc')->get();
             view()->share(['produk'=>$data,'area'=>$area]);
     		parent::actionGetIndex();
     }

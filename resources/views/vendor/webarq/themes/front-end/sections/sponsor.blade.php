@@ -6,7 +6,7 @@
 			@if(count($shareData))
 				@foreach($shareData as $data)
 					<div class="list-sponsor">
-						<a href="{{$data->link}}" target="_blank"><img src="{{URL::asset($data->logo)}}"></a>
+						<a href="{{$data->link}}" target="_blank"><img src="{{URL::asset($data->logo)}}" style="height:55px;"></a>
 					</div>
 				@endforeach
 			@endif
