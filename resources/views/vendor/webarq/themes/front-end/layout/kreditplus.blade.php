@@ -14,6 +14,7 @@
           @if($section->getKey() == 'banner')
              {!! $section->toHtml() !!}
              @break
+             @break
           @endif          
         @endforeach
     @endif

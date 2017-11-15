@@ -13,6 +13,7 @@
         @foreach ($shareSections as $section)
           @if($section->getKey() == 'banner')
              {!! $section->toHtml() !!}
+             @break
           @endif          
         @endforeach
     @endif
