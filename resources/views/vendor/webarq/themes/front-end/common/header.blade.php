@@ -43,10 +43,15 @@
                         <span></span>
                     </div>
                         <ul>
+                            
                             <li class="menures"><a>MENU</a></li>
                             <?php $page = Wa::menu()->getActive()->eloquent()->getAttributes();?>
                             @foreach(Wa::menu()->main() as $key=>$menu)
-                                <li class="<?php echo $page['id'] == $menu->id ? 'active' : '';?>"><a href="{{$menu->permalink}}">{{$menu->title}}</a></li>
+                                @php $link = $menu->permalink; @endphp
+                                @if(Wa::menu()->getNode($menu->id)->getChild('first'))                                
+                                    @php $link = Wa::menu()->getNode($menu->id)->getChild('first')->permalink; @endphp
+                                @endif
+                                <li class="<?php echo $page['id'] == $menu->id ? 'active' : '';?>"><a href="{{URL::trans($link)}}">{{$menu->title}}</a></li>
                             @endforeach
                         </ul>
                     <div class="bg-gradient"></div>

@@ -12,6 +12,7 @@
         @foreach ($shareSections as $section)
           @if($section->getKey() == 'banner')
              {!! $section->toHtml() !!}
+             @break
           @endif          
         @endforeach
     @endif
@@ -28,6 +29,7 @@
 </section>
 <section class="ctnwp">
 <div class="wrap-sm">
+    <?php $page = Wa::menu()->getActive()->eloquent()->getAttributes();?>
     @if ([] !== $shareSections)
         @foreach ($shareSections as $section)
           @if($section->getKey() != 'banner' &&  $section->getKey() != 'submenu')
