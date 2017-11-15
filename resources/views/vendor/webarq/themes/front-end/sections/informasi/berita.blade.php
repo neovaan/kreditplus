@@ -19,7 +19,7 @@
 	<?php $i=1;?>
 	@foreach($shareData as $data)
 		<div class="list-promo">
-			<figure><img src="{{URL::asset($data->image)}}" alt="promo {{$i}}"></figure>
+			<figure><img src="{{URL::asset($data->image)}}" alt="promo {{$i}}" style=""></figure>
 			<div class="desc-promo">
 				<a href="{{URL::trans($page['permalink'].'/read/'.$data->permalink)}}" class="lbl {{ ($data->type == 'promo') ? 'lyellow' : 'lblue' }} lbl-sm">{{ strtoupper($data->type)  }}</a>
 				<h4>{{$data->title}}</h4>
