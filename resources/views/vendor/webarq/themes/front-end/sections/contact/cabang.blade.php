@@ -10,6 +10,7 @@
 
 <div class="office-list">
     <?php $res=array();?>
+    <?php $i = 0;?>
 	@foreach($shareData as $data)
         <?php 
             if($data->lat && $data->long){
@@ -25,7 +26,7 @@
             }
        ?>
 	<div class="list-office">
-		<div class="in-office">
+		<div class="in-office" onclick="goMarker('{{$i}}')">
 			<h5>{{$data->kota}}</h5>
 			<p>{{$data->alamat}}</p>
 			<div class="laddress">
@@ -35,6 +36,7 @@
 			</div>
 		</div>
 	</div>
+    <?php $i++;?>
 	@endforeach
 </div>
 <script type="text/javascript">	
@@ -150,16 +152,55 @@ foreach ($res AS $val) {
             });
             rmarker[k] = marker;
 
+            rmarker.push(marker);
+
             marker.addListener('click', function () {
                 var content = '';
+                var target = '';
 
                 $.each(json[this.uniqueId], function (k, v) {
+
                     content += '<div class="map_content"><b>' + v.name + '</b><br>' + v.contact + '<br></div>';
+                    target = v.target;
                 });
                 infowindow.setContent(content);
                 infowindow.open(map, marker);
 
-                setTimeout(function() { smootScroll(); }, 100);
+                // setTimeout(function() { smootScroll(); }, 100);
+
+                var intarget = parseInt($("#"+target).offset().top) - parseInt($("header").height()) + 40;
+                $(".office-list .list-office .in-office").removeClass("active");
+                $("#"+target).find(".in-office").addClass("active");
+                // console.log(intarget);
+
+                $("html, body").animate({ scrollTop: intarget }, 100);
+                $("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+                   $("html, body").stop();
+                });
+                return false;
+                // TweenLite.to(window, 1, {scrollTo:intarget, ease:Quart.easeInOut});
+
+            });
+            marker.addListener('mouseover', function () {
+                var content = '';
+                var target = '';
+
+                $.each(json[this.uniqueId], function (k, v) {
+
+                    content += '<div class="map_content"><b>' + v.name + '</b><br>' + v.contact + '<br></div>';
+                    target = v.target;
+                });
+                infowindow.setContent(content);
+                infowindow.open(map, marker);
+
+                // setTimeout(function() { smootScroll(); }, 100);
+
+                // var intarget = parseInt($("#"+target).offset().top) - parseInt($("header").height()) + 40;
+                // $(".office-list .list-office .in-office").removeClass("active");
+                // $("#"+target).find(".in-office").addClass("active");
+                // console.log(intarget);
+
+                // TweenLite.to(window, 1, {scrollTo:intarget, ease:Quart.easeInOut});
 
             });
         });
@@ -170,7 +211,20 @@ foreach ($res AS $val) {
 
     function goMarker(id)
     {
-        google.maps.event.trigger(rmarker[id], "click");
-        return false;
+        google.maps.event.trigger(rmarker[id], "mouseover");
+        officeClick();
+    }
+    function officeClick(){
+        $(".office-list .list-office .in-office").click(function(){
+            if($(".box-maps").length){
+                $(".office-list .list-office .in-office").removeClass("active");
+                $(this).addClass("active");
+                $("html, body").animate({ scrollTop: 0 }, 100);
+                $("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+                   $("html, body").stop();
+                });
+                // TweenLite.to(window, 1, {scrollTo:0, ease:Quart.easeInOut});
+            }
+        })
     }
 </script>
