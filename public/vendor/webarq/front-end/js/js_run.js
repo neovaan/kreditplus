@@ -12,36 +12,51 @@ $(document).ready(function () {
     accordion();
     popupPrestasi();
     chooseproduct();
-    animService();
-    animProduct();
-    animTestimoni();
-    animSponsor();
     loader();
     floatChat();
     burgMenu();
+    slideSponsor();
+    // officeClick();
 
-    if($(".office-list .list-office .in-office").length){
-	    $(".office-list .list-office .in-office").autoheight({
-	    	column: 3,
-	    });
+    if($(window).width() > 690){
+        if($(".office-list .list-office .in-office").length){
+            $(".office-list .list-office .in-office").autoheight({
+                column: 3,
+            });
+        }
+        if($(".box-list-achievement").length){
+            $(".box-list-achievement .list-achievement .in-achievement").autoheight({
+                column: 3,
+            });
+        }
     }
     $(".boxsliderhome .list-slide figure img").responsiveImage({
         type: 'image',
     });
 
-    $(".a-from-bottom").animationFrom({
-        from: 'from_bottom',
-        time: 1,
-        ease: Cubic.easeOut 
+    $(".banner > figure > img").responsiveImage({
+        type: 'image',
     });
-    $(".a-from-left").animationFrom({
-        from: 'from_left',
-        time: 1,
-        ease: Quint.easeOut
-    });
-    $(".a-from-right").animationFrom({
-        from: 'from_right',
-        time: 1,
-        ease: Quint.easeOut
-    });
+
+    if($(window).width() > 690){
+        $(".a-from-bottom").animationFrom({
+            from: 'from_bottom',
+            time: 1,
+            ease: Cubic.easeOut 
+        });
+        $(".a-from-left").animationFrom({
+            from: 'from_left',
+            time: 1,
+            ease: Quint.easeOut
+        });
+        $(".a-from-right").animationFrom({
+            from: 'from_right',
+            time: 1,
+            ease: Quint.easeOut
+        });
+        animService();
+        animProduct();
+        animTestimoni();
+        animSponsor();
+    }
 });
