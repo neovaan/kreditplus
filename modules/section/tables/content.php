@@ -13,6 +13,6 @@ return [
         ['master' => 'shortIntro', 'name' => 'intro', 'notnull' => false,'multilingual' => true],
         ['master' => 'title', 'name' => 'flag', 'notnull' => false],
         ['master' => 'description', 'name' => 'description','multilingual' => true],
-        ['master' => 'title', 'name' => 'txtbtn_pelajari','multilingual' => true],
-        ['master' => 'title', 'name' => 'link'],
+        ['master' => 'title', 'name' => 'txtbtn_pelajari','multilingual' => true,'notnull' => false],
+        ['master' => 'title', 'name' => 'link','notnull' => false],
        ];
