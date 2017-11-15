@@ -46,7 +46,7 @@
                             <li class="menures"><a>MENU</a></li>
                             <?php $page = Wa::menu()->getActive()->eloquent()->getAttributes();?>
                             @foreach(Wa::menu()->main() as $key=>$menu)
-                                <li><a href="{{$menu->permalink}}">{{$menu->title}}</a></li>
+                                <li class="<?php echo $page['id'] == $menu->id ? 'active' : '';?>"><a href="{{$menu->permalink}}">{{$menu->title}}</a></li>
                             @endforeach
                         </ul>
                     <div class="bg-gradient"></div>

@@ -71,14 +71,17 @@ $(document).ready(function(){
 		if(i == 0){
 			var tenor  = $("#tenor").val();
 			var harga  = $('[name="harga"]').val();
-			console.log(harga);
 			harga = replaceTitik(harga);
 			var dp  = $("#dpx").val();
 			dp = replaceTitik(dp);
 			var bunga  = $('[name="bunga"]').val();
-			var uang_muka = (parseInt(dp)/100)*parseInt(harga);
-			var pokok_hutang = 1+((parseInt(bunga)/100)*parseInt(tenor));
-			var angsuran = (parseInt(harga) - parseInt(uang_muka)) * parseInt(pokok_hutang) / parseInt(tenor);
+			// var uang_muka = (parseInt(dp)/100)*parseInt(harga);
+			// var pokok_hutang = 1+((parseInt(bunga)/100)*parseInt(tenor));
+			// var angsuran = (parseInt(harga) - parseInt(uang_muka)) * parseInt(pokok_hutang) / parseInt(tenor);
+			var cicilan = parseInt(harga) / parseInt(tenor);
+			var persen = parseInt(bunga) / 100;
+			var bunga_cicilan =  (parseInt(harga) * persen) / 12;
+			var angsuran = cicilan + bunga_cicilan;
 			$("#angsuran").html(rupiah(angsuran));
 			$("#dp_awal").html(rupiah(dp));
 		}
