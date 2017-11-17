@@ -22,7 +22,7 @@ $_CONFIG = array(
 // GENERAL SETTINGS
 
     'disabled' => false,
-    'uploadURL' => $_SERVER['DOCUMENT_ROOT']."ck/",
+    'uploadURL' => $_SERVER['DOCUMENT_ROOT']."/kreditplus-be/public/ck/",
     'uploadDir' => "/home/dev/apps/kreditplus-be/public/ck/",
     'theme' => "default",
 
