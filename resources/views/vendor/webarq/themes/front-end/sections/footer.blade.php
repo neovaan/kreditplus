@@ -10,7 +10,8 @@
                                     <h6>{{$c['title']}}</h6>
                                     <ul>
                                          @foreach(Wa::menu()->getNodes() as $m)
-                                            @if(in_array($m['parent_id'],(array($c['id']))) || $m['id'] == $c['id'])
+                                            @if(in_array($m['parent_id'],(array($c['id']))) || $c['title'] != $c['title'])
+                                                                                      
                                                 <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
                                             @endif
                                         @endforeach
@@ -18,71 +19,6 @@
                                 </div>
                             @endif
                         @endforeach
-                        {{-- 
-                        <div class="list-foot-menu">
-                            <h6>Tentang kami</h6>
-                            <ul>
-                                 @foreach(Wa::menu()->getNodes() as $m)
-                                 {{dd($m)}}
-                                    @if(in_array($m['parent_id'],(array('02')))  || $m['id'] == "02" )
-
-                                        <li><a href="{{URL::trans(array_get($m,'permalink_'.App::getLocale()))}}">{{$m['title']}}</a></li>
-                                        }
-                                    @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="list-foot-menu">
-                            <h6>Produk</h6>
-                            <ul>
-                                @foreach(Wa::menu()->getNodes() as $m)
-                                    @if(in_array($m['parent_id'],(array('07')))  || $m['id'] == "07" )
-                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="list-foot-menu">
-                            <h6>Information</h6>
-                            <ul>
-                               @foreach(Wa::menu()->getNodes() as $m)
-                                    @if($m['id'] == "13" )
-                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="list-foot-menu">
-                            <h6>Karir</h6>
-                            <ul>
-                                  @foreach(Wa::menu()->getNodes() as $m)
-                                    @if(in_array($m['parent_id'],(array('17'))) || $m['id'] == "17")
-                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="list-foot-menu">
-                            <h6>Kreditplusku</h6>
-                            <ul>
-                                @foreach(Wa::menu()->getNodes() as $m)
-                                    @if(in_array($m['parent_id'],(array('11'))) )
-                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="list-foot-menu">
-                            <h6>Hi! Kreditplus</h6>
-                            <ul>
-                                 @foreach(Wa::menu()->getNodes() as $m)
-                                    @if(in_array($m['parent_id'],(array('14')))  || $m['id'] == "14" )
-                                        <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        </div>
-                        --}}
                     </div>
                     <div class="foot-subs">
                         <div class="box-subscribe">

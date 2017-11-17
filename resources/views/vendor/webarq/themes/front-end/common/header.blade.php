@@ -14,7 +14,6 @@
             </div>
             <div class="right">
               @foreach (Wl::getCodes() as $code)
-                            {{--@if ($code !== app()->getLocale())--}}
                             @set(activeURL, Wa::menu()->getActive() ? Wa::menu()->getActive()->eloquent()->trans('permalink', $code) : '')
                             @if (isset($shareDetail) && $shareDetail instanceof \Illuminate\Database\Eloquent\Model && $shareDetail->count())
                                 @if (null !== Wa::menu()->getSegment('markup.key'))
@@ -23,7 +22,7 @@
                                 @set(activeURL, $activeURL . '/' . $shareDetail->trans('permalink', $code))
                             @else
                             @endif
-                            <a href="{{ URL::trans($activeURL, [], null, $code) }}">{{strtoupper($code)}}
+                            <a class="{{ app()->getLocale() == $code ? 'active' : ''}}" href="{{ URL::trans($activeURL, [], null, $code) }}">{{strtoupper($code)}}
                             </a>
                             {{--@endif--}}
                     @endforeach
@@ -42,16 +41,14 @@
                         <span></span>
                         <span></span>
                     </div>
-                        <ul>
-                            
-                            <li class="menures"><a>MENU</a></li>
-                            <?php $page = Wa::menu()->getActive()->eloquent()->getAttributes();?>
-                            @foreach(Wa::menu()->main() as $key=>$menu)
+                       <ul>
+                            <li class="menures"></li>
+                           @foreach(Wa::menu()->main() as $key => $menu)
                                 @php $link = $menu->permalink; @endphp
                                 @if(Wa::menu()->getNode($menu->id)->getChild('first'))                                
                                     @php $link = Wa::menu()->getNode($menu->id)->getChild('first')->permalink; @endphp
                                 @endif
-                                <li class="<?php echo $page['id'] == $menu->id ? 'active' : '';?>"><a href="{{URL::trans($link)}}">{{$menu->title}}</a></li>
+                                <li class="{{ in_array($menu->id,$menu->getActive(true)) ? 'active' : ''}}"><a href="{{URL::trans($link)}}">{{$menu->title}}</a></li>
                             @endforeach
                         </ul>
                     <div class="bg-gradient"></div>

@@ -5,7 +5,6 @@
  * Date: 3/24/2017
  * Time: 5:40 PM
  */ ?>
-
 @extends('webarq::themes.front-end.layout.index')
 @section('content')
 	<section class="banner">
@@ -29,7 +28,7 @@
 						<div class="lsv">
 							<h5><?php echo $item->title ;?></h5>
 							<p><?php echo $item->intro;?></p>
-							<a class="link-blue" style="margin-bottom:10px;" href="{{URL('informasi/read/'.$item->title)}}">Selengkapnya</a>
+							<a class="link-blue" style="margin-bottom:10px;" href="{{URL::to('informasi/read/'.$item->permalink)}}">Selengkapnya</a>
 						</div>
 					</div>
 				@endforeach

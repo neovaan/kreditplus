@@ -26,13 +26,9 @@
 <section class="ctnwp">
 	<div class="wrap-sm">
 		<h3 class="tblue"><?php echo $data[0]->title ;?></h3>
-		<h3 class="tregular"><?php echo $data[0]->intro;?></p>
-		<br>
-		<br>
+		<h3 class="tregular"><?php echo $data[0]->intro;?></h3>
 		<p><?php echo $data[0]->description ;?></p>
-		
 			<a href="{{URL($page['permalink'])}}" class="link-blue">{{Wa::trans('site.label_kembali')}}</a>
-		
 		<div class="related-news">
 			@if($list->count())
 			<h4>{{Wa::trans('site.label_berita_lainya')}}</h4>

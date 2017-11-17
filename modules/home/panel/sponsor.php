@@ -34,7 +34,7 @@ return [
                                                 'max' => 3072,
                                                 'upload-dir' => 'site/uploads/banners'
                                         ],
-                                        'info'=>'Image recommendation size: 108px width 37px height'
+                                        'info'=>'Image recommendation: max height 55px'
                                 ]
                         ]
                 ],
@@ -58,7 +58,7 @@ return [
                                         ],
                                         'ignored'=>true,
                                         'notnull'=>false,
-                                        'info'=>'Image recommendation size: 108px width 37px height'
+                                        'info'=>'Image recommendation: max height 55px'
 
                                 ]
                         ]
