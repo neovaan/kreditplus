@@ -11,6 +11,10 @@ return [
         'listing' => [
                 'headers' => [
                         'columns' => [
+                                'produk.title as produk' => [
+                                    'on'=>['prdk.id', 'brnd.produk_id'],
+                                    'title'=>'Produk'
+                                ],
                                 'title'
                         ]
                 ]

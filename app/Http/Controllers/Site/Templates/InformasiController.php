@@ -19,10 +19,11 @@ use DB;
 class InformasiController extends BaseController
 {
     public function actionGetRead($id){
+
         $data = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image','type')->whereTranslate('informasi.permalink',$id)->get();
-        $list = new InformasiModel;
+        $list = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image','type');
         if(count($data)){
-            $list = $list->whereTranslate('informasi.permalink','!=',$data[0]->permalink)->limit(2)->where('informasi.type','=',$data[0]->type)->get();
+            $list = $list->whereTranslate('permalink','!=',$data[0]->permalink)->limit(2)->where('type','=',$data[0]->type)->get();
         }else{
             $list = $list->limit(2)->get();
         }
