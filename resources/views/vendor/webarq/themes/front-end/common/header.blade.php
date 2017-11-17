@@ -57,7 +57,8 @@
                         <span class="btn-search"></span>
                         <div class="drop-search">
                         	<?php $link = Wa::menu()->getNode(13);?>
-                            <form method="get" id="searchfrm" onsubmit="search(); return false;" action="{{URL($link->permalink)}}">
+                        	<?php $link = $link->getChild('first') ? $link->getChild('first') : $link ;?>
+                            <form method="get" id="searchfrm" onsubmit="search(); return false;" action="{{URL::trans($link->permalink)}}">
                                 <input type="text" name="d" id="qs" placeholder="Search...">
                                 <button type="button" class="sub-search">
                             </form>

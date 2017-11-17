@@ -17,7 +17,6 @@
         </div>
     </div>
 </section>
-
 <section class="ctnwp">
 	<div class="wrap-sm">
 		@if($data->count())
