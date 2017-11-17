@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Site\Templates;
 use App\Http\Controllers\Site\BaseController;
 use App\Webarq\Model\InformasiModel;
 use App\Webarq\Model\FooterModel;
+use App\Webarq\Model\BannerModel;
 use App\Webarq\Model\TypeModel;
 use Illuminate\Http\Request;
 use Wa;
@@ -19,11 +20,33 @@ class InformasiController extends BaseController
 {
     public function actionGetRead($id){
         $data = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image','type')->whereTranslate('permalink',$id)->get();
-        $list = InformasiModel::selectTranslate('title','intro','description','permalink')->addSelect('image','type')->where('type','=',$data[0]->type)->whereTranslate('permalink','!=',$id)->limit(2);
-        $list->get();
+        $list = new InformasiModel;
+        if(count($data)){
+            $list = $list->whereTranslate('permalink','!=',$data[0]->permalink)->limit(2)->where('type','=',$data[0]->type)->get();
+        }else{
+            $list = $list->limit(2)->get();
+        }
+        $metaDescription = $data->count() ? $data[0]->description : 'Not Found';
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
+        $link = Wa::menu()->getActive(true);
+        $node = Wa::menu()->getNode($link[0])->permalink;
+        $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$link[0].'%')->get();
         $view = "vendor.webarq.themes.front-end.layout.detail_informasi";
-        return view($view, ['metaTitle'=>$id,'data' => $data, 'list'=>$list,'footer'=>$footer,'metaDescription'=>$data[0]->description] );
+        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node,'banner'=>$banner , 'list'=>$list,'footer'=>$footer,'metaDescription'=>$metaDescription] );
+    }
+
+    public function actionGetQ($id){
+        $data = InformasiModel::selectTranslate('title','intro','permalink')->where('description','like','%'.$id.'%')
+                ->orWhere('title','like','%'.$id.'%')
+                ->orWhere('intro','like','%'.$id.'%')
+                ->get();
+        $metaDescription = $data->count() ? $data[0]->description : 'Not Found';
+        $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
+        $view = "vendor.webarq.themes.front-end.layout.search";
+        $link = Wa::menu()->getActive(true);
+        $node = Wa::menu()->getNode($link[0])->permalink;
+        $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$link[0].'%')->get();
+        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node, 'banner'=>$banner ,'footer'=>$footer,'metaDescription'=> $metaDescription] );
     }
 
     function actionAjaxPostXy(Request $req){

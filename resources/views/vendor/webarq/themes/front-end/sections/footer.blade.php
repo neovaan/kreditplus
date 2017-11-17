@@ -1,28 +1,38 @@
-
+<?php use App\Submenu;?>
 <footer>  {{-- dd(Wa::menu()->main()) --}}
             <div class="foot-top">
                 <div class="wrapper">
                     <div class="foot-menu">
                         <?php $id=array();?>
                         @foreach(Wa::menu()->getNodes() as $c)
-                            @if($c['permalink'] != "/" && $c['parent_id'] == "0")
-                                 <div class="list-foot-menu">
-                                    <h6>{{$c['title']}}</h6>
-                                    <ul>
-                                         @foreach(Wa::menu()->getNodes() as $m)
-                                            @if(in_array($m['parent_id'],(array($c['id']))) || $c['title'] != $c['title'])
-                                                                                      
-                                                <li><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
-                                            @endif
+                                <?php $f = false;?>
+                                <?php $parent = '';?>
+                                @if($c['permalink'] != "/" && $c['parent_id'] == "0")
+                                        <div class="list-foot-menu">
+                                            <h6>{{$c['title']}}</h6>
+                                            <ul>
+                                        <?php $f = true;?>
+                                        <?php $parent = $c['id'];?>
+                                @endif
+                                @if($f)
+                                    @if(Wa::menu()->getNode($parent)->getChild('first'))
+                                        <?php $menu = Submenu::asd($parent);?>            
+                                        @foreach($menu as $mlink)                       
+                                            <li><a href="{{URL::trans($mlink['permalink'])}}">{{$mlink['title']}}</a></li>
                                         @endforeach
-                                    </ul>
-                                </div>
-                            @endif
+                                            </ul>
+                                        </div>
+                                    @else
+                                            <li><a href="{{URL::trans($c['permalink'])}}">{{$c['title']}}</a></li>
+                                           </ul>
+                                        </div>
+                                    @endif
+                                @endif
                         @endforeach
                     </div>
                     <div class="foot-subs">
                         <div class="box-subscribe">
-                            <h6>{{$footer[0]->txt1}}</h6>
+                            <h6>{{ $footer->count() ? $footer[0]->txt1 : ''}}</h6>
                             <div class="boxf-mail">
                                 <form id="sm">
                                     <input type="email" id="em" name="email" placeholder="Email">
@@ -31,7 +41,7 @@
                             </div>
                         </div>
                         <div class="box-ojk">
-                            <h6>{{$footer[0]->txt2}}</h6>
+                            <h6>{{$footer->count() ? $footer[0]->txt2 : ''}}</h6>
                             <a href="{{$footer[0]->link}}" target="_blank">
                                 <figure><img src="{{URL::asset($footer[0]->image)}}"></figure>
                             </a>

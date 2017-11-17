@@ -56,8 +56,9 @@
                     <div class="box-search">
                         <span class="btn-search"></span>
                         <div class="drop-search">
-                            <form method="get" onsubmit="search()" action="{{URL('q')}}">
-                                <input type="text" name="d" placeholder="Search...">
+                        	<?php $link = Wa::menu()->getNode(13);?>
+                            <form method="get" id="searchfrm" onsubmit="search(); return false;" action="{{URL($link->permalink)}}">
+                                <input type="text" name="d" id="qs" placeholder="Search...">
                                 <button type="button" class="sub-search">
                             </form>
                         </div>
@@ -77,4 +78,9 @@
     </div>
 </header>
 <script>
+	function search(){
+		var param = $("#qs").val();
+		var action = $("#searchfrm").attr('action');
+		location.href=action+"/q/"+param;
+	}
 </script>
