@@ -1,3 +1,14 @@
+<style>
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+</style>
 <h3 class="tblue">{{$shareData[0]->title}}</h3>
 <?php
 	$bulan = 12;

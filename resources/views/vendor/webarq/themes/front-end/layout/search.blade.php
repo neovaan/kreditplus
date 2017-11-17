@@ -34,7 +34,7 @@
 					<div class="lsv">
 						<h5><?php echo $item->title ;?></h5>
 						<p><?php echo $item->intro;?></p>
-						<a class="link-blue" style="margin-bottom:10px;" href="{{URL($link.'/read/'.$item->title)}}">Selengkapnya</a>
+						<a class="link-blue" style="margin-bottom:10px;" href="{{URL($link.'/read/'.$item->title)}}">{{Wa::trans('site.label_lihat_selengkapnya')}}</a>
 					</div>
 				</div>
 			@endforeach
