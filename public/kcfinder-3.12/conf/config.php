@@ -22,7 +22,7 @@ $_CONFIG = array(
 // GENERAL SETTINGS
 
     'disabled' => false,
-    'uploadURL' => $_SERVER['DOCUMENT_ROOT']."/kreditplus-be/public/ck/",
+    'uploadURL' => "http://dev.webarq.info:8081/kreditplus-be/ck/",
     'uploadDir' => "/home/dev/apps/kreditplus-be/public/ck/",
     'theme' => "default",
 
