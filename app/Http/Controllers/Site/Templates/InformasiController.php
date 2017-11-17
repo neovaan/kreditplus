@@ -36,9 +36,9 @@ class InformasiController extends BaseController
     }
 
     public function actionGetQ($id){
-        $data = InformasiModel::selectTranslate('title','intro','permalink')->where('description','like','%'.$id.'%')
-                ->orWhere('title','like','%'.$id.'%')
-                ->orWhere('intro','like','%'.$id.'%')
+        $data = InformasiModel::selectTranslate('title','intro','permalink')->where('informasi.description','like','%'.$id.'%')
+                ->orWhere('informasi.title','like','%'.$id.'%')
+                ->orWhere('informasi.intro','like','%'.$id.'%')
                 ->get();
         $metaDescription = $data->count() ? $data[0]->description : 'Not Found';
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
