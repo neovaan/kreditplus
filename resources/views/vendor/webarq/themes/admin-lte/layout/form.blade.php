@@ -21,7 +21,7 @@
         CKEDITOR.config.contentsCss = "{{ URL::asset('vendor/webarq/default/css/ckeditor.css') }}";
         CKEDITOR.config.filebrowserImageUploadUrl="{{URL::to('imagex')}}";
         CKEDITOR.config.image_previewText = CKEDITOR.tools.repeat(' ',100);
-        CKEDITOR.config.filebrowserImageBrowseUrl = "{{URL('vendor/webarq/admin-lte/plugins/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images')}}";
+        CKEDITOR.config.filebrowserImageBrowseUrl = "{{URL::to('kcfinder-3.12/browse.php?opener=ckeditor&type=images')}}";
 
     });
     function select_image(url) {
