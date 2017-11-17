@@ -48,9 +48,12 @@ class InformasiController extends BaseController
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
         $view = "vendor.webarq.themes.front-end.layout.search";
         $link = Wa::menu()->getActive(true);
-        $node = Wa::menu()->getNode($link[0])->permalink;
-        $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$link[0].'%')->get();
-        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node, 'banner'=>$banner ,'footer'=>$footer,'metaDescription'=> $metaDescription] );
+        $node = Wa::menu()->getNode($link[0])->getChild('first');
+        if(!$node){
+            $node = Wa::menu()->getNode($link[0]);
+        }
+        $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$node->id.'%')->get();
+        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node->permalink, 'banner'=>$banner ,'footer'=>$footer,'metaDescription'=> $metaDescription] );
     }
 
     function actionAjaxPostXy(Request $req){
