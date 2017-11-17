@@ -22,8 +22,8 @@ $_CONFIG = array(
 // GENERAL SETTINGS
 
     'disabled' => false,
-    'uploadURL' => "upload",
-    'uploadDir' => "",
+    'uploadURL' => "/home/dev/apps/kreditplus-be/public/ck/",
+    'uploadDir' => "/home/dev/apps/kreditplus-be/public/ck/",
     'theme' => "default",
 
     'types' => array(
