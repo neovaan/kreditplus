@@ -1,4 +1,4 @@
 <Files *>
-Order allow,deny
+Order allow
 Deny from all
 </Files>
