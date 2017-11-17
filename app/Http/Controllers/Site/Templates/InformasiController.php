@@ -30,10 +30,13 @@ class InformasiController extends BaseController
         $metaDescription = $data->count() ? $data[0]->description : 'Not Found';
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
         $link = Wa::menu()->getActive(true);
-        $node = Wa::menu()->getNode($link[0])->permalink;
-        $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$link[0].'%')->get();
+        $node = Wa::menu()->getNode($link[0])->getChild('first');
+        if(!$node){
+            $node = Wa::menu()->getNode($link[0]);
+        }
+        $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$node->id.'%')->get();
         $view = "vendor.webarq.themes.front-end.layout.detail_informasi";
-        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node,'banner'=>$banner , 'list'=>$list,'footer'=>$footer,'metaDescription'=>$metaDescription] );
+        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node->permalink,'banner'=>$banner , 'list'=>$list,'footer'=>$footer,'metaDescription'=>$metaDescription] );
     }
 
     public function actionGetQ($id){
