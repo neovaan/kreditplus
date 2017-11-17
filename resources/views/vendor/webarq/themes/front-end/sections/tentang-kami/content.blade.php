@@ -13,40 +13,13 @@
    @if($data->intro != "")
      <h3 class="tregular"><?php echo str_replace('"','',$data->intro);?></h3>
    @endif
-   @if($data->description != "")
-      @if($data->image1 != "" && $data->image2 == "")
-          <div class="a-center">
-            <img src="{{URL($data->image1)}}" alt="">
-          </div>
-          <?php echo $data->description;?>
-      @endif
-      @if($data->image1 != "" && $data->image2 != "")
-          <?php
-               $desc = explode("<p>",$data->description);
-               $i=0;
-               foreach($desc as $d){
-                if($i == 2){
-          ?>
-                   	<div class="imgctn">
-                			<div class="left"><img src="{{URL::asset($data->image1)}}" alt="office 1"></div>
-                			<div class="right"><img src="{{URL::asset($data->image2)}}" alt="office 2"></div>
-                		</div>
-              <?php 
-                } 
-                echo "<p>".$d."</p>";
-                $i++;
-              ?>
-            <?php } ?>
-       @endif
-       @if($data->image1 == "" && $data->image2 == "")
-           <?php echo $data->description;?>
-           @if($data->link && $data->txtbtn_pelajari)
-               <br/>
-               <a href="{{URL::trans($data->link)}}" class="btn-box btn-red">{{$data->txtbtn_pelajari}}</a>
-               <br/>
-            @endif
-       @endif
-     @endif
+  
+   <?php echo $data->description;?>
+   @if($data->link && $data->txtbtn_pelajari)
+       <br/>
+       <a href="{{URL::trans($data->link)}}" class="btn-box btn-red">{{$data->txtbtn_pelajari}}</a>
+       <br/>
+    @endif
 @endforeach
 <script>
    $(function(){

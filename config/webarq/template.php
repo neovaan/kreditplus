@@ -39,15 +39,15 @@ return [
                         'name' => 'Home'
                 ],
                 'tentang-kami' => [
-                        'name' => 'Tentang Kami'
+                        'name' => 'Static'
                 ],
                 'visimisi'=>[
                         'name' => 'Visi Misi'
                 ],
-                'management'=>['name'=>'management'],
+               // 'management'=>['name'=>'management'],
                 'prestasi'=>['name'=>'Prestasi'],
-                'goodcorporategov'=>['name'=>'Good Corporate Gov'],
-                'kreditplus'=>['name'=>'Kreditplus'],
+                //'goodcorporategov'=>['name'=>'Good Corporate Gov'],
+                //'kreditplus'=>['name'=>'Kreditplus'],
                 'produk'=>['name'=>'Produk'],
                 'informasi'=>['name'=>'informasi'],
                 'contact' => [

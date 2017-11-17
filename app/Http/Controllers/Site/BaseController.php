@@ -15,6 +15,7 @@ use Webarq\Manager\Site\MenuManager;
 use App\Webarq\Model\FooterModel;
 use App\Webarq\Model\TestimoniUserModel;
 use App\Webarq\Model\SosmedModel;
+use App\Webarq\Model\MenuModel;
 use DB;
 
 class BaseController extends Webarq
@@ -33,9 +34,9 @@ class BaseController extends Webarq
     {
 
         $this->themes = config('webarq.system.site.themes', 'front-end');
-
+         
         view()->share('shareThemes', $this->themes);
-
+       // view
         parent::__construct($params);
 
         $this->menu = $this->bindMenu(array_pull($params, 'menu'));

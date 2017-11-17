@@ -29,14 +29,7 @@ return [
                                 ],
                                 'section.mini_banner.txt'=>['title'=>'title'],
                                 'section.mini_banner.txtbtn'=>['title'=>'Text Button'],
-                                'section.mini_banner.link'=>[
-                                        'type' => 'select table',
-                                        'title' => 'Menu',
-                                        'sources' => [
-                                               'table' => 'menus',
-                                               'column' => ['permalink', 'title']
-                                        ]
-                                ],
+                                'section.mini_banner.link'=>['rules'=>'url'],
                                 'section.mini_banner.background' => [
                                         'file' => [
                                                 'type' => 'image',
@@ -60,14 +53,7 @@ return [
                                 ],
                                 'section.mini_banner.txt'=>['title'=>'title'],
                                 'section.mini_banner.txtbtn'=>['title'=>'Text Button'],
-                                'section.mini_banner.link'=>[
-                                        'type' => 'select table',
-                                        'title' => 'Menu',
-                                        'sources' => [
-                                               'table' => 'menus',
-                                               'column' => ['permalink', 'title']
-                                        ]
-                                ],
+                                'section.mini_banner.link'=>['rules'=>'url'],
                                 'section.mini_banner.background' => [
                                         'file' => [
                                                 'type' => 'image',

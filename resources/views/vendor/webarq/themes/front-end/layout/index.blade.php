@@ -19,7 +19,6 @@
     <link rel="shortcut icon" type="images/x-icon" href="{{ URL::asset(Wa::config('system.favicon')) }}"/>
     <!-- Bootstrap 3.3.6 -->
     <!-- Font Awesome -->
-
     <!-- Enable/Disabled browser system cache -->
     @if (1 === (int) Wa::config('system.site.cache'))
         <meta http-equiv="cache-control" content="max-age=0"/>

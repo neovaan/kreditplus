@@ -42,3 +42,12 @@ use App\Submenu;
 		@endforeach
 	@endif
 </ul>
+
+    <?php  $page = Wa::menu()->getActive()->eloquent()->getAttributes(); ?>
+    @if(!Wa::menu()->getNode($page['id'])->getChild('first') && $page['permalink'] != "/" && $page['parent_id'] == "0")
+    	<script>
+    		$(document).ready(function(){
+    			$(".submenu-banner").hide();
+    		});
+    	</script>
+    @endif
