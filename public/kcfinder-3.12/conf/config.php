@@ -101,7 +101,7 @@ $_CONFIG = array(
 
     'mime_magic' => "",
 
-    'cookieDomain' => "http://dev.webarq.info",
+    'cookieDomain' => $_SERVER['SERVER_NAME'],
     'cookiePath' => "",
     'cookiePrefix' => 'KCFINDER_',
 
