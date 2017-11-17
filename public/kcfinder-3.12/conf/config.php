@@ -64,8 +64,8 @@ $_CONFIG = array(
 
 // PERMISSION SETTINGS
 
-    'dirPerms' => 0755,
-    'filePerms' => 0644,
+    'dirPerms' => 0777,
+    'filePerms' => 0777,
 
     'access' => array(
 
@@ -101,7 +101,7 @@ $_CONFIG = array(
 
     'mime_magic' => "",
 
-    'cookieDomain' => "",
+    'cookieDomain' => "http://dev.webarq.info",
     'cookiePath' => "",
     'cookiePrefix' => 'KCFINDER_',
 
