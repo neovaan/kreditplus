@@ -11,7 +11,6 @@ return [
         'listing' => [
                 'headers' => [
                         'columns' => [
-                                ':sectionMenu',
                                 'title','type'
                         ]
                 ]
