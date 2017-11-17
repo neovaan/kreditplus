@@ -22,7 +22,7 @@ $_CONFIG = array(
 // GENERAL SETTINGS
 
     'disabled' => false,
-    'uploadURL' => $_SERVER['SERVER_NAME'],
+    'uploadURL' => URL::asset('ck/'),
     'uploadDir' => "/home/dev/apps/kreditplus-be/public/ck/",
     'theme' => "default",
 
