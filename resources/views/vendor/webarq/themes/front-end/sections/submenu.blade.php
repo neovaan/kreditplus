@@ -14,10 +14,10 @@ use App\Submenu;
 	@if($page['parent_id'] == "0")
 	   <?php $e = 0;?>
 	   @foreach(Wa::menu()->getNodes() as $m)
-	   		@if($pageid == "16")
-	   			<li class="active"><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
-	   		@endif
 			@if($m['parent_id'] == $pageid)
+				@if($pageid == "16")
+		   			<li class="active"><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
+		   		@endif
 				@foreach(Wa::menu()->getChild() as $w)
 				<?php $e++;?>
 				<li class="<?php echo $e == 1 && $pageid != 16 ? 'active' : '';?>"><a href="{{URL::trans($w->permalink)}}">{{$w->title}}</a></li>
@@ -35,6 +35,9 @@ use App\Submenu;
 		<?php $r = false;?>
 		@foreach(Wa::menu()->getNodes() as $m)
 			@if($m['parent_id'] == $parent)
+			    @if($parent == "16")
+		   			<li class="active"><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
+		   		@endif
 				<?php $sub = Submenu::asd($parent);?>
 				@foreach($sub as $q)
 					<?php $r=true;?>
