@@ -11,5 +11,6 @@
            'label_testimoni_nasabah'=>'Testimoni Nasabah Kami ID',
            'label_btn_pengajuan_kredit' => 'Pengajuan Kredit ID',
            'label_produk_kreditplus' =>'Produk Kreditplus ID',
-           'text_kawasan_kantor_cabang'=>'Pilih kawasan, untuk melihat informasi GB store terdekat EN'
+           'text_kawasan_kantor_cabang'=>'Pilih kawasan, untuk melihat informasi GB store terdekat EN',
+           'text_button_pengajuan' => 'Ajukan Kredit ID'
        ];
