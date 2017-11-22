@@ -16,6 +16,9 @@
                                 @endif
                                 @if($f)
                                     @if(Wa::menu()->getNode($parent)->getChild('first'))
+                                        @if($parent == "16")
+                                             <li><a href="{{URL::trans($c['permalink'])}}">{{$c['title']}}</a></li>
+                                        @endif
                                         <?php $menu = Submenu::asd($parent);?>            
                                         @foreach($menu as $mlink)                       
                                             <li><a href="{{URL::trans($mlink['permalink'])}}">{{$mlink['title']}}</a></li>
