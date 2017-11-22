@@ -61,7 +61,7 @@ input[type=number] {
 		</div>
 		<div class="notsim">*{{$shareData[0]->txt2}}</div>
 		<div class="a-center">
-			<a href="{{URL::to($link->permalink)}}" class="btn-box btn-lg">{{Wa::trans('site.text_button_pengajuan')}}</a>
+			<a href="{{URL::trans($link->permalink)}}" class="btn-box btn-lg">{{Wa::trans('site.text_button_pengajuan')}}</a>
 		</div>
 	</div>
 </div>
