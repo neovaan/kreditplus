@@ -8,6 +8,7 @@
 use App\Submenu;
  $page = Wa::menu()->getActive()->eloquent()->getAttributes();
  $pageid = $page['id'];
+ $parent = 
  $arr_temp = array();
  ?>
 <ul>
@@ -16,7 +17,8 @@ use App\Submenu;
 	   @foreach(Wa::menu()->getNodes() as $m)
 			@if($m['parent_id'] == $pageid)
 				@if($pageid == "16")
-		   			<li class="active"><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
+				    <?php $link = Wa::menu()->getNode(16);?>
+		   			<li class="active"><a href="{{URL::trans($link->permalink)}}">{{$link->title}}</a></li>
 		   		@endif
 				@foreach(Wa::menu()->getChild() as $w)
 				<?php $e++;?>
@@ -36,12 +38,13 @@ use App\Submenu;
 		@foreach(Wa::menu()->getNodes() as $m)
 			@if($m['parent_id'] == $parent)
 			    @if($parent == "16")
-		   			<li class="active"><a href="{{URL::trans($m['permalink'])}}">{{$m['title']}}</a></li>
+			        <?php $link = Wa::menu()->getNode(16);?>
+		   			<li class="active"><a href="{{URL::trans($link->permalink)}}">{{$link->title}}</a></li>
 		   		@endif
 				<?php $sub = Submenu::asd($parent);?>
 				@foreach($sub as $q)
 					<?php $r=true;?>
-					<li class="<?php echo $q->id == $pageid ? 'active' : '';?>"><a href="{{URL::trans($q->permalink)}}">{{$q->title}}</a></li>
+					<li class="<?php echo $q->id == $pageid && parent != "16" ? 'active' : '';?>"><a href="{{URL::trans($q->permalink)}}">{{$q->title}}</a></li>
 				@endforeach
 			@endif
 			<?php if($r) break;?>
