@@ -44,7 +44,7 @@ use App\Submenu;
 				<?php $sub = Submenu::asd($parent);?>
 				@foreach($sub as $q)
 					<?php $r=true;?>
-					<li class="<?php echo $q->id == $pageid && parent != "16" ? 'active' : '';?>"><a href="{{URL::trans($q->permalink)}}">{{$q->title}}</a></li>
+					<li class="<?php echo $q->id == $pageid && $parent != 16 ? 'active' : '';?>"><a href="{{URL::trans($q->permalink)}}">{{$q->title}}</a></li>
 				@endforeach
 			@endif
 			<?php if($r) break;?>
