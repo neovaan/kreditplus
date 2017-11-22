@@ -11,6 +11,7 @@ input[type=number] {
 </style>
 <h3 class="tblue">{{$shareData[0]->title}}</h3>
 <?php
+	$link = Wa::menu()->getNode(16);
 	$bulan = 12;
 	$tmp_bulan = array();
 	for($i=1;$i<=5;$i++){
@@ -59,6 +60,9 @@ input[type=number] {
 			<h3 id="dp_awal"></h3>
 		</div>
 		<div class="notsim">*{{$shareData[0]->txt2}}</div>
+		<div class="a-center">
+			<a href="{{URL::to($link->permalink)}}" class="btn-box btn-lg">AJUKAN KREDIT</a>
+		</div>
 	</div>
 </div>
 <script type="text/javascript" src="{{URL::asset('a.js')}}"></script>

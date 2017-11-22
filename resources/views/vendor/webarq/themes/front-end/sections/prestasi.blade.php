@@ -4,12 +4,13 @@
  * User: DanielSimangunsong
  * Date: 3/24/2017
  * Time: 6:09 PM
- */ ?>
+ */ 
+?>
       <div class="box-list-achievement">
-         <?php foreach ($shareData as $data) {  ?>
+         <?php foreach ($shareData as $data) { ?>
          <div class="list-achievement">
             <div class="in-achievement btn-poppres">
-               <h4>{{$data->title}}</h4>
+               <figure><img src="{{URL::asste($data->thumbnail)}}" alt="prestasi"></figure>
                <p>{{$data->intro}}</p>
 
                <div class="inpop">

@@ -5,12 +5,8 @@
 		<div class="inprokre">
 			<h3 class="a-from-bottom" delay=".8" trigger-anim=".trig-produk">{{Wa::trans('site.label_produk_kreditplus')}}</h3>
 			<div class="circwhite">
-				<div class="box-list-product">
-					<?php $i=0;?>
+				<div class="box-list-product slideprodhome">
 					@foreach($shareData as $data)
-						@if($i == 4)
-							@break
-						@endif
 					<div class="list-product">
 						<a href="{{URL::trans($data->link)}}">
 							<div class="in-product">
@@ -22,7 +18,6 @@
 							</div>
 						</a>
 					</div>
-					<?php $i++;?>
 					@endforeach
 				</div>
 			</div>
@@ -92,7 +87,7 @@
 	<div class="intestimonihome a-from-bottom" delay=".3" trigger-anim=".trig-testimoni" style="background-image: url('{{URL('vendor/webarq/front-end/images/content/bg-testimoni.jpg')}}');">
 	<div class="wrapper">
 	<h3 class="a-from-bottom" delay=".8" trigger-anim=".trig-testimoni">{{Wa::trans('site.label_testimoni_nasabah')}}</h3>
-	<div class="box-list-testimoni">
+	<div class="box-list-testimoni slidetestimoni">
 		@if($testimoni->count())
 		@foreach($testimoni as $testi)
 		<div class="list-testimoni">

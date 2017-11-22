@@ -735,3 +735,42 @@ function officeClick(){
         }
     })
 }
+
+function slideprodhome(){
+    $(".slideprodhome").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        responsive: [{
+            breakpoint: 690,
+            settings: 'unslick'
+        }]
+    })
+}
+function slidetestimoni(){
+    $(".slidetestimoni").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        responsive: [{
+            breakpoint: 690,
+            settings: 'unslick'
+        }]
+    })
+}
+function slidesponsor(){
+    $(".slidesponsor").slick({
+        slidesToShow: 8,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: false,
+        responsive: [{
+            breakpoint: 690,
+            settings: {
+                slidesToShow: 4,
+            }
+        }]
+    })
+}

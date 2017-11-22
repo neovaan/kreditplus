@@ -16,9 +16,18 @@ $(document).ready(function () {
     floatChat();
     burgMenu();
     slideSponsor();
+    slideprodhome();
+    slidetestimoni();
+    slidesponsor();
     // officeClick();
 
-    if($(window).width() > 690){
+    if($(window).width() > 1200){
+        if($(".office-list .list-office .in-office").length){
+            $(".office-list .list-office .in-office").autoheight({
+                column: 5,
+            });
+        }
+    }else if($(window).width() > 690 && $(window).width() <= 1200){
         if($(".office-list .list-office .in-office").length){
             $(".office-list .list-office .in-office").autoheight({
                 column: 3,

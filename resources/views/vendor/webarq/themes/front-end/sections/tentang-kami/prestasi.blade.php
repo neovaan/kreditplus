@@ -3,8 +3,8 @@
 	<?php foreach ($shareData as $data) { ?>
 	<div class="list-achievement">
 		<div class="in-achievement btn-poppres">
-			<h4>{{$data->title}}</h4>
-			<p>{{$data->intro}}</p>
+			<figure><img src="{{URL::asset($data->thumbnail)}}" alt="prestasi"></figure>
+			<h4>{{$data->intro}}</h4>
 
 			<div class="inpop">
 				<figure><img src="{{URL($data->image)}}" alt="{{$data->title}}"></figure>

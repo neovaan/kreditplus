@@ -22,12 +22,12 @@ return [
                                 'attributes' => [
                                         'enctype' => 'multipart/form-data',
                                 ],
+                                'tentang-kami.prestasi.title',
                                 'tentang-kami.prestasi.section_id' => [
                                         'type' => 'select template',
                                         'title' => 'Menu',
                                         'section' => 'prestasi'
                                 ],
-                                'tentang-kami.prestasi.title',
                                 'tentang-kami.prestasi.intro'=>['type'=>'textarea'],
                                 'tentang-kami.prestasi.image' => [
                                         'file' => [
@@ -39,7 +39,16 @@ return [
 
                                         'title'=>'Image Popup',
                                         'info' => 'Image recommendation size: 629px width 486px height'
-                                ]
+                                ],
+                                'tentang-kami.prestasi.thumbnail'=>[
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/banners'
+                                        ],
+                                        'info' => 'Image recommendation size: 240px width 210px height'
+                                ],
                         ]
                 ],
                 'edit' => [
@@ -65,7 +74,18 @@ return [
                                         'info' =>'Image recommendation size: 629px width 486px height',
                                         'ignored'=>true,
                                         'notnull'=>false
-                                ]
+                                ],
+                                'tentang-kami.prestasi.thumbnail'=>[
+                                        'file' => [
+                                                'type' => 'image',
+                                                'mimes' => ['jpg', 'jpeg', 'png'],
+                                                'max' => 3072,
+                                                'upload-dir' => 'site/uploads/banners'
+                                        ],
+                                        'info' => 'Image recommendation size: 240px width 210px height',
+                                        'ignored'=>true,
+                                        'notnull'=>false
+                                ],
                         ]
                 ],
                 'delete'
