@@ -1,7 +1,7 @@
 <div class="box-filter">
     <div class="left">{{Wa::trans('site.text_kawasan_kantor_cabang')}}</div>
 	<div class="right">
-		<label>Provinsi : </label>
+		<label>{{Wa::trans('site.text_cabang')}} : </label>
 		<select onchange="kota(this.value)" id="prof">
 			<option value="jabodetabek">Jabodetabek</option>
 			<option value="indo">Indonesia</option>
