@@ -47,7 +47,7 @@ return [
                // 'management'=>['name'=>'management'],
                 'prestasi'=>['name'=>'Prestasi'],
                 //'goodcorporategov'=>['name'=>'Good Corporate Gov'],
-                //'kreditplus'=>['name'=>'Kreditplus'],
+                'kreditplus'=>['name'=>'Kreditplus'],
                 'produk'=>['name'=>'Produk'],
                 'informasi'=>['name'=>'informasi'],
                 'contact' => [
@@ -80,7 +80,7 @@ return [
                                 'select'=>['image','image_phone','image_desktop','link']
                         ],
                         'panel'=>'slide',
-                        'limit' => 0
+                        'limit' => 0 
                 ],
                 'simulasi'=>[
                     'name'=> 'Simulasi',
@@ -198,7 +198,7 @@ return [
                         'table' => [
                                 'name' => 'prestasi',
                                 'translate'=>['title','intro'],
-                                'select'=>['image'],
+                                'select'=>['image','thumbnail'],
                                 'sequence'=>'prestasi.id:desc'
                         ],
                         'panel' => 'prestasi',
