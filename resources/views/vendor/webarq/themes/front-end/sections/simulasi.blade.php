@@ -60,7 +60,7 @@ input[type=number] {
 			<h3 id="dp_awal"></h3>
 		</div>
 		<div class="notsim">*{{$shareData[0]->txt2}}</div>
-		<div class="a-center">
+		<div class="a-center" id="btns" style='display:none;'>
 			<a href="{{URL::trans($link->permalink)}}" class="btn-box btn-lg">{{Wa::trans('site.text_button_pengajuan')}}</a>
 		</div>
 	</div>
@@ -99,6 +99,7 @@ $(document).ready(function(){
 			var angsuran = cicilan + bunga_cicilan;
 			$("#angsuran").html(rupiah(angsuran));
 			$("#dp_awal").html(rupiah(dp));
+			$("#btns").show();
 		}
 	}
 

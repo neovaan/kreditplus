@@ -13,5 +13,6 @@
            'label_produk_kreditplus' =>'Produk Kreditplus ID',
            'text_kawasan_kantor_cabang'=>'Pilih kawasan, untuk melihat informasi GB store terdekat EN',
            'text_button_pengajuan' => 'Ajukan Kredit ID',
-           'text_cabang'=>'Cabang ID'
+           'text_cabang'=>'Cabang ID',
+           'label_hasil_pencarian' => 'Hasil Pencarian ID'
        ];

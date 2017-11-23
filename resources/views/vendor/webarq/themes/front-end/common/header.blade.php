@@ -8,7 +8,7 @@
                <?php } ?>
                 @foreach(Wa::menu()->getNodes() as $m)
                     @if($m['id'] == "17")
-                        <a href="{{URL($m['permalink'])}}">{{trim($m['title'])}}</a>
+                        <a href="{{URL::trans($m['permalink'])}}">{{trim($m['title'])}}</a>
                     @endif
                 @endforeach
             </div>
@@ -68,7 +68,7 @@
                 <div class="request-head">
                     @foreach(Wa::menu()->getNodes() as $m)
                         @if($m['id'] == "16")
-                         <a href="{{URL($m['permalink'])}}" class="btn-request">
+                         <a href="{{URL::trans($m['permalink'])}}" class="btn-request">
                           {{Wa::trans('site.label_btn_pengajuan_kredit')}}
                         </a>
                         @endif

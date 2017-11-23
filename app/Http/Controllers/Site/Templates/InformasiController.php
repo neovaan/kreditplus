@@ -10,6 +10,11 @@ namespace App\Http\Controllers\Site\Templates;
 
 use App\Http\Controllers\Site\BaseController;
 use App\Webarq\Model\InformasiModel;
+use App\Webarq\Model\ProdukModel;
+use App\Webarq\Model\KarirModel;
+use App\Webarq\Model\ContentModel;
+use App\Webarq\Model\LayananModel;
+use App\Webarq\Model\ContentKarirModel;
 use App\Webarq\Model\FooterModel;
 use App\Webarq\Model\BannerModel;
 use App\Webarq\Model\TypeModel;
@@ -40,11 +45,41 @@ class InformasiController extends BaseController
     }
 
     public function actionGetQ($id){
-        $data = InformasiModel::selectTranslate('title','intro','permalink')->where('informasi.description','like','%'.$id.'%')
-                ->orWhere('informasi.title','like','%'.$id.'%')
-                ->orWhere('informasi.intro','like','%'.$id.'%')
-                ->get();
-        $metaDescription = $data->count() ? $data[0]->description : 'Not Found';
+        // $data = InformasiModel::selectTranslate('title','intro','permalink','description')
+        //         ->whereTranslate('description','like','%'.$id.'%')
+        //         ->get();
+        $informasi = InformasiModel::selectTranslate('title','intro','permalink','description')
+                     ->where('description','like','%'.$id.'%')
+                     ->orWhere('title','like','%'.$id.'%')
+                     ->orWhere('intro','like','%'.$id.'%')
+                     ->orWhere('permalink','like','%'.$id.'%')
+                     ->get();
+         $produk = ProdukModel::selectTranslate('title','intro')->addSelect('link')
+                     ->where('title','like','%'.$id.'%')
+                     ->orWhere('intro','like','%'.$id.'%')
+                     ->get();
+
+         $karir = KarirModel::selectTranslate('description')->addSelect('title_job')
+                     ->where('title_job','like','%'.$id.'%')
+                     ->orWhere('description','like','%'.$id.'%')
+                     ->get();
+         $content = ContentModel::selectTranslate('description','title','intro')->addSelect('section_id')
+                     ->where('title','like','%'.$id.'%')
+                     ->orWhere('description','like','%'.$id.'%')
+                     ->orWhere('intro','like','%'.$id.'%')
+                     ->get();
+        $content_karir = ContentKarirModel::selectTranslate('description','title','intro')
+                     ->where('title','like','%'.$id.'%')
+                     ->orWhere('description','like','%'.$id.'%')
+                     ->orWhere('intro','like','%'.$id.'%')
+                     ->get();
+
+        $layanan =   LayananModel::selectTranslate('title','intro')
+                     ->where('title','like','%'.$id.'%')
+                     ->orWhere('description','like','%'.$id.'%')
+                     ->orWhere('intro','like','%'.$id.'%')
+                     ->get();
+
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
         $view = "vendor.webarq.themes.front-end.layout.search";
         $link = Wa::menu()->getActive(true);
@@ -53,7 +88,7 @@ class InformasiController extends BaseController
             $node = Wa::menu()->getNode($link[0]);
         }
         $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$node->id.'%')->get();
-        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node->permalink, 'banner'=>$banner ,'footer'=>$footer,'metaDescription'=> $metaDescription] );
+        return view($view, ['metaTitle'=>$id,'layanan'=>$layanan,'informasi' => $informasi, 'produk' => $produk, 'karir' => $karir, 'content' => $content, 'content_karir' => $content_karir, 'link'=>$node->permalink, 'banner'=>$banner ,'footer'=>$footer,'metaDescription'=> $id] );
     }
 
     function actionAjaxPostXy(Request $req){

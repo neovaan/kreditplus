@@ -33,7 +33,7 @@ return [
                                            'column' => ['id', 'name']
                                     ]
                                 ],
-                                'contact.cabang.kota'=>['type'=>'select','option'=>''],
+                                'contact.cabang.kota'=>['type'=>'text'],
                                 'contact.cabang.alamat' => ['type'=>'textarea','title'=>'Alamat Detail'],
                                 'contact.cabang.lat' => ['title'=>'Latitude'],
                                 'contact.cabang.long' => ['title'=>'Longtitude'],
@@ -58,7 +58,7 @@ return [
                                         'column'=>['id','name']
                                     ]
                                 ],
-                                'contact.cabang.kota'=>['type'=>'select','option'=>''],
+                                'contact.cabang.kota'=>['type'=>'text'],
                                 'contact.cabang.alamat' => ['type'=>'textarea','title'=>'Alamat Detail'],
                                 'contact.cabang.lat' => ['title'=>'Latitude'],
                                 'contact.cabang.long' => ['title'=>'Longtitude'],
