@@ -54,29 +54,29 @@ class InformasiController extends BaseController
                      ->orWhere('informasi.intro','like','%'.$id.'%')
                      ->get();
          $produk = ProdukModel::selectTranslate('title','intro')->addSelect('link')
-                     ->where('title','like','%'.$id.'%')
-                     ->orWhere('intro','like','%'.$id.'%')
+                     ->where('produk.title','like','%'.$id.'%')
+                     ->orWhere('produk.intro','like','%'.$id.'%')
                      ->get();
 
          $karir = KarirModel::selectTranslate('description')->addSelect('title_job')
-                     ->where('title_job','like','%'.$id.'%')
-                     ->orWhere('description','like','%'.$id.'%')
+                     ->where('karir.title_job','like','%'.$id.'%')
+                     ->orWhere('karir.description','like','%'.$id.'%')
                      ->get();
          $content = ContentModel::selectTranslate('description','title','intro')->addSelect('section_id')
-                     ->where('title','like','%'.$id.'%')
-                     ->orWhere('description','like','%'.$id.'%')
-                     ->orWhere('intro','like','%'.$id.'%')
+                     ->where('content.title','like','%'.$id.'%')
+                     ->orWhere('content.description','like','%'.$id.'%')
+                     ->orWhere('content.intro','like','%'.$id.'%')
                      ->get();
         $content_karir = ContentKarirModel::selectTranslate('description','title','intro')
-                     ->where('title','like','%'.$id.'%')
-                     ->orWhere('description','like','%'.$id.'%')
-                     ->orWhere('intro','like','%'.$id.'%')
+                     ->where('content_karir.title','like','%'.$id.'%')
+                     ->orWhere('content_karir.description','like','%'.$id.'%')
+                     ->orWhere('content_karir.intro','like','%'.$id.'%')
                      ->get();
 
         $layanan =   LayananModel::selectTranslate('title','intro')
-                     ->where('title','like','%'.$id.'%')
-                     ->orWhere('description','like','%'.$id.'%')
-                     ->orWhere('intro','like','%'.$id.'%')
+                     ->where('layanan.title','like','%'.$id.'%')
+                     ->orWhere('layanan.description','like','%'.$id.'%')
+                     ->orWhere('layanan.intro','like','%'.$id.'%')
                      ->get();
 
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
