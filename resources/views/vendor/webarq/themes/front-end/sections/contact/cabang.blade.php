@@ -27,7 +27,7 @@
             }
        ?>
 	<div class="list-office">
-		<div class="in-office" onclick="goMarker('{{$i}}')">
+		<div class="in-office" onclick="goMarker('{{$i}}')" style="min-height:211px;">
 			<h5>{{$data->kota}}</h5>
 			<p>{{$data->alamat}}</p>
 			<div class="laddress">
@@ -62,8 +62,8 @@
 					$.each(data.val, function(k,val){
                         var m = val.id;
                         m = parseInt(m) - 1;
-						html+='<div class="list-office" onclick="goMarker('+m+')" style="height:234px;">';
-							html+='<div class="in-office">';
+						html+='<div class="list-office">';
+							html+='<div class="in-office" onclick="goMarker('+m+')" style="min-height:211px;">';
 								html+='<h5>'+val.kota+'</h5>';
 								html+='<p>'+val.alamat+'</p>';
 								html+='<div class="laddress">';
