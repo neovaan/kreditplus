@@ -49,10 +49,9 @@ class InformasiController extends BaseController
         //         ->whereTranslate('description','like','%'.$id.'%')
         //         ->get();
         $informasi = InformasiModel::selectTranslate('title','intro','permalink','description')
-                     ->where('description','like','%'.$id.'%')
-                     ->orWhere('title','like','%'.$id.'%')
-                     ->orWhere('intro','like','%'.$id.'%')
-                     ->orWhere('permalink','like','%'.$id.'%')
+                     ->where('informasi.description','like','%'.$id.'%')
+                     ->orWhere('informasi.title','like','%'.$id.'%')
+                     ->orWhere('informasi.intro','like','%'.$id.'%')
                      ->get();
          $produk = ProdukModel::selectTranslate('title','intro')->addSelect('link')
                      ->where('title','like','%'.$id.'%')
