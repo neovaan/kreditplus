@@ -63,9 +63,9 @@ class ContactController extends BaseController
                ->orWhere('kota','like','%bekasi%')
                ->get();
       }else if($data == "indo"){
-          $q = CabangModel::select('kota','alamat','fax','email','telp')->get();
+          $q = CabangModel::select('kota','alamat','fax','email','telp','id')->get();
       }else{
-          $q = CabangModel::select('kota','alamat','fax','email','telp')->where('provinsi',$data)->get();
+          $q = CabangModel::select('kota','alamat','fax','email','telp','id')->where('provinsi',$data)->get();
       }
       if($q->count()){
         echo json_encode(array('response'=>'ok','val'=>$q));

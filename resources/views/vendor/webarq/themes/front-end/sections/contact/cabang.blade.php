@@ -62,7 +62,7 @@
 					$.each(data.val, function(k,val){
                         var m = val.id;
                         m = parseInt(m) - 1;
-						html+='<div class="list-office" onclick="goMarker('+m+')">';
+						html+='<div class="list-office" onclick="goMarker('+m+')" style="height:234px;">';
 							html+='<div class="in-office">';
 								html+='<h5>'+val.kota+'</h5>';
 								html+='<p>'+val.alamat+'</p>';
