@@ -17,6 +17,8 @@ use App\Webarq\Model\LayananModel;
 use App\Webarq\Model\ContentKarirModel;
 use App\Webarq\Model\FooterModel;
 use App\Webarq\Model\BannerModel;
+use App\Webarq\Model\VisimisiModel;
+use App\Webarq\Model\PrestasiModel;
 use App\Webarq\Model\TypeModel;
 use Illuminate\Http\Request;
 use Wa;
@@ -67,7 +69,7 @@ class InformasiController extends BaseController
                      ->orWhere('content.description','like','%'.$id.'%')
                      ->orWhere('content.intro','like','%'.$id.'%')
                      ->get();
-        $content_karir = ContentKarirModel::selectTranslate('description','title','intro')
+        $content_karir = ContentKarirModel::selectTranslate('description','title','intro')->addSelect('section_id')
                      ->where('content_karir.title','like','%'.$id.'%')
                      ->orWhere('content_karir.description','like','%'.$id.'%')
                      ->orWhere('content_karir.intro','like','%'.$id.'%')
@@ -79,6 +81,21 @@ class InformasiController extends BaseController
                      ->orWhere('layanan.intro','like','%'.$id.'%')
                      ->get();
 
+        $visimisi =   VisimisiModel::selectTranslate('visi','misi','nilai','title')->addSelect('section_id')
+                     ->where('visimisi.title','like','%'.$id.'%')
+                     ->orWhere('visimisi.nilai','like','%'.$id.'%')
+                     ->orWhere('visimisi.visi','like','%'.$id.'%')
+                     ->orWhere('visimisi.misi','like','%'.$id.'%')
+                     ->get();
+
+        $prestasi =   PrestasiModel::selectTranslate('intro','title')->addSelect('section_id')
+                     ->whereTranslate('prestasi.title','like','%'.$id.'%','or')
+                     ->orWhere('prestasi.title','like','%'.$id.'%')
+                     ->orWhere('prestasi.intro','like','%'.$id.'%')
+                     ->orWhereTranslate('prestasi.intro','like','%'.$id.'%')
+                     //dd($prestasi->toSql());
+                     ->get();
+
         $footer = FooterModel::selectTranslate('txt1','txt2')->addSelect('image','link')->get();
         $view = "vendor.webarq.themes.front-end.layout.search";
         $link = Wa::menu()->getActive(true);
@@ -87,7 +104,7 @@ class InformasiController extends BaseController
             $node = Wa::menu()->getNode($link[0]);
         }
         $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$node->id.'%')->get();
-        return view($view, ['metaTitle'=>$id,'layanan'=>$layanan,'informasi' => $informasi, 'produk' => $produk, 'karir' => $karir, 'content' => $content, 'content_karir' => $content_karir, 'link'=>$node->permalink, 'banner'=>$banner ,'footer'=>$footer,'metaDescription'=> $id] );
+        return view($view, ['visimisi'=>$visimisi,'prestasi'=>$prestasi,'metaTitle'=>$id,'layanan'=>$layanan,'informasi' => $informasi, 'produk' => $produk, 'karir' => $karir, 'content' => $content, 'content_karir' => $content_karir, 'link'=>$node->permalink, 'banner'=>$banner ,'footer'=>$footer,'metaDescription'=> $id] );
     }
 
     function actionAjaxPostXy(Request $req){

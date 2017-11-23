@@ -14,5 +14,6 @@
            'text_kawasan_kantor_cabang'=>'Pilih kawasan, untuk melihat informasi GB store terdekat EN',
            'text_button_pengajuan' => 'Ajukan Kredit ID',
            'text_cabang'=>'Cabang ID',
-           'label_hasil_pencarian' => 'Hasil Pencarian ID'
+           'label_hasil_pencarian' => 'Hasil Pencarian ID',
+           'label_notfound' => 'Data Tidak Ditemukan'
        ];

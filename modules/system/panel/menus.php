@@ -16,9 +16,7 @@ return [
                                 'is_active',
                                 'sequence',
                                 'title',
-                                'permalink',
-                                'external_link',
-                                'template'
+                                'permalink'
                         ]
                 ],
                 'sequence' => [
