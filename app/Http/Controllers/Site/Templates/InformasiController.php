@@ -41,9 +41,10 @@ class InformasiController extends BaseController
         if(!$node){
             $node = Wa::menu()->getNode($link[0]);
         }
+        $meta = $data->count() ? $data[0]->title : 'Not Found';
         $banner = BannerModel::select('path','image_small','image_medium')->where('section_id','like',$node->id.'%')->get();
         $view = "vendor.webarq.themes.front-end.layout.detail_informasi";
-        return view($view, ['metaTitle'=>$id,'data' => $data, 'link'=>$node->permalink,'banner'=>$banner , 'list'=>$list,'footer'=>$footer,'metaDescription'=>$metaDescription] );
+        return view($view, ['metaTitle'=>$meta,'data' => $data, 'link'=>$node->permalink,'banner'=>$banner , 'list'=>$list,'footer'=>$footer,'metaDescription'=>$metaDescription] );
     }
 
     public function actionGetQ($id){
