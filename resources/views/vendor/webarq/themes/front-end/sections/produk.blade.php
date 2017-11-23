@@ -63,7 +63,7 @@
 						<div class="list-info-sm a-from-right" delay=".8" trigger-anim=".trig-info">
 							<a href="{{URL::trans($link.'/read/'.$q->permalink)}}">
 								<figure>
-									<img src="{{URL($q->image)}}" alt="{{$q->type}}">
+									<img src="{{URL($q->image2)}}" alt="{{$q->type}}">
 									<span class="lbl <?php echo ( ($q->type == "berita") ? "lblue" : "lyellow") ;?>">{{$q->type}}</span>
 								</figure>
 								<div class="desc-sm-info">
