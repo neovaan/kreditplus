@@ -56,7 +56,7 @@ class ContactController extends BaseController
     public function actionAjaxPostXy(Request $req){
       $data = $req->input('val');
       if($data == "jabodetabek"){
-          $q = CabangModel::select('kota','alamat','fax','email','telp')->where('kota','like','%jakarta%')
+          $q = CabangModel::select('kota','alamat','fax','email','telp','id')->where('kota','like','%jakarta%')
                ->orWhere('kota','like','%bogor%')
                ->orWhere('kota','like','%depok%')
                ->orWhere('kota','like','%tanggerang%')
