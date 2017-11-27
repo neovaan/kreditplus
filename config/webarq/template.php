@@ -47,7 +47,7 @@ return [
                // 'management'=>['name'=>'management'],
                 'prestasi'=>['name'=>'Prestasi'],
                 //'goodcorporategov'=>['name'=>'Good Corporate Gov'],
-                'kreditplus'=>['name'=>'Kreditplus'],
+                // 'kreditplus'=>['name'=>'Kreditplus'],
                 'produk'=>['name'=>'Produk'],
                 'informasi'=>['name'=>'informasi'],
                 'contact' => [
