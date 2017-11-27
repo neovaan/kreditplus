@@ -774,3 +774,12 @@ function slidesponsor(){
         }]
     })
 }
+
+function tooltipFooter(){
+    $(document).bind("click", function(e){
+        var $clicked = $(e.target);
+        if(!$clicked.parents().hasClass("tooltip")){
+            $(".tooltip").fadeOut(300);
+        }
+    })
+}

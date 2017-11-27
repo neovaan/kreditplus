@@ -19,6 +19,7 @@ $(document).ready(function () {
     slideprodhome();
     slidetestimoni();
     slidesponsor();
+    tooltipFooter();
     // officeClick();
 
     if($(window).width() > 1200){
