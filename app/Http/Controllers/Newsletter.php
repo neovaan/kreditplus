@@ -16,7 +16,7 @@ class Newsletter extends Controller
 	    	$news->save();
 	    	echo json_encode(array('response'=>'ok','msg'=>'Proses Berhasil'));
 	    }else{
-	    	echo json_encode(array('response'=>'ok','msg'=>'Email Sudah Terdaftar'));
+	    	echo json_encode(array('response'=>'err','msg'=>'Email Sudah Terdaftar'));
 	    }
     }
 }
