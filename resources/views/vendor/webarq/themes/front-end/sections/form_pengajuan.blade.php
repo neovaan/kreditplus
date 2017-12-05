@@ -88,7 +88,13 @@
 						data:$(this).serialize(),
 						type:'POST',
 						dataType:'json',
+						beforeSend:function(){
+							overlayDefault();
+						},
 						success:function(data){
+							if($('.ovr').length){
+								$('.ovr').remove();
+							}
 							if(data.response == "error"){
 								alert('Error captcha');
 							}else{
@@ -112,9 +118,9 @@
 		});
 	}
 
-	function overlay(){
+	function overlayDefault(){
 		$('body').prepend('<div class="ovr"></div>');
-		$('.ovr').css({'width':$('body').width(),'height':$('body').height(),'z-index':6000,'position':'absolute','opacity':0.2,'background-color':'black'});
+		$('.ovr').css({'width':$('body').width(),'height':$('body').height(),'z-index':6000,'position':'absolute','opacity':0.4,'background-color':'black'});
 	}
 
 	function cekForm(){
