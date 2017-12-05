@@ -15,5 +15,7 @@
            'text_button_pengajuan' => 'Ajukan Kredit EN',
            'text_cabang'=>'Cabang EN',
            'label_hasil_pencarian' => 'Hasil Pencarian EN',
-           'label_notfound' => 'Not Found'
+           'label_notfound' => 'Not Found',
+           'label_thanks_for_register' => 'Thanks For Register EN',
+           'label_msg_email_terdaftar' => 'Email Sudah Terdaftar EN'
        ];

@@ -15,5 +15,7 @@
            'text_button_pengajuan' => 'Ajukan Kredit ID',
            'text_cabang'=>'Cabang ID',
            'label_hasil_pencarian' => 'Hasil Pencarian ID',
-           'label_notfound' => 'Data Tidak Ditemukan'
+           'label_notfound' => 'Data Tidak Ditemukan',
+           'label_thanks_for_register' => 'Thanks For Register ID',
+           'label_msg_email_terdaftar' => 'Email Sudah Terdaftar ID'
        ];

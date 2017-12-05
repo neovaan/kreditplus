@@ -41,6 +41,11 @@
                                     <input type="email" id="em" name="email" placeholder="Email">
                                     <input type="submit" name="" value="" class="btn-fly">
                                 </form>
+                                <div class="tooltip" id="tooltip_msg" style="display: none;">
+                                    <div class="intooltip">
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="box-ojk">
@@ -83,9 +88,23 @@
             if($("#em").val() != ""){
                 $.post("{{URL::to('newsletter')}}",{'data':$("#em").val(),'_token':"{{csrf_token()}}" }, function(res){
                     if(res.response == "ok"){
-                        alert(res.msg);
-                        $("#em").val("");
-                        $("#em").css({'border-color':''});
+                        var msg_ok = "{{Wa::trans('site.label_thanks_for_register')}}";
+                        $("#tooltip_msg .intooltip").text(msg_ok);
+                        $("#tooltip_msg").show();
+                    }else{
+                        if(res.response == "err"){
+                            var msg_err = "{{Wa::trans('site.label_msg_email_terdaftar')}}";
+                            $("#tooltip_msg .intooltip").text(msg_err);
+                            $("#tooltip_msg").show();
+                            
+                        }
+                    }
+                    $("#em").val("");
+                    $("#em").css({'border-color':''});
+                    if($("#tooltip_msg").length){
+                        setTimeout(function(){
+                            $("#tooltip_msg").hide('slow');
+                        },5000);
                     }
                 },'json');
             }else{
