@@ -28,6 +28,9 @@
  @foreach(Wa::menu()->getNodes() as $m)
     @if($m['id'] == "13" )
         <?php $link =  $m['permalink'];?>
+         @if(Wa::menu()->getNode($m['id'])->getChild('first'))
+         	@php $link = Wa::menu()->getNode($m['id'])->getChild('first')->permalink; @endphp
+         @endif
     @endif
 @endforeach
 @if($info->count())

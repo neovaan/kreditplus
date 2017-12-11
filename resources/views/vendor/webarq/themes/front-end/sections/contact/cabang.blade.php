@@ -77,7 +77,9 @@
 					if(html != ""){
 						$(".office-list").html(html);
 					}
-				}
+				}else{
+                    $(".office-list").html("");
+                }
 			}
 		});
 	}
