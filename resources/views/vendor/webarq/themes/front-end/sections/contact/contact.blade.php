@@ -51,7 +51,7 @@
 		$('#frm-c').submit(function(){
 			if(cekForm()){
 				$.ajax({
-					url:'contact',
+					url:"{{URL::to('contact')}}",
 					type:$(this).attr('method'),
 					data:$(this).serialize(),
 					beforeSend:function(){
