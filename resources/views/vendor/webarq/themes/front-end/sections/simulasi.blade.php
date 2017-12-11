@@ -44,7 +44,7 @@ input[type=number] {
 			</div>
 			<div class="row">
 				<label>{{$shareData[0]->txt1}}</label>
-				<label class="block"><strong>Rp 100.000,-</strong></label>
+				<label class="block"><strong>{{$shareData[0]->jml_admin}}</strong></label>
 			</div>
 			<div class="row submit">
 				<input type="button" onclick="simulasi()" class="btn-box btn-lg" value="{{$shareData[0]->txtbtn}}">

@@ -18,5 +18,6 @@ return [
         ['master' => 'title', 'name' => 'txtbtn', 'notnull' => true,'multilingual' => true],
         ['master' => 'title', 'name' => 'angsuran1', 'notnull' => true,'multilingual' => true],
         ['master' => 'title', 'name' => 'angsuran2', 'notnull' => true,'multilingual' => true],
-        ['master' => 'title', 'name' => 'txt2', 'notnull' => true,'multilingual' => true]
+        ['master' => 'title', 'name' => 'txt2', 'notnull' => true,'multilingual' => true],
+        ['master' => 'title', 'name' => 'jml_admin', 'notnull' => true]
        ];

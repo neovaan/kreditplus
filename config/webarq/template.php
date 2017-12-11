@@ -87,7 +87,8 @@ return [
                         'view'=> 'simulasi',
                         'table' => [
                                 'name' => 'simulasi',
-                                'translate'=>['title','field1','field2','field3','field4','txt1','txtbtn','angsuran1','angsuran2','txt2']
+                                'translate'=>['title','field1','field2','field3','field4','txt1','txtbtn','angsuran1','angsuran2','txt2'],
+                                'select'=>['jml_admin']
                         ],
                         'panel'=>'simulasi',
                         'limit' => 1
