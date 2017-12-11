@@ -42,7 +42,7 @@ class ContactController extends BaseController
     public function actionPostSet(Request $req){
        $data = array(
         'name' =>$req->input('nama'),
-    );
+       );
       unset($_POST['_token']);
       DB::table('testimoni')->insert($_POST);
       Mail::send('test', $data, function ($message) use($req) {
@@ -56,11 +56,15 @@ class ContactController extends BaseController
     public function actionAjaxPostXy(Request $req){
       $data = $req->input('val');
       if($data == "jabodetabek"){
-          $q = CabangModel::select('kota','alamat','fax','email','telp','id')->where('kota','like','%jakarta%')
+          $q = CabangModel::select('kota','alamat','fax','email','telp')
+               ->leftjoin('provinces','provinces.id','=','cabang.provinsi')
+               ->where('kota','like','%jakarta%')
                ->orWhere('kota','like','%bogor%')
                ->orWhere('kota','like','%depok%')
                ->orWhere('kota','like','%tanggerang%')
                ->orWhere('kota','like','%bekasi%')
+               ->orWhere('cabang.provinsi','=','13')
+               ->orWhere('cabang.provinsi','=','32')
                ->get();
       }else if($data == "indo"){
           $q = CabangModel::select('kota','alamat','fax','email','telp','id')->get();

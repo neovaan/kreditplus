@@ -55,10 +55,11 @@
 					type:$(this).attr('method'),
 					data:$(this).serialize(),
 					beforeSend:function(){
-						loader();
+						loaderOverlay();
 					},
 					dataType:'json',
 					success:function(data){
+                        disOverlay();
 						if(data.response == "ok"){
 							alert('Data Berhasil Tersimpan');
 							location.reload();
@@ -85,6 +86,16 @@
 			return false;
 		}
 	}
+    function loaderOverlay(){
+        $('body').prepend('<div id="ovecls"></div>');
+        var b = $('body').width();
+        var h = $('body').height();
+        $("#ovecls").css({'width':b,'height':h,'z-index':10000,'background-color':'black','opacity':0.6, 'position':'absolute','top':0,'left':0});
+    }
+
+    function disOverlay(){
+        $("#ovecls").remove();
+    }
 </script>
 <?php
 $res = [    // ganti value ini dari DataBase    
