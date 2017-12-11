@@ -16,12 +16,12 @@
 @endif
 <div class="submenu-banner">
     <div class="wrap-sm">
-        <div class="box-submenu">
+        <!-- <div class="box-submenu">
             <div class="btn-submenu">Submenu</div>
             <div class="drop-submenu">
-                @include('webarq::themes.front-end.sections.submenu')
+               
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 </section>

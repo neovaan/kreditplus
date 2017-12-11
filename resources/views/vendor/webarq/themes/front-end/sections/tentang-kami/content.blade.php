@@ -23,13 +23,13 @@
 @endforeach
 <script>
    $(function(){
-      if($(".ctnwp ul").length){
+      if($(".ctnwp ol").length){
          var html = '';
-         var val = $(".ctnwp ul li").text(function(text,val){
+         var val = $(".ctnwp ol li").text(function(text,val){
             html+= "<li>"+val+"</li>";
          });
          var q = $(".ctnwp li").parent();
-         q.replaceWith('<ol>'+html+'</ol>');
+         q.replaceWith('<ul>'+html+'</ul>');
       }
    });
 </script>

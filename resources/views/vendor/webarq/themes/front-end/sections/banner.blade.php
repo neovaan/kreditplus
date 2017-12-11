@@ -8,6 +8,6 @@
 
 @foreach ($shareData as $data)
     <figure>
-        <img src="{{URL::asset($data->path)}}" img-large="images/content/banner-about.jpg" img-medium="images/content/banner-about-md.jpg" img-small="images/content/banner-about-sm.jpg" alt="banner">
+        <img src="{{URL::asset($data->path)}}" img-large="{{URL::asset($data->path)}}" img-medium="{{URL::asset($data->image_medium)}}" img-small="{{URL::asset($data->image_small)}}" alt="banner">
     </figure>
 @endforeach

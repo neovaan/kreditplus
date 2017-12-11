@@ -1,9 +1,10 @@
 <h3 class="tblue">{{$shareData[0]->title}}</h3>
-<?php echo $shareData[0]->intro; ?>
+<?php echo $shareData[0]->intro;?>
 <img src="{{URL($shareData[0]->image)}}" alt="information">
 <br>
 <br>
 <?php echo $shareData[0]->description;?>
+
 {{--
 @if($page['permalink'] == "kreditplus-mobile")
 	<div class="downloadapps margtop">
