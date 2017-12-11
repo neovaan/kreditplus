@@ -51,7 +51,7 @@
 		$('#frm-c').submit(function(){
 			if(cekForm()){
 				$.ajax({
-					url:'{{URL::trans(Wa::menu()->getActive()->permalink."/set/a")}}',
+					url:'contact',
 					type:$(this).attr('method'),
 					data:$(this).serialize(),
 					beforeSend:function(){

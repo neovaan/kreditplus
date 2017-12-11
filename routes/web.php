@@ -11,6 +11,7 @@
 |
 */
 // Route::get('/', 'About@index');
+use App\Http\Controllers\Site\Templates\PengajuanController as pengajuan;
 Route::get('q','SearchController@index');
 // Route::post('image',['as' => 'upload',function(){
 //  dd($_FILES)
@@ -33,4 +34,20 @@ Route::post('imagex', function(){
 Route::post('newsletter', 'Newsletter@setMail');
 Route::post('kota', 'KotaController@getKota');
 Route::post('setkota', 'KotaController@setKota');
-
+Route::post('setBrand', function(){
+    $pengajuan = new pengajuan;
+    $pengajuan->actionPostAjaxSet();
+});
+Route::post('contact',function(){
+     $data = array(
+        'name' =>$_POST['nama'],
+    );
+      unset($_POST['_token']);
+      DB::table('testimoni')->insert($_POST);
+        Mail::send('test', $data, function ($message) use($data) {
+        $message->from('meggi@webarq.co.id', 'Kreditplus');
+        $message->to($_POST['email'])->subject('tes email');
+         });
+      echo json_encode(array('response'=>'ok'));
+      die;
+});
