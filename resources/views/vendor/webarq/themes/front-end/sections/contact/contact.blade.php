@@ -51,7 +51,7 @@
         <div class="btn-close"></div>
         <div class="wrappop wrapsmall">
             <div class="dpres a-center">
-                <h5>Data berhasil Tersimpan</h5>
+                <h5>{{Wa::trans('site.label_msg_ok')}}</h5>
             </div>
         </div>
     </div>

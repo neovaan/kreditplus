@@ -17,5 +17,8 @@
            'label_hasil_pencarian' => 'Hasil Pencarian EN',
            'label_notfound' => 'Not Found',
            'label_thanks_for_register' => 'Thanks For Register EN',
-           'label_msg_email_terdaftar' => 'Email Sudah Terdaftar EN'
+           'label_msg_email_terdaftar' => 'Email Sudah Terdaftar EN',
+           'label_error_captcha' => 'Error Captcha EN',
+           'label_msg_ok' => 'Data Berhasil Disimpan EN',
+           'label_error' => 'Error EN'
        ];

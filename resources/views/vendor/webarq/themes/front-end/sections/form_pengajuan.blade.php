@@ -81,7 +81,7 @@
         <div class="btn-close"></div>
         <div class="wrappop wrapsmall">
             <div class="dpres a-center">
-                <h5>Data berhasil Tersimpan</h5>
+                <h5>{{Wa::trans('site.label_msg_ok')}}</h5>
             </div>
         </div>
     </div>
@@ -105,7 +105,7 @@
 								$('.ovr').remove();
 							}
 							if(data.response == "error"){
-								alert('Error captcha');
+								alert("{{Wa::trans('site.label_msg_ok')}}");
 							}else{
 								if(data.response == "ok"){
 									var inpres = $(".popup#pop-pengajuan");
@@ -114,7 +114,7 @@
 		                            TweenLite.to(inpres, 0.3, {scale: 1, ease: Power1.easeOut});
 		                            clearForm();
 								}else{
-									alert('Error');
+									alert("{{Wa::trans('site.label_error')}}");
 									location.reload();
 								}
 							}

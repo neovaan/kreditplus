@@ -17,5 +17,8 @@
            'label_hasil_pencarian' => 'Hasil Pencarian ID',
            'label_notfound' => 'Data Tidak Ditemukan',
            'label_thanks_for_register' => 'Thanks For Register ID',
-           'label_msg_email_terdaftar' => 'Email Sudah Terdaftar ID'
+           'label_msg_email_terdaftar' => 'Email Sudah Terdaftar ID',
+           'label_error_captcha' => 'Error Captcha ID',
+           'label_msg_ok' => 'Data Berhasil Disimpan ID',
+           'label_error' => 'Error ID'
        ];
