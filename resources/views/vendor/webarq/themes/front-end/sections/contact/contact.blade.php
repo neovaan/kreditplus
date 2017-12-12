@@ -18,7 +18,7 @@
 			</div> -->
 			<div class="row">
 				<label>{{$shareData[0]->field2}}</label>
-				<input type="text" class="i" name="telp" placeholder="">
+				<input type="number" class="i" name="telp" placeholder="">
 			</div>
 			<div class="row">
 				<label>{{$shareData[0]->field3}}</label>

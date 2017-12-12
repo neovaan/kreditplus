@@ -44,11 +44,11 @@
 					</div>
 					<div class="col col_5 col_xsml">
 						<label>{{$shareData[0]->field6}}</label>
-						<input type="text" class="i" name="ktp">
+						<input type="number" class="i" name="ktp">
 					</div>
 					<div class="col col_5 col_xsml">
 						<label>{{$shareData[0]->field7}}</label>
-						<input type="text" class="i" name="telp">
+						<input type="number" class="i" name="telp">
 					</div>
 					<div class="col col_5 col_xsml">
 						<label>{{$shareData[0]->field8}}</label>
