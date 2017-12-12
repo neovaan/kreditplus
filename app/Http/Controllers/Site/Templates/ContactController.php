@@ -63,6 +63,13 @@ class ContactController extends BaseController
                ->orWhere('kota','like','%depok%')
                ->orWhere('kota','like','%tanggerang%')
                ->orWhere('kota','like','%bekasi%')
+
+               ->orwhere('alamat','like','%jakarta%')
+               ->orWhere('alamat','like','%bogor%')
+               ->orWhere('alamat','like','%depok%')
+               ->orWhere('alamat','like','%tanggerang%')
+               ->orWhere('alamat','like','%bekasi%')
+
                ->orWhere('cabang.provinsi','=','13')
                ->orWhere('cabang.provinsi','=','32')
                ->get();
