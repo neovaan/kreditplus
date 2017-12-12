@@ -8,7 +8,7 @@
 					<figure><img src="<?php echo URL::asset($val['image']);?>" alt="produk"></figure>
 					<div class="desc-product">
 						<h5>{{$val['title']}}</h5>
-						<button type="button" onclick="kredit('{{$val['id']}}')" class="btn-box btn-ssm btn-yellow" data-value="pembelian elektronik">PILIH PRODUK</button>
+						<button type="button" onclick="kredit('{{$val['id']}}')" class="btn-box btn-ssm btn-yellow" data-value="pembelian elektronik">{{Wa::trans('site.label_pilih_produk')}}</button>
 					</div>
 				</div>
 			</div>

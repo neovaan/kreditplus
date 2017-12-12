@@ -20,5 +20,6 @@
            'label_msg_email_terdaftar' => 'Email Sudah Terdaftar ID',
            'label_error_captcha' => 'Error Captcha ID',
            'label_msg_ok' => 'Data Berhasil Disimpan ID',
-           'label_error' => 'Error ID'
+           'label_error' => 'Error ID',
+           'label_pilih_produk' => 'Pilih Produk ID'
        ];
