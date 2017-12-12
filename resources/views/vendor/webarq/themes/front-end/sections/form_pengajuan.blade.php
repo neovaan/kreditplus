@@ -1,3 +1,14 @@
+ <style>
+ .no-spinners {
+  -moz-appearance:textfield;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+</style>
 <form method="post" action="" id="frm-a">
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
 	<div class="box-chooseproduct">
@@ -44,11 +55,11 @@
 					</div>
 					<div class="col col_5 col_xsml">
 						<label>{{$shareData[0]->field6}}</label>
-						<input type="number" class="i" name="ktp">
+						<input type="number" class="i no-spinners" name="ktp">
 					</div>
 					<div class="col col_5 col_xsml">
 						<label>{{$shareData[0]->field7}}</label>
-						<input type="number" class="i" name="telp">
+						<input type="number" class="i no-spinners" name="telp">
 					</div>
 					<div class="col col_5 col_xsml">
 						<label>{{$shareData[0]->field8}}</label>

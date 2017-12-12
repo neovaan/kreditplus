@@ -1,3 +1,14 @@
+ <style>
+ .no-spinners {
+  -moz-appearance:textfield;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+</style>
 <h3 class="tblue">{{$shareData[0]->title}}</h3>
 <?php echo $shareData[0]->description;?>
 
@@ -18,7 +29,7 @@
 			</div> -->
 			<div class="row">
 				<label>{{$shareData[0]->field2}}</label>
-				<input type="number" class="i" name="telp" placeholder="">
+				<input type="number" class="i no-spinners" name="telp" placeholder="">
 			</div>
 			<div class="row">
 				<label>{{$shareData[0]->field3}}</label>
