@@ -58,6 +58,16 @@
 </div>
 <script>
 	$(document).ready(function(){
+        $('[name="telp"]').keydown(function(event){
+            var k = event.keyCode;
+            var arr = [48,49,50,51,52,53,54,55,56,57,8,9,96,97,98,99,100,101,102,103,104,105];
+            if(jQuery.inArray(k,arr) === -1){
+                event.preventDefault();
+            }
+            var l = $(this).val();
+            if(l.length == 13 && k != 8)
+                event.preventDefault();
+        });
 		$('#frm-c').submit(function(){
 			if(cekForm()){
 				$.ajax({

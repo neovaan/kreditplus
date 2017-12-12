@@ -88,7 +88,26 @@
 </div>	
 <script>
 	$(document).ready(function(){
-		//overlay();
+		$('[name="ktp"]').keydown(function(event){
+			var k = event.keyCode;
+			var arr = [48,49,50,51,52,53,54,55,56,57,8,9,96,97,98,99,100,101,102,103,104,105];
+            if(jQuery.inArray(k,arr) === -1){
+        		event.preventDefault();
+        	}
+        	var l = $(this).val();
+        	if(l.length == 16 && k != 8)
+        		event.preventDefault();
+		});
+		$('[name="telp"]').keydown(function(event){
+			var k = event.keyCode;
+			var arr = [48,49,50,51,52,53,54,55,56,57,8,9,96,97,98,99,100,101,102,103,104,105];
+            if(jQuery.inArray(k,arr) === -1){
+        		event.preventDefault();
+        	}
+        	var l = $(this).val();
+        	if(l.length == 13 && k != 8)
+        		event.preventDefault();
+		});
 		var btn = $(".box-chooseproduct button").first().click();
 		$('#frm-a').on('submit', function(){
 			if(cekForm()){
@@ -112,7 +131,9 @@
 		                            TweenLite.set(inpres, {scale: 0.95});
 		                            $(".popup#pop-pengajuan").fadeIn(300);
 		                            TweenLite.to(inpres, 0.3, {scale: 1, ease: Power1.easeOut});
-		                           	location.reload();
+		                            setTimeout(function(){
+		                           		location.reload();
+		                           	});
 								}else{
 									alert("{{Wa::trans('site.label_error')}}");
 									location.reload();
