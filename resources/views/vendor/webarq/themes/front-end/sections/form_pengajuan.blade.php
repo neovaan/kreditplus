@@ -105,14 +105,14 @@
 								$('.ovr').remove();
 							}
 							if(data.response == "error"){
-								alert("{{Wa::trans('site.label_msg_ok')}}");
+								alert("{{Wa::trans('site.label_error')}}");
 							}else{
 								if(data.response == "ok"){
 									var inpres = $(".popup#pop-pengajuan");
 		                            TweenLite.set(inpres, {scale: 0.95});
 		                            $(".popup#pop-pengajuan").fadeIn(300);
 		                            TweenLite.to(inpres, 0.3, {scale: 1, ease: Power1.easeOut});
-		                            clearForm();
+		                           	location.reload();
 								}else{
 									alert("{{Wa::trans('site.label_error')}}");
 									location.reload();
