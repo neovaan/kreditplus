@@ -11,7 +11,7 @@
          <div class="list-achievement">
             <div class="in-achievement btn-poppres">
                <figure><img src="{{URL::asste($data->thumbnail)}}" alt="prestasi"></figure>
-               <p>{{$data->intro}}</p>
+               <p>{{$data->title}}</p>
 
                <div class="inpop">
                   <figure><img src="{{URL($data->image)}}" alt="{{$data->title}}"></figure>

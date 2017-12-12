@@ -46,6 +46,16 @@
 		</div>
 	</div>
 </div>
+<div class="popup" id="pop-pengajuan">
+    <div class="in-popup">
+        <div class="btn-close"></div>
+        <div class="wrappop wrapsmall">
+            <div class="dpres a-center">
+                <h5>Data berhasil Tersimpan</h5>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
 	$(document).ready(function(){
 		$('#frm-c').submit(function(){
@@ -61,8 +71,11 @@
 					success:function(data){
                         disOverlay();
 						if(data.response == "ok"){
-							alert('Data Berhasil Tersimpan');
-							location.reload();
+                            var inpres = $(".popup#pop-pengajuan");
+                            TweenLite.set(inpres, {scale: 0.95});
+                            $(".popup#pop-pengajuan").fadeIn(300);
+                            TweenLite.to(inpres, 0.3, {scale: 1, ease: Power1.easeOut});
+                            clearForm();
 						}
 					}
 				});
@@ -86,6 +99,13 @@
 			return false;
 		}
 	}
+
+    function clearForm(){
+        $(".i").each(function(){
+            $(this).val("");
+        });
+    }
+
     function loaderOverlay(){
         $('body').prepend('<div id="ovecls"></div>');
         var b = $('body').width();
