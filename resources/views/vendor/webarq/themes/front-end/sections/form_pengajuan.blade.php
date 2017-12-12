@@ -31,7 +31,6 @@
 				</div>
 			</div>
 			<hr>
-
 			<div class="personal-data">
 				<h4>{{$shareData[0]->field3}}</h4>
 				<div class="row_list box-form">
@@ -76,7 +75,17 @@
 					</div>
 				</div>
 			</div>
-</form>	
+</form>
+<div class="popup" id="pop-pengajuan">
+    <div class="in-popup">
+        <div class="btn-close"></div>
+        <div class="wrappop wrapsmall">
+            <div class="dpres a-center">
+                <h5>Data berhasil Tersimpan</h5>
+            </div>
+        </div>
+    </div>
+</div>	
 <script>
 	$(document).ready(function(){
 		//overlay();
@@ -99,8 +108,11 @@
 								alert('Error captcha');
 							}else{
 								if(data.response == "ok"){
-									alert('Data Berhasil Disimpan');
-									location.reload();
+									var inpres = $(".popup#pop-pengajuan");
+		                            TweenLite.set(inpres, {scale: 0.95});
+		                            $(".popup#pop-pengajuan").fadeIn(300);
+		                            TweenLite.to(inpres, 0.3, {scale: 1, ease: Power1.easeOut});
+		                            clearForm();
 								}else{
 									alert('Error');
 									location.reload();
@@ -122,6 +134,12 @@
 		$('body').prepend('<div class="ovr"></div>');
 		$('.ovr').css({'width':$('body').width(),'height':$('body').height(),'z-index':6000,'position':'absolute','opacity':0.4,'background-color':'black'});
 	}
+
+	 function clearForm(){
+        $(".i").each(function(){
+            $(this).val("");
+        });
+    }
 
 	function cekForm(){
 		$(".i").css({'border-color':''});
