@@ -4,7 +4,7 @@
 	<div class="list-achievement">
 		<div class="in-achievement btn-poppres">
 			<figure><img src="{{URL::asset($data->thumbnail)}}" alt="prestasi"></figure>
-			<h4>{{$data->intro}}</h4>
+			<h4>{{$data->title}}</h4>
 
 			<div class="inpop">
 				<figure><img src="{{URL($data->image)}}" alt="{{$data->title}}"></figure>
