@@ -25,7 +25,7 @@ return [
                                 ],
                                 'contact.cabang.telp'=>['notnull'=>false],
                                 'contact.cabang.fax'=>['notnull'=>false],
-                                'contact.cabang.email',
+                                'contact.cabang.email'=>['notnull'=>false],
                                 'contact.cabang.provinsi'=>[
                                     'type'=>'select table',
                                     'sources' => [
@@ -50,7 +50,7 @@ return [
                                 ],
                                 'contact.cabang.telp'=>['notnull'=>false],
                                 'contact.cabang.fax'=>['notnull'=>false],
-                                'contact.cabang.email',
+                                'contact.cabang.email'=>['notnull'=>false],
                                 'contact.cabang.provinsi'=>[
                                     'type'=>'select table',
                                     'sources'=>[
