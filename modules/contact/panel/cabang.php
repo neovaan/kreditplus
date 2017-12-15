@@ -23,8 +23,8 @@ return [
                                         'title' => 'Template',
                                         'section' => 'cabang'
                                 ],
-                                'contact.cabang.telp',
-                                'contact.cabang.fax',
+                                'contact.cabang.telp'=>['notnull'=>false],
+                                'contact.cabang.fax'=>['notnull'=>false],
                                 'contact.cabang.email',
                                 'contact.cabang.provinsi'=>[
                                     'type'=>'select table',
@@ -48,8 +48,8 @@ return [
                                         'title' => 'Template',
                                         'section' => 'cabang'
                                 ],
-                                'contact.cabang.telp',
-                                'contact.cabang.fax',
+                                'contact.cabang.telp'=>['notnull'=>false],
+                                'contact.cabang.fax'=>['notnull'=>false],
                                 'contact.cabang.email',
                                 'contact.cabang.provinsi'=>[
                                     'type'=>'select table',
