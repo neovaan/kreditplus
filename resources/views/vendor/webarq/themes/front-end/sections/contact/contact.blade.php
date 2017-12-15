@@ -44,7 +44,7 @@
 			</div>
 		</form>
 	</div>
-	<div class="right">
+	 <div class="right">
 		<div class="address-box">
 			<i class="icwp ic_building" style="background-image:url('{{URL::asset($shareData[0]->icon)}}')"></i>
 			<h4>{{$shareData[0]->nm_persh}}</h4>
@@ -55,7 +55,7 @@
 				Email. <a href="mailto:cs@kreditplus.com">{{$shareData[0]->email}}</a>
 			</div>
 		</div>
-	</div>
+	</div> 
 </div>
 <div class="popup" id="pop-pengajuan">
     <div class="in-popup">
@@ -69,6 +69,12 @@
 </div>
 <script>
 	$(document).ready(function(){
+        if($(".box-filter").length){
+            $(".box-filter").remove();
+        }
+        if($(".office-list").length){
+            $(".office-list").remove();
+        }
         $('[name="telp"]').keydown(function(event){
             var k = event.keyCode;
             var arr = [48,49,50,51,52,53,54,55,56,57,8,9,96,97,98,99,100,101,102,103,104,105];
