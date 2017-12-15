@@ -73,8 +73,11 @@
 								html+='<h5>'+val.kota+'</h5>';
 								html+='<p>'+val.alamat+'</p>';
 								html+='<div class="laddress">';
+                                if(val.telp != "")
 									html+='Telp. <a href="tel:02129333646">'+val.telp+'</a><br/>';
+                                if(val.fax != "")
 									html+='Fax. <a href="tel:02129333648">'+val.fax+'</a><br/>';
+                                if(val.email != "")
 									html+='Email. <a href="mailto:'+v.email+'">'+val.email+'</a>';
 								html+='</div>';
 							html+='</div>';
@@ -82,6 +85,7 @@
 					});
 					if(html != ""){
 						$(".office-list").html(html);
+                         cekPanjang();
 					}
 				}else{
                     $(".office-list").html("");
@@ -108,6 +112,7 @@ foreach ($res AS $val) {
         var rmarker = new Array();
         var json = <?php echo json_encode($json); ?>;
     $(document).ready(function () {
+        cekPanjang();
         var mapIcon = '{{URL::asset("vendor/webarq/front-end/images/material/ico_map.png")}}';
         var map;
         var center= {lat:-6.1561976, lng: 106.8410695},
@@ -221,7 +226,6 @@ foreach ($res AS $val) {
 
     });
 
-
     function goMarker(id)
     {
         google.maps.event.trigger(rmarker[id], "mouseover");
@@ -240,4 +244,25 @@ foreach ($res AS $val) {
             }
         });
     }
+
+    function cekPanjang(){
+        var arr_tmp = new Array();
+        $(".list-office .in-office").each(function(k,v){
+            var l = $(v).height();
+            arr_tmp.push(l);
+        });
+        var max = getMaxOfArray(arr_tmp);
+        console.log(max);
+        console.log(max);
+        $(".list-office").each(function(k1,v1){
+            var l1 = $(v1).height();
+            if(parseInt(l1) != max){
+                $(".list-office .in-office").eq(k1).css('height',max);
+            }
+        });
+    }
+    function getMaxOfArray(numArray) {
+      return Math.max.apply(null, numArray);
+    }
+
 </script>
