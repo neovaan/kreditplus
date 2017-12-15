@@ -31,9 +31,15 @@
 			<h5>{{$data->kota}}</h5>
 			<p>{{$data->alamat}}</p>
 			<div class="laddress">
+                @if($data->telp)
 				Telp. <a href="tel:02129333646">{{$data->telp}}</a><br>
+                @endif
+                @if($data->fax)
 				Fax. <a href="tel:02129333648">{{$data->fax}}</a><br>
+                @endif
+                @if($data->email)
 				Email. <a href="mailto:{{$data->email}}">{{$data->email}}</a>
+                @endif
 			</div>
 		</div>
 	</div>
