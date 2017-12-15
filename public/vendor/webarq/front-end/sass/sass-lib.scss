@@ -21,6 +21,13 @@
     -ms-transform: $attr;
     -o-transform: $attr;
 }
+@mixin transformOrigin($attr){
+    transform-origin: $attr;
+    -webkit-transform-origin: $attr;
+    -moz-transform-origin: $attr;
+    -ms-transform-origin: $attr;
+    -o-transform-origin: $attr;
+}
 @mixin borderRadius($attr){
     border-radius: $attr;
     -webkit-border-radius: $attr;

@@ -176,7 +176,7 @@
 		}
 	}
 	.ctn-testi{
-		font-size: 12px; height: 150px;
+		font-size: 12px; height: 72px; 
 		&:before, &:after{font-size: 26px;}
 		&:after{top: 16px;}
 	}
@@ -221,13 +221,16 @@
 	}
 	.box-list-achievement{
 		.list-achievement{
-			h4{font-size: 14px; line-height: 20px; padding-bottom: 15px; margin-bottom: 15px;}
-			p{font-size: 12px; line-height: 18px;}
+			h4{font-size: 14px; line-height: 20px; margin-bottom: 15px; height: 40px;}
+			p{font-size: 12px; line-height: 18px; height: 72px; padding-top: 20px;}
 			.in-achievement{padding: 30px 25px;}
 		}
 	}
 	.popup{
-		.wrappop{width: auto;}
+		.wrappop{
+			width: auto;
+			&.wrapsmall{width: 580px;}
+		}
 		.dpres{
 			padding: 15px 30px;
 			p{font-size: 12px; line-height: 16px;}
@@ -254,8 +257,8 @@
 	.promo-list{
 		.list-promo{
 			font-size: 12px; line-height: 20px;
-			h4{font-size: 16px; line-height: 24px;}
-			p{font-size: 12px; line-height: 18px; height: 54px; margin-bottom: 10px;}
+			h4{font-size: 16px; line-height: 24px; max-height: 48px;}
+			p{font-size: 12px; line-height: 18px; max-height: 54px; margin-bottom: 10px;}
 			.desc-promo{
 				.lbl{margin-bottom: 10px;}
 			}
@@ -266,6 +269,11 @@
 			margin-bottom: 20px;
 			.btn-acc{
 				span{font-size: 13px;}
+			}
+
+			&:hover{
+				background: #eeeeee; color: #333;
+				.link-black{color: #333;}
 			}
 		}
 	}
@@ -291,6 +299,24 @@
 			p{font-size: 12px; line-height: 20px;}
 		 	.in-office{padding: 35px 25px;}
 		 	.laddress{line-height: 18px;}
+
+		 	.in-office{
+			 	&:hover{
+	                color: inherit;
+	                &:before{opacity: 1;}
+	                &:after{opacity: 0; @include transform(scale(0.95));}
+	                h5{color: inherit;}
+	                a{color: inherit;}
+	            }
+			 	
+	            &.active{
+	                color: $white;
+	                &:before{opacity: 0;}
+	                &:after{opacity: 1; @include transform(scale(1));}
+	                h5{color: #ffd204;}
+	                a{color: $white;}
+	            }
+		 	}
 		}
 	}
 	.produk-list{
@@ -302,6 +328,24 @@
 		}
 	}
 	.notsim{font-size: 14px;}
+	.box-filter{
+		.left{width: 100%; margin-bottom: 10px;}
+		.right{width: 100%; text-align: left;}
+	}
+	.listver{
+		.lsv{
+			padding-top: 30px;
+			h5{font-size: 16px; line-height: 24px;}
+			p{height: 66px; overflow: hidden;}
+		}
+	}
+	.banner{
+		figure{min-height: 180px;}
+	}
+	.slidetestimoni{
+		.slick-prev{left: -20px}
+		.slick-next{right: -20px}
+	}
 
 
 	footer{

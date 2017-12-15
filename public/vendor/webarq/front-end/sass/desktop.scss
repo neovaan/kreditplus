@@ -98,7 +98,7 @@
 	.box-list-product{
 		.list-product{
 			h4{font-size: 18px;}
-			p{font-size: 14px; line-height: 1.5;}
+			p{font-size: 14px; line-height: 1.5; height: 40px;}
 			.in-product{padding: 20px;}
 		}
 	}
@@ -115,18 +115,18 @@
 	.box-list-info-sm{
 		.list-info-sm{
 			font-size: 14px;
-			h4{line-height: 1.4;}
-			p{font-size: 14px; line-height: 1.5;}
+			h4{line-height: 1.4; max-height: 48px;}
+			p{font-size: 14px; line-height: 1.5; max-height: 44px;}
 		}
 	}
 	.lg-info{
 		font-size: 14px;
 		h4{line-height: 1.5;}
-		p{font-size: 14px; line-height: 1.5;}
+		p{font-size: 14px; line-height: 1.5; max-height: 44px;}
 	}
 	.infohome{padding: 30px 0 60px;}
 	.ctn-testi{
-		font-size: 14px; line-height: 1.8;
+		font-size: 14px; line-height: 1.8; height: 102px;
 		&:before{top: -8px;font-size: 34px;}
 		&:after{font-size: 34px;}
 	}
@@ -181,11 +181,11 @@
 		margin-top: 40px; margin-left: -10px; margin-right: -10px;
 		.list-achievement{
 			padding: 0 10px; margin-bottom: 20px;
-			h4{
-				font-size: 18px; line-height: 24px; padding-bottom: 35px; margin-bottom: 30px;
+			h4{font-size: 18px; line-height: 24px; margin-bottom: 30px; height: 48px;}
+			p{
+				font-size: 14px;
 				&:before{height: 2px; width: 30px;}
 			}
-			p{font-size: 14px;}
 			.in-achievement{padding: 50px 25px 30px;}
 		}
 	}
@@ -199,7 +199,7 @@
 	.prod-list-h{
 		.list-prod{
 			&:before{height: 90px;}
-			h4{font-size: 18px; padding-top: 36px;}
+			h4{font-size: 18px; padding-top: 36px; line-height: 24px;}
 			.desc-prod{height: 115px;}
 		}
 	}
@@ -212,6 +212,10 @@
 		.box-maps{
 			iframe, #map_location{height: 360px;}
 		}
+	}
+	.slideprodhome{
+		.slick-prev{left: -10px;}
+		.slick-next{right: -10px;}
 	}
 }
 
@@ -243,6 +247,7 @@
 			.btn-search{
 				width: 15px;
 				&:before{background-size: 100%;}
+				&:after{background-size: 100%;}
 			}
 			.drop-search{
 				input[type=text]{width: 600px;}
@@ -268,6 +273,16 @@
 			.scar{width: 350px; right: -40px; top: 220px;}
 			.inright-service{
 				height: 440px;
+				.servicekredit{
+					cursor: auto;
+					&:hover{
+						&:after{opacity: 0; @include transform(scale(0.95));}
+						> span{
+							color: #333;
+							&:before{background-position: top center;}
+						}
+					}
+				}
 				.ctn-kreright{padding-left: 40px; padding-right: 40px;}
 			}
 		}
@@ -295,7 +310,7 @@
 	.box-list-info-sm{
 		.list-info-sm{
 			font-size: 12px;
-			h4{height: 44px; overflow: hidden;}
+			h4{height: 44px; overflow: hidden; }
 			p{height: 44px; overflow: hidden;}
 		}
 	}
@@ -310,7 +325,7 @@
 		}
 		.ttl-testi{padding-left: 68px; padding-top: 6px; font-size: 12px; padding-bottom: 0; min-height: 0;}
 	}
-	.ctn-testi{font-size: 13px; line-height: 1.5;}
+	.ctn-testi{font-size: 13px; line-height: 1.5; height: 96px;}
 	.intestimonihome{padding: 50px 60px 60px;}
 	.boxf-mail{
 		input[type=email], input[type=text]{font-size: 12px; height: 38px;}
@@ -333,8 +348,8 @@
 	.promo-list{
 		.list-promo{
 			font-size: 14px; line-height: 22px;
-			h4{font-size: 20px; line-height: 30px;}
-			p{font-size: 14px; line-height: 22px; height: 66px; overflow: hidden;}
+			h4{font-size: 20px; line-height: 30px; max-height: 60px;}
+			p{font-size: 14px; line-height: 22px; max-height: 66px; overflow: hidden;}
 			.desc-promo{padding-top: 0;}
 		}
 	}
@@ -362,12 +377,11 @@
 		.right{width: 28%; text-align: right;}
 	}
 	.office-list{
-		margin: 0 -10px;
+		margin: 0 -10px 30px;
 		.list-office{
-			font-size: 14px; line-height: 24px; padding: 0 10px; margin-bottom: 20px;
-			p{font-size: 14px; line-height: 24px;}
-			.in-office{padding: 50px 35px;}
-			.laddress{line-height: 24px;}
+			font-size: 14px; line-height: 24px; padding: 0 10px; margin-bottom: 20px; width: 33.3333333333333333333%;
+			&:nth-child(5n+1){clear: inherit;}
+			&:nth-child(3n+1){clear: both;}
 		}
 	}
 	.produk-list{

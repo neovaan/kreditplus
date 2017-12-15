@@ -531,6 +531,15 @@ function popupPrestasi(){
         $(".popup#pop-prestasi").fadeIn(300);
         TweenLite.to(inpres, 0.3, {scale: 1, ease: Power1.easeOut});
     });
+    $(".btn-poppengajuan").on('click', function(){
+        var inpres = $(".popup#pop-pengajuan");
+        console.log("sdf");
+
+
+        TweenLite.set(inpres, {scale: 0.95});
+        $(".popup#pop-pengajuan").fadeIn(300);
+        TweenLite.to(inpres, 0.3, {scale: 1, ease: Power1.easeOut});
+    });
 
     $(".popup .in-popup .btn-close").click(function(){
         $(this).parents(".popup").fadeOut(300);
