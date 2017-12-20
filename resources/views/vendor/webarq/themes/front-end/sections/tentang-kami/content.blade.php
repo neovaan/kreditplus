@@ -22,15 +22,16 @@
     @endif
 @endforeach
 <script>
-   $(function(){
-      if($(".ctnwp ol").length){
-         var html = '';
-         var val = $(".ctnwp ol li").text(function(text,val){
-            html+= "<li>"+val+"</li>";
-         });
-         var q = $(".ctnwp li").parent();
-         q.replaceWith('<ul>'+html+'</ul>');
-      }
-   });
+   // $(function(){
+   //    // if($(".ctnwp ol").length){
+   //    //   console.log('fr');
+   //    //    var html = '';
+   //    //    var val = $(".ctnwp ol li").text(function(text,val){
+   //    //       html+= "<li>"+val+"</li>";
+   //    //    });
+   //    //    var q = $(".ctnwp li").parent();
+   //    //    q.replaceWith('<ul>'+html+'</ul>');
+   //    // }
+   // });
 </script>
  
