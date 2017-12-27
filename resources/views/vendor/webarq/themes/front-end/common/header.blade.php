@@ -42,7 +42,7 @@
                         <span></span>
                     </div>
                        <ul>
-                            <li class="menures"></li>
+                            <li class="menures"><a>MENU</a></li>
                            @foreach(Wa::menu()->main() as $key => $menu)
                                 @php $link = $menu->permalink; @endphp
                                 @if(Wa::menu()->getNode($menu->id)->getChild('first'))                                
