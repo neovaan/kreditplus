@@ -97,7 +97,22 @@ $(document).ready(function(){
 			var persen = parseInt(bunga) / 100;
 			var bunga_cicilan =  (parseInt(harga) * persen) / 12;
 			var angsuran = cicilan + bunga_cicilan;
-			$("#angsuran").html((rupiah(Math.floor(angsuran))));
+			//var str_a = angsuran.toStirng();
+			var tmp="";
+			tmp = angsuran.toFixed(2);
+			var e = tmp.split(".");
+			console.log(e);
+			var t = "";
+			if(e.length){
+				t = e[0];
+			}else{
+				t = angsuran;
+			}
+			var rupiahx = rupiah(t);
+			if(e.length && e[1] != "00"){
+				rupiahx+=","+e[1];
+			}
+			$("#angsuran").html(rupiahx);
 			$("#dp_awal").html(rupiah(dp));
 			$("#btns").show();
 		}
@@ -118,7 +133,7 @@ $(document).ready(function(){
 			var sisa 	= number_string.length % 3,
 			rupiah 	= number_string.substr(0, sisa),
 			ribuan 	= number_string.substr(sisa).match(/\d{3}/g);
-				
+			
 		if (ribuan) {
 			separator = sisa ? '.' : '';
 			rupiah += separator + ribuan.join('.');
