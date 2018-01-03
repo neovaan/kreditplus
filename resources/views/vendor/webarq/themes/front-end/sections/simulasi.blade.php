@@ -97,7 +97,7 @@ $(document).ready(function(){
 			var persen = parseInt(bunga) / 100;
 			var bunga_cicilan =  (parseInt(harga) * persen) / 12;
 			var angsuran = cicilan + bunga_cicilan;
-			$("#angsuran").html(rupiah(angsuran));
+			$("#angsuran").html((rupiah(Math.floor(angsuran))));
 			$("#dp_awal").html(rupiah(dp));
 			$("#btns").show();
 		}
