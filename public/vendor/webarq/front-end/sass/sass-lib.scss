@@ -1,0 +1,85 @@
+/*=============================================================================================	
+    Company    : PT Web Architect Technology - webarq.com
+    Document   : Stylesheet
+    Author     : FrontEnd Team  
+==============================================================================================*/
+
+/* import bourbon - http://bourbon.io/docs */
+@import "bourbon/bourbon";
+
+@mixin transition($attr){
+    transition: $attr;
+    -webkit-transition: $attr;
+    -moz-transition: $attr;
+    -ms-transition: $attr;
+    -o-transition: $attr;
+}
+@mixin transform($attr){
+    transform: $attr;
+    -webkit-transform: $attr;
+    -moz-transform: $attr;
+    -ms-transform: $attr;
+    -o-transform: $attr;
+}
+@mixin transformOrigin($attr){
+    transform-origin: $attr;
+    -webkit-transform-origin: $attr;
+    -moz-transform-origin: $attr;
+    -ms-transform-origin: $attr;
+    -o-transform-origin: $attr;
+}
+@mixin borderRadius($attr){
+    border-radius: $attr;
+    -webkit-border-radius: $attr;
+    -moz-border-radius: $attr;
+    -ms-border-radius: $attr;
+    -o-border-radius: $attr;
+}
+@mixin boxShadow($attr){
+    box-shadow:  $attr;
+    -webkit-box-shadow: $attr;
+    -moz-box-shadow: $attr;
+    -ms-box-shadow: $attr;
+    -o-box-shadow: $attr
+}
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}  
+}
+@mixin boxSizing($attr){
+    -webkit-box-sizing: $attr;
+    -moz-box-sizing: $attr;
+    box-sizing: $attr;
+}
+@mixin grayscale($attr){
+    -webkit-filter: grayscale($attr); /* Safari 6.0 - 9.0 */
+    filter: grayscale($attr);
+}
+@mixin bggradient(){
+    background: rgba(229,27,37,1);
+    background: -moz-linear-gradient(-45deg, rgba(229,27,37,1) 0%, rgba(251,177,6,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(229,27,37,1)), color-stop(100%, rgba(251,177,6,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(229,27,37,1) 0%, rgba(251,177,6,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(229,27,37,1) 0%, rgba(251,177,6,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(229,27,37,1) 0%, rgba(251,177,6,1) 100%);
+    background: linear-gradient(135deg, rgba(229,27,37,1) 0%, rgba(251,177,6,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e51b25', endColorstr='#fbb106', GradientType=1 );
+}
+
+
+/* color global
+----------------------------------------------------------------------------------------------*/
+$c_111: #111;
+$c_333: #333;
+$c_666: #666;
+$c_999: #999;
+$c_ea: #eaeaea;
+$white: #fff;
+$black: #000;
+$blue: #01a3de;
+$blue2: #2a9cc6;
+$red: #e51b24;
+$yellow: #ffd204;
+$yellow2: #ffb400;
